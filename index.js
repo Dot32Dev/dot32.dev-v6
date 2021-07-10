@@ -10,6 +10,8 @@ xhr.onload = function()
   var text = xhr.responseText;
   // console.log(text);
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
+
+  document.getElementById("url").innerHTML = "url: " + window.location.href
 }
 xhr.send();
 
