@@ -2,9 +2,13 @@ const md = new Remarkable({
 	html: true
 });
 // document.getElementById("markdown").innerHTML = md.render('# tada');
+var page = "Dot32.md"
+if (window.location.pathname === "/tutorials/" || window.location.pathname === "/tutorials/index.html") {
+	page = "Tutorials.md"
+}
 
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "Dot32.md");
+xhr.open("GET", page);
 xhr.onload = function()
 {
   var text = xhr.responseText;
@@ -27,7 +31,7 @@ function Projects() {
 	xhr.open("GET", "Projects.md");
 	xhr.send();
 }
-function Posts() {
-	xhr.open("GET", "Posts.md");
+function Tutorials() {
+	xhr.open("GET", "Tutorials.md");
 	xhr.send();
 }
