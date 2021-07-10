@@ -94,6 +94,12 @@ main {
 	border: 1px solid var(--line);
 }
 
+.segment {
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid var(--line);
+}
+
 img {
 	padding: 0;
   display: block;
