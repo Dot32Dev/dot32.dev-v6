@@ -1,0 +1,115 @@
+:root {
+  --header: #29303d;
+  --button: #394355;
+  --line: #5D7191;
+}
+
+
+body {
+	font-family: PT Sans, helvetica;
+	/*background-color: #212121; */
+	/*background-color: #f0f0f0;*/
+	background-color: #29303d;
+	/*background-color: hsl(194, 85%, 81%);*/
+  /*color: #c2c2c2;*/
+  margin:  0px;
+}
+
+header {
+	position: fixed;
+	/*text-align: left;*/
+	background-color: var(--header);
+	/*background-color: #f0f0f0;*/
+	width: 100%;
+	top: 0;
+  left: 0;
+  margin: 0;
+ 	border-bottom: 1px solid var(--line);
+}
+
+header nav, header .socials {
+	display: inline-block;
+}
+
+header nav {
+	text-align: left;
+}
+
+header .socials {
+	text-align: right;
+}
+
+ul {
+	margin: 0px;
+}
+
+header nav ul li, header .socials ul li {
+	display: inline;
+}
+
+header nav ul li button, header .socials ul li span {
+  /*background-color: #2e2e2e;*/
+  color: white;
+  border: none;
+  /*border: 2px solid var(--header);*/
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 25px;
+  /*padding: 20;*/
+  /*padding-right:30px;*/
+  /*padding-left:30px;*/
+  /*border-radius: 10px;*/
+  font-weight: bold;
+  background-color: var(--header);
+}
+
+header .socials ul li span {
+	padding: 0px 5px;
+}
+
+header nav ul li button:hover {
+	background-color: var(--button);
+	/*color:  plum;*/
+	color:  #90cc84;
+	cursor: pointer;
+	/*border: 1px solid var(--line);*/
+}
+
+main {
+	/*text-align: center;*/
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	/*background-color: white; */
+	/*background-color: var(--header);*/
+	border-radius: 5px;
+	color: white;
+	border: 1px solid var(--line);
+}
+
+img {
+	padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 50vh;
+  max-width: 100%;
+}
+
+a {
+	color: deepskyblue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#sunriseSomewhere {
+	/*background-color: hsl(194, 85%, 65%);*/
+	/*background-color: hsl(194, 85%, 81%);*/
+	background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));
+	/*border-radius: -10px;*/
+	/*border-bottom: 1px solid var(--line);*/
+}
