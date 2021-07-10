@@ -3,8 +3,9 @@ const md = new Remarkable({
 });
 // document.getElementById("markdown").innerHTML = md.render('# tada');
 var page = "Dot32.md"
-if (window.location.pathname === "/tutorials/" || window.location.pathname === "/tutorials/index.html") {
+if (window.location.pathname === "/tutorials" || window.location.pathname === "/tutorials/" || window.location.pathname === "/tutorials/index.html") {
 	page = "Tutorials.md"
+	document.getElementsByTagName("main").item(0).innerHTML = "these tutorials are call amirite"
 }
 
 var xhr = new XMLHttpRequest();
