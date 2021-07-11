@@ -7,8 +7,11 @@ const md = new Remarkable({
 // 	page = "Tutorials.md"
 // 	document.getElementsByTagName("main").item(0).innerHTML = "these tutorials are call amirite"
 // }
-var page = window.location.pathname.replace('index.html','')
+var page = window.location.pathname.replace('index.html','').replace('.html','')
 console.log(page)
+if (page.charAt(page.length-1) === "/") {
+	page.slice(0, -1);
+}
 page = page + ".md"
 if (page === "/.md") {
 	page = "Dot32.md"
