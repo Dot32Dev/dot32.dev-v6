@@ -53,8 +53,8 @@ function detectPageFromURL() {
 	}
 	page = page + ".md"
 	if (page === "/.md") {
-		page = "Dot32.md"
+		page = "dot32.md"
 	}
 	console.log(page)
-	return "/" + page
+	return page
 }
