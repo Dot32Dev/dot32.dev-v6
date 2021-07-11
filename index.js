@@ -33,7 +33,7 @@ xhr.send();
 // }
 
 function setContent(name) {
-	xhr.open("GET", name+".md");
+	xhr.open("GET", "/" + name + ".md");
 	xhr.send();
 	window.history.pushState(name, 'Dot32', '/'+name);
 }
@@ -48,7 +48,6 @@ window.onpopstate = function(event) {
 
 function detectPageFromURL() {
 	var page = window.location.pathname.replace('index.html','').replace('.html','')
-	console.log(page)
 	if (page.charAt(page.length-1) === "/") {
 		page.slice(0, -1);
 	}
@@ -56,5 +55,5 @@ function detectPageFromURL() {
 	if (page === "/.md") {
 		page = "Dot32.md"
 	}
-	return page
+	return "/" + page
 }
