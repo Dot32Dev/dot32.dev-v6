@@ -7,18 +7,18 @@ const md = new Remarkable({
 // 	page = "Tutorials.md"
 // 	document.getElementsByTagName("main").item(0).innerHTML = "these tutorials are call amirite"
 // }
-var page = window.location.pathname.replace('index.html','').replace('.html','')
-console.log(page)
-if (page.charAt(page.length-1) === "/") {
-	page.slice(0, -1);
-}
-page = page + ".md"
-if (page === "/.md") {
-	page = "Dot32.md"
-}
+// var page = window.location.pathname.replace('index.html','').replace('.html','')
+// console.log(page)
+// if (page.charAt(page.length-1) === "/") {
+// 	page.slice(0, -1);
+// }
+// page = page + ".md"
+// if (page === "/.md") {
+// 	page = "Dot32.md"
+// }
 
 var xhr = new XMLHttpRequest();
-xhr.open("GET", page);
+xhr.open("GET", detectPageFromURL());
 xhr.onload = function()
 {
   var text = xhr.responseText;
@@ -31,22 +31,6 @@ xhr.send();
 // for (let i = 0; i < nodelist.length; i++) {
 //   console.log(nodelist.item(i).innerHTML) // .onclick = function() {}
 // }
-function Dot32() {
-	xhr.open("GET", "Dot32.md");
-	xhr.send();
-	window.history.pushState('', 'Dot32', '/');
-}
-function Projects() {
-	xhr.open("GET", "Projects.md");
-	xhr.send();
-	// window.location.pathname = "/projects"
-	window.history.pushState('projects', 'Dot32', '/projects');
-}
-function Tutorials() {
-	xhr.open("GET", "Tutorials.md");
-	xhr.send();
-	window.history.pushState('tutorials', 'Dot32', '/tutorials');
-}
 
 function setContent(name) {
 	xhr.open("GET", name+".md");
@@ -57,6 +41,20 @@ function setContent(name) {
 window.onpopstate = function(event) {
   // console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
   if (event.state) {
-  	console.log(event.state.pathname)
+  	xhr.open("GET", detectPageFromURL());
+  	xhr.send();
   }
+}
+
+function detectPageFromURL() {
+	var page = window.location.pathname.replace('index.html','').replace('.html','')
+	console.log(page)
+	if (page.charAt(page.length-1) === "/") {
+		page.slice(0, -1);
+	}
+	page = page + ".md"
+	if (page === "/.md") {
+		page = "Dot32.md"
+	}
+	return page
 }
