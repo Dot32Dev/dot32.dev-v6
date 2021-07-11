@@ -2,11 +2,14 @@ const md = new Remarkable({
 	html: true
 });
 // document.getElementById("markdown").innerHTML = md.render('# tada');
-var page = "Dot32.md"
-if (window.location.pathname === "/tutorials" || window.location.pathname === "/tutorials/" || window.location.pathname === "/tutorials/index.html") {
-	page = "Tutorials.md"
-	document.getElementsByTagName("main").item(0).innerHTML = "these tutorials are call amirite"
-}
+// var page = "Dot32.md"
+// if (window.location.pathname === "/tutorials" || window.location.pathname === "/tutorials/" || window.location.pathname === "/tutorials/index.html") {
+// 	page = "Tutorials.md"
+// 	document.getElementsByTagName("main").item(0).innerHTML = "these tutorials are call amirite"
+// }
+var page = window.location.pathname.replace('index.html','')
+console.log(page)
+page = page + ".md"
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", page);
@@ -16,7 +19,7 @@ xhr.onload = function()
   // console.log(text);
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
 
-  // document.getElementById("url").innerHTML = "<h3>Testing (ignore)</h3><br>" + window.location.href + "<br>" + window.location.hostname + "<br>" + window.location.host + "<br>" + window.location.pathname
+  document.getElementById("url").innerHTML = "<h3>Testing (ignore)</h3><br>" + window.location.href + "<br>" + window.location.hostname + "<br>" + window.location.host + "<br>" + window.location.pathname
 }
 xhr.send();
 
