@@ -55,5 +55,8 @@ function setContent(name) {
 }
 
 window.onpopstate = function(event) {
-  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
+  // console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
+  if (event.state) {
+  	console.log(event.state.pathname)
+  }
 }
