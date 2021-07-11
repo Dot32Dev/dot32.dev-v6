@@ -53,3 +53,7 @@ function setContent(name) {
 	xhr.send();
 	window.history.pushState(name, 'Dot32', '/'+name);
 }
+
+window.onpopstate = function(event) {
+  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
+}
