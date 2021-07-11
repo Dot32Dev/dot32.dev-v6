@@ -39,11 +39,9 @@ function setContent(name) {
 }
 
 window.onpopstate = function(event) {
-  // console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
-  if (event.state) {
-  	xhr.open("GET", detectPageFromURL());
-  	xhr.send();
-  }
+	console.log(detectPageFromURL())
+	xhr.open("GET", detectPageFromURL());
+	xhr.send();
 }
 
 function detectPageFromURL() {
