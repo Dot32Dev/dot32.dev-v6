@@ -3,7 +3,7 @@
 Build physics for your platformer without using any libraries
 or the [inbuilt physics module](https://love2d.org/wiki/love.physics).
 
-![thumb.gif](tutorials/thumb.gif)
+![thumb.gif](/tutorials/thumb.gif)
 
 First, we want to create a yV variable for our player; a variable to keep track of the Y velocity. For every in-game frame, we want to add our "gravity" force to our velocity. I usually keep the gravity strength at 1. We also want to be updating the players Y position by their previous Y + the yV.
 Example code to be run every frame:

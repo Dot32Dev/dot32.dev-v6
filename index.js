@@ -24,6 +24,7 @@ xhr.onload = function()
   var text = xhr.responseText;
   // console.log(text);
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
+  hljs.highlightAll()
 }
 xhr.send();
 
