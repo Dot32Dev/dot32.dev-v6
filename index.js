@@ -10,6 +10,9 @@ const md = new Remarkable({
 var page = window.location.pathname.replace('index.html','')
 console.log(page)
 page = page + ".md"
+if (page === "/.md") {
+	page = "Dot32.md"
+}
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", page);
@@ -42,4 +45,10 @@ function Tutorials() {
 	xhr.open("GET", "Tutorials.md");
 	xhr.send();
 	window.history.pushState('tutorials', 'Dot32', '/tutorials');
+}
+
+function setContent(name) {
+	xhr.open("GET", name+".md");
+	xhr.send();
+	window.history.pushState(name, 'Dot32', '/'+name);
 }
