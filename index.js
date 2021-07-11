@@ -21,8 +21,6 @@ xhr.onload = function()
   var text = xhr.responseText;
   // console.log(text);
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
-
-  document.getElementById("url").innerHTML = "<h3>Testing (ignore)</h3><br>" + window.location.href + "<br>" + window.location.hostname + "<br>" + window.location.host + "<br>" + window.location.pathname
 }
 xhr.send();
 
