@@ -3,10 +3,9 @@
 # Hei ✌️ 
 I'm Dot32, a 16 year old from Western Australia. Feel free to check out my programming projects and tutorials hosted here!
 
-View the [source code](https://github.com/Dot32IsCool/dot32-website-v4) for this site.
-
-Play my officially released game, [Tiny Tank](https://dot32.itch.io/tiny-tank)!
-Or even check out [this song](https://soundcloud.com/dot32/journey-to-the-clouds) I produced.
+View the [source code](https://github.com/Dot32IsCool/dot32-website-v4) for this site. <br>
+Play my officially released game, [Tiny Tank](https://dot32.itch.io/tiny-tank)! <br>
+Or even check out [this song](https://soundcloud.com/dot32/journey-to-the-clouds) I produced. <br>
 
 If you would like to contact me in anyway, send me a friend request through Discord to **Dot32#1186**.
 
