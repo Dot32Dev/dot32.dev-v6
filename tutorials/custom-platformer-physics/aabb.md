@@ -6,14 +6,14 @@ understand the logic behind aabb
 
 The idea behind aabb intercept detection is that if we have the coordinates and width/height of two rectangles we can calculate whether they are interfering in eachothers space.
 
-**Get some paper out and sketch this to help you proccess the maths!**
+**Get some paper out and sketch this to help you proccess the maths!** <br>
 If the left side of the first rectangle's x position is less than the right side of the second rectangle's x position, and the right side of the first rectangle's x is greater than the left side of the second triangle's x, theN the two rectangles must be within eachothers X.
 
 If the top side of the first rectangle's y position is less than the bottom side of the second rectangle's y position, and the bottom side of the first rectangle's y is greater than the top side of the second triangle's y, then the two rectangles must be within eachothers Y.
 
 If the first rectangle is within both the x and the y of the second rectangle, then the rectangles must be touching!
 
-![aabb example image]("/tutorials/custom-platformer-physics/aabb.svg")
+![aabb example image](/tutorials/custom-platformer-physics/aabb.svg)
 
 We can represent rectangles in code with x, y, width and height parametres. Our rectangle is drawn from the top left corner at (x,y) and extends right/downwards for its width and height respectively.
 
