@@ -11,7 +11,6 @@ Example code to be run every frame:
 ```lua
 player.yV = player.yV + 1
 player.y = player.y - player.yV
-
 ```
 
 The velocity will be increasing by 1 each frame, and the player will fall at the velocity each frame, creating an exceleration and conservation of motion.
@@ -42,7 +41,6 @@ then
 	player.y = player.y - player.yV
 	player.y = 0
 end
-
 ```
 
 This code should be run after updating the Y position/velocity for the player each frame.
@@ -91,7 +89,6 @@ then
 	player.x = player.x - player.xV
 	player.xV = 0
 end
-
 ```
 
 As you can see, i added some code in the Y collision section to jump. This means that when you are colliding with the ground, you can press up arrow to jump!
