@@ -127,3 +127,7 @@ a:hover {
 	/*border-radius: -10px;*/
 	/*border-bottom: 1px solid var(--line);*/
 }
+
+pre {
+	font-family: PT Mono, monospace;
+}
