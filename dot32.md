@@ -12,3 +12,5 @@ Or even check out [this song](https://soundcloud.com/dot32/journey-to-the-clouds
 If you would like to contact me in anyway, i recommend sending a friend request through Discord to **Dot32#2572**.
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6" align="left">
+
+_ _
