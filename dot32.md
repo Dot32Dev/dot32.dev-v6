@@ -9,6 +9,6 @@ Play my officially released game, [Tiny Tank](https://dot32.itch.io/tiny-tank).
 
 Or even check out [this song](https://soundcloud.com/dot32/journey-to-the-clouds) I produced.
 
-If you would like to contact me in anyway, i recommend sending a friend request on Discord to **Dot32#2572**.
+If you would like to contact me in anyway, i recommend sending a friend request through Discord to **Dot32#2572**.
 
-<img src = https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6 align = left>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6" align="left">
