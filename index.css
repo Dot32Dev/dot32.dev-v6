@@ -106,7 +106,6 @@ main {
 img {
 	padding: 0;
   display: block;
-  margin: 0 auto;
   max-height: 50vh;
   max-width: 100%;
 }
