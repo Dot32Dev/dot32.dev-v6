@@ -128,6 +128,7 @@ a:hover {
 	/*border-bottom: 1px solid var(--line);*/
 }
 
-pre {
+code {
 	font-family: PT Mono, monospace;
+	background-color: #282c34;
 }
