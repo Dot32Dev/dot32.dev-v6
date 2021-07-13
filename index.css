@@ -136,7 +136,6 @@ code {
 
 *::-webkit-scrollbar { 
   width: 10px;
-  border: 1px solid var(--line);
 }
 
 *::-webkit-scrollbar-thumb {
