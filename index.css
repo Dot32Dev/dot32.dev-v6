@@ -135,13 +135,14 @@ code {
 }
 
 *::-webkit-scrollbar { 
-  width: 8px;
+  width: 10px;
+  border: 1px solid var(--line);
 }
 
 *::-webkit-scrollbar-thumb {
-  border-right: 8px solid black;
+  border-right: 10 solid #282c34;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  border-right: 8px solid gray;
+  border-right: 10 solid #90cc84;
 }
