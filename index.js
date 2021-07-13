@@ -37,6 +37,7 @@ function setContent(name) {
 	xhr.open("GET", "/" + name + ".md");
 	xhr.send();
 	window.history.pushState(name, 'Dot32', '/'+name);
+	return false
 }
 
 window.onpopstate = function(event) {
