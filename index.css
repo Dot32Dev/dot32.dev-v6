@@ -140,9 +140,12 @@ code {
 }
 
 *::-webkit-scrollbar-thumb {
-  border-right: 10 solid #282c34;
+  background-color: #282c34;
+  border: 1px solid var(--background);
+  border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  border-right: 10 solid #90cc84;
+  background-color: #90cc84;
+  border-radius: 10px;
 }
