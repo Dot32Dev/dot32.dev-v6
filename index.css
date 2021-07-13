@@ -133,3 +133,15 @@ code {
 	font-family: PT Mono, monospace;
 	background-color: #282c34;
 }
+
+*::-webkit-scrollbar { 
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-right: 8px solid black;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  border-right: 8px solid gray;
+}
