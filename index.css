@@ -55,7 +55,7 @@ header nav ul li, header .socials ul li {
 	display: inline;
 }
 
-header nav ul li a, header .socials ul li span {
+header nav ul li button, header .socials ul li span {
   /*background-color: #2e2e2e;*/
   color: white;
   border: none;
@@ -77,7 +77,7 @@ header .socials ul li span {
 	padding: 015px 5px;
 }
 
-header nav ul li a:hover {
+header nav ul li button:hover {
 	background-color: var(--button);
 	/*color:  plum;*/
 	color:  #90cc84;
