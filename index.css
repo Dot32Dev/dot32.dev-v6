@@ -157,6 +157,10 @@ code {
 	background-color: var(--header);
 }
 
+.largeLink h2 {
+	margin-bottom: 0;
+}
+
 .largeLink div {
 	margin-left: 30px;
 }
