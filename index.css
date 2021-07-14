@@ -151,22 +151,24 @@ code {
 
 .largeLink {
 	display: flex;
-	align-items: flex-start
+	align-items: flex-start;
 	padding: 20px;
 	border-radius: 5px;
-	background-color: var(--button);
+	background-color: var(--header);
 }
 
 .largeLink div {
-	margin: 30;
+	margin-left: 30px;
 }
 
 .largeLink img {
 	height: 130px;
 }
 
-.langauge {
+span.language {
 	background-color: #282c34;
 	background-radius: 10px;
-	border: 1px solid var(--background);
+	padding-right: 10px;
+	padding-left: 10px;
+	color: white;
 }
