@@ -12,9 +12,7 @@
 		<p>How to detect interception between circles and rectangles.</p>
 	</div>
 </div>
-
-<br>
-
+<p></p>
 <div class=largeLink>
 	<a href="/tutorials/auto-tilling" onClick="setContent('tutorials/auto-tilling')">
 		<img src="/tutorials/autotilling.gif">
