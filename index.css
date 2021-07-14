@@ -148,3 +148,8 @@ code {
   background-color: #90cc84;
   border-radius: 10px;
 }
+
+.largeLink {
+	display: flex;
+	align-items: flex-start
+}
