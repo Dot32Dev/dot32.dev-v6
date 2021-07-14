@@ -158,7 +158,10 @@ code {
 }
 
 .largeLink h2 {
-	margin-bottom: 0;
+	margin-bottom: 5px;
+}
+.largeLink p {
+	margin: 5px;
 }
 
 .largeLink div {
@@ -166,7 +169,7 @@ code {
 }
 
 .largeLink img {
-	height: 130px;
+	height: 110px;
 }
 
 span.language {
