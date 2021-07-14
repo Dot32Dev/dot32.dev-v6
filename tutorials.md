@@ -6,8 +6,8 @@
 	</a>
 	<div>
 		<a href="/tutorials/auto-tilling">
-			<h2>How to create auto tilling</h2>
+			<h2>How to build custom auto tilling <span class="language">Lua</span></h2>
 		</a>
-		<p><span class="language">Lua</span></p>
+		<p>It's not as hard as you might think!</p>
 	</div>
 </div>
