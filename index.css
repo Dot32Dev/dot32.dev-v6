@@ -157,11 +157,11 @@ code {
 	background-color: var(--button);
 }
 
-.largeLink > div {
+.largeLink div {
 	margin: 30;
 }
 
-.largeLink > img {
+.largeLink img {
 	height: 130px;
 }
 
