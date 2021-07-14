@@ -13,6 +13,8 @@
 	</div>
 </div>
 
+<br>
+
 <div class=largeLink>
 	<a href="/tutorials/auto-tilling" onClick="setContent('tutorials/auto-tilling')">
 		<img src="/tutorials/autotilling.gif">
