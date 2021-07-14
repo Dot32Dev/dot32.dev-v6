@@ -166,6 +166,7 @@ code {
 
 .largeLink div {
 	margin-left: 30px;
+	max-width: 500px;
 }
 
 .largeLink img {
