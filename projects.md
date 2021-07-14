@@ -25,10 +25,36 @@
 		<p>Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential</p>
 	</div>
 </div>
-
 <hr>
-
-## more to come
+<div class=largeLink>
+	<div>
+		<a href="https://discordtimestampgenerator.netlify.app/">
+			<h2>Discord timestamp generator</h2>
+		</a>
+		<span class="language">Web</span>
+		<p>Generate relative timestamps that you can paste into chat</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
+	<div>
+		<a href="https://github.com/Dot32IsCool/count-lines">
+			<h2>Count Lines</h2>
+		</a>
+		<span class="language">Nim compiler required</span>
+		<p>Will automatically count how many lines of (Lua) sourcecode is in a folder</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
+	<div>
+		<a href="https://github.com/Dot32IsCool/italian-numbers">
+			<h2>Italian Number Practice</h2>
+		</a>
+		<span class="language">Nim compiler required</span>
+		<p>Will quiz you on your knowlage of Italian numbers</p>
+	</div>
+</div>
 
 also see: [my github reopositories](https://github.com/Dot32IsCool)
 

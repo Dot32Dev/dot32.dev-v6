@@ -180,3 +180,7 @@ span.language {
 	padding-left: 10px;
 	color: white;
 }
+
+hr {
+	border-color: var(--line);
+}
