@@ -29,12 +29,15 @@ window.onpopstate = function(event) {
 function detectPageFromURL() {
 	var page = window.location.pathname.replace('index.html','').replace('.html','')
 	if (page.charAt(page.length-1) === "/") {
+		console.log("removing slash")
 		page.slice(0, -1);
 	}
 	page = page + ".md"
 	if (page === "/.md") {
 		page = "dot32.md"
 	}
+	page = page.replace('/.md','.md')
+
 	console.log(page)
 	return page
 }
