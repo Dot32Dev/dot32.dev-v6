@@ -11,6 +11,9 @@ xhr.onload = function()
 {
   var text = xhr.responseText;
   // console.log(text);
+  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
+  	text = "# 404 <br> The page you were looking for could not be resolved"
+  }
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
   hljs.highlightAll()
 }
