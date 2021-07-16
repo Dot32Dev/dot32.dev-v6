@@ -2,6 +2,8 @@ const md = new Remarkable({
 	html: true
 });
 
+console.log(document)
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", detectPageFromURL());
 console.log(detectPageFromURL())
@@ -29,7 +31,7 @@ window.onpopstate = function(event) {
 function detectPageFromURL() {
 	var page = window.location.pathname.replace('index.html','').replace('.html','')
 	if (page.charAt(page.length-1) === "/") {
-		console.log("removing slash")
+		console.log("removing slash to " + page)
 		page.slice(0, -1);
 	}
 	page = page + ".md"
