@@ -162,7 +162,7 @@ code {
 }
 
 .largeLink img {
-	height: 110px;
+	width: 146px;
 }
 
 span.language {
@@ -178,14 +178,21 @@ hr {
 }
 
 @media only screen and (max-width: 800px) {
- main {
+	main {
  	border: none;
  }
 }
 
 @media only screen and (max-width: 720px) {
- header .socials {
+	header .socials {
 		display: none;
+	}
+	.largeLink {
+		flex-direction: column;
+	}
+	.largeLink div {
+		margin-left: 0px;
+		max-width: 500px;
 	}
 }
 
