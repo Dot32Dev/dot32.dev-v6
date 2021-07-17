@@ -177,6 +177,12 @@ hr {
 	border-color: var(--line);
 }
 
+@media only screen and (max-width: 800px) {
+ main {
+ 	border: none;
+ }
+}
+
 @media only screen and (max-width: 720px) {
  header .socials {
 		display: none;
