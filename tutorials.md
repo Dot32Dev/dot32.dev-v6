@@ -1,11 +1,11 @@
 # Tutorials
 
 <div class=largeLink>
-	<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision')">
+	<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision') return false">
 		<img src="/tutorials/rectvcircle.gif">
 	</a>
 	<div>
-		<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision')">
+		<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision') return false">
 			<h2>Circle versus rectangle collision</h2>
 		</a>
 		<span class="language">Lua</span>
