@@ -16,6 +16,7 @@ xhr.onload = function()
   }
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
   hljs.highlightAll()
+  twemoji.parse(document.body)
 }
 xhr.send();
 
