@@ -1,4 +1,4 @@
-<div style="background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));max-height: 30vh;"><img src="sunrise somewhere.svg"></div>
+<div style="background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));"><img src="sunrise somewhere.svg" style="max-height: 30vh;"></div>
 
 # Hei ✌️ 
 I'm Dot32, a 16 year old from Western Australia. Feel free to check out my programming projects and tutorials hosted here!
