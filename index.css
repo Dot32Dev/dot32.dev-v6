@@ -181,6 +181,12 @@ hr {
 	border-color: var(--line);
 }
 
+img.emoji {
+	width:1.5em;
+	pointer-events: none; 
+	display: inline;
+}
+
 @media only screen and (max-width: 800px) {
 	main {
  	border: none;
