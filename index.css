@@ -161,12 +161,12 @@ code {
 	max-width: 500px;
 }
 
-.largeLink img {
-	width: 146px;
+.largeLink div:only-child {
+	margin-left: 0;
 }
 
-.largeLink:has( img) div {
-	margin-left: 0px;
+.largeLink img {
+	width: 146px;
 }
 
 span.language {
