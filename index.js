@@ -22,7 +22,7 @@ xhr.send();
 function setContent(name) {
 	xhr.open("GET", "/" + name + ".md");
 	xhr.send();
-	window.history.pushState(name, 'Dot32', '/'+name);
+	window.history.pushState(name, `Dot32 | ${name.replace('.md', '')}`, '/'+name);
 }
 
 window.onpopstate = function(event) {
@@ -42,6 +42,8 @@ function detectPageFromURL() {
 		page = "dot32.md"
 	}
 	page = page.replace('/.md','.md')
+
+	document.title = page.replace('.md', '')
 
 	console.log(page)
 	return page
