@@ -45,7 +45,7 @@ function detectPageFromURL() {
 	page = page.replace('/.md','.md')
 
 	var title = page.replace('.md', '')
-	title.replace('/', '')
+	title.substring(1)
 	title = "Dot32 | " + title
 	document.title = title
 
