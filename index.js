@@ -64,9 +64,9 @@ function getPageData() {
 	}
 	console.log(data)
 	if (data.archived) {
-		document.getElementById("json").style.display = "block"
-		document.getElementById("json").innerHTML = "<h2>This page is archived, and may be out of date/hard to understand</h2>"
+		document.getElementById("alert").style.display = "block"
+		document.getElementById("alert").innerHTML = "<h2>This page is archived, and may be out of date/hard to understand</h2>"
 	} else {
-		document.getElementById("json").style.display = "none"
+		document.getElementById("alert").style.display = "none"
 	}
 }
