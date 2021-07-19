@@ -3,7 +3,7 @@ This written tutorial will show you how to detect interception between circles a
 
 ![thumbnail gif](/tutorials/rectvcircle.gif)
 
-Now, you should already know that to detect interception between a circle and a point, all we need is to find the distance from the point to the centre of the circle. If the distance is less thand the radius, then the point has to be within the circle.
+Now, you should already know that to detect interception between a circle and a point, all we need is to find the distance from the point to the centre of the circle. If the distance is less than the radius, then the point has to be within the circle.
 This actually means that the only information we need to find is of the cloesest point on the rectangle to the circle. If we can find the closest point, we can measure the distance and detect interception.
 
 Finding the closest point is actually really simple. We can simply "clamp" the coordinates of the circle onto the rectangle.
@@ -22,7 +22,7 @@ py = math.min(py, rectangle.y + rectangle.h)
 And just like this, our entire collision function can be written as this:
 
 ```lua
-function circle_Rectangle(circle, rectangle)
+function circleVsRectangle(circle, rectangle)
   local px = circle.x
   local py = circle.y
   px = math.max(px, rectangle.x)

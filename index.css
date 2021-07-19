@@ -187,6 +187,10 @@ img.emoji {
 	display: inline;
 }
 
+json-data {
+	display: none;
+}
+
 @media only screen and (max-width: 800px) {
 	main {
  	border: none;

@@ -10,13 +10,19 @@ xhr.onload = function()
   var text = xhr.responseText;
   // console.log(text);
   if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
-  	text = `
-  	# 404
-  	The page you were looking for could not be resolved.`
+  	text = '# 404'
   }
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
   hljs.highlightAll()
   twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
+
+  try {
+	  var data = JSON.parse(document.getElementsByTagName("json-data").item(0).innerHTML)
+	}
+	catch(err) {
+	  var data = JSON.parse("{}")
+	}
+	console.log(data)
 }
 xhr.send();
 

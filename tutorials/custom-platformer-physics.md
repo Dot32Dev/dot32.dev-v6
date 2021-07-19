@@ -97,3 +97,11 @@ Something to note is that while each section has to be together, you can change 
 
 `Written by Dot32`
 `18th Jan 2021`
+
+<json-data>
+	{
+		"archived": true,
+		"author": "Dot32",
+		"date": "18th Jan 2021"
+	}
+</json-data>
