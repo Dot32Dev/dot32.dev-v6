@@ -16,14 +16,7 @@ xhr.onload = function()
   hljs.highlightAll()
   twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
 
-  try {
-	  var data = JSON.parse(document.getElementsByTagName("json-data").item(0).innerHTML)
-	}
-	catch(err) {
-	  var data = JSON.parse("{}")
-	  console.log(err)
-	}
-	console.log(data)
+  getPageData()
 }
 xhr.send();
 
@@ -59,4 +52,15 @@ function detectPageFromURL() {
 
 	console.log(page)
 	return page
+}
+
+function getPageData() {
+	try {
+	  var data = JSON.parse(document.getElementById("json").innerHTML)
+	}
+	catch(err) {
+	  var data = JSON.parse("{}")
+	  console.log(err)
+	}
+	console.log(data)
 }
