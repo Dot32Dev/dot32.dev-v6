@@ -63,4 +63,10 @@ function getPageData() {
 	  console.log(err)
 	}
 	console.log(data)
+	if (data.archived) {
+		document.getElementById("json").style.display = "block"
+		document.getElementById("json").innerHTML = "<h2>This page is archived, and may be out of date/hard to understand</h2>"
+	} else {
+		document.getElementById("json").style.display = "none"
+	}
 }
