@@ -21,6 +21,7 @@ xhr.onload = function()
 	}
 	catch(err) {
 	  var data = JSON.parse("{}")
+	  console.log(err)
 	}
 	console.log(data)
 }
