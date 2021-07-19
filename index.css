@@ -191,6 +191,16 @@ img.emoji {
 	display: none;
 }
 
+#alert {
+	background-color: rgb(107 101 65);
+  border: 1px solid rgb(202 185 106);
+  display: none;
+  max-width: 800px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 20px;
+}
+
 @media only screen and (max-width: 800px) {
 	main {
  	border: none;
