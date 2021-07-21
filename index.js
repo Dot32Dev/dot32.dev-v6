@@ -62,11 +62,27 @@ function getPageData() {
 	  var data = JSON.parse("{}")
 	  console.log(err)
 	}
+	
 	console.log(data)
+
 	if (data.archived) {
 		document.getElementById("alert").style.display = "block"
 		document.getElementById("alert").innerHTML = "<h3>This page is archived, and may be out of date/hard to understand</h3>"
 	} else {
 		document.getElementById("alert").style.display = "none"
 	}
+
+	if (data.author && data.date) {
+		document.getElementById("datetime").style.display = "block"
+		document.getElementById("datetime").innerHTML = `Written ${data.date} by ${data.author}`
+	} else if (data.author) {
+		document.getElementById("datetime").style.display = "block"
+		document.getElementById("datetime").innerHTML = `Written by ${data.author}`
+	} else if (data.date) {
+		document.getElementById("datetime").style.display = "block"
+		document.getElementById("datetime").innerHTML = `Written ${data.date}`
+	} else {
+		document.getElementById("datetime").style.display = "none"
+	}
+
 }

@@ -95,9 +95,6 @@ As you can see, i added some code in the Y collision section to jump. This means
 
 Something to note is that while each section has to be together, you can change their order freely. You can do all the Y calculations first and then calulate the X, or you can do all the X caculations first and caclulate the Y, it doesn't really matter. For this tutorial i chose to explain the Y axis first as gravity is a nice first accomplishment to reach.
 
-`Written by Dot32`
-`18th Jan 2021`
-
 <div id="json">
 	{
 		"archived": true,
