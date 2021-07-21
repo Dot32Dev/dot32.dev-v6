@@ -191,7 +191,7 @@ img.emoji {
 	display: none;
 }
 
-#alert, #datetimte {
+#alert, #datetime {
 	background-color: rgb(107 101 65);
   border: 1px solid rgb(202 185 106);
   display: none;
@@ -204,13 +204,13 @@ img.emoji {
   text-align: center;
 }
 
-#datetimte {
+#datetime {
 	background: none;
 	border: 1px solid var(--line);
 }
 
 @media only screen and (max-width: 800px) {
-	main, #alert, #datetimte {
+	main, #alert, #datetime {
  	border: none;
  }
 }
