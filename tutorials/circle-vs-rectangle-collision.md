@@ -3,10 +3,10 @@ This written tutorial will show you how to detect interception between circles a
 
 ![thumbnail gif](/tutorials/rectvcircle.gif)
 
-Now, you should already know that to detect interception between a circle and a point, all we need is to find the distance from the point to the centre of the circle. If the distance is less than the radius, then the point has to be within the circle.
-This actually means that the only information we need to find is of the cloesest point on the rectangle to the circle. If we can find the closest point, we can measure the distance and detect interception.
+You may already know that to detect interception between a circle and a point, all we need is to calculate the distance from the point to the centre of the circle. If the distance is less than the radius, then the point has to be within the circle.
+This actually means that the only information we need to find for this collision detection is the closest point on the rectangle to the circle. This will give us the direct distance to measure against the radius.
 
-Finding the closest point is actually really simple. We can simply "clamp" the coordinates of the circle onto the rectangle.
+Finding the closest point is actually really simple! We can simply get the coordinates of the circle and "clamp" them onto the rectangle:
 
 ```lua
 local px = circle.x
@@ -16,7 +16,7 @@ px = math.min(px, rectangle.x + rectangle.w)
 py = math.max(py, rectangle.y)
 py = math.min(py, rectangle.y + rectangle.h)
 
--- clamps the cirlce's position to the boundaries of the rectangle
+-- sets px/py to the circle's coordinates and clamps it to the bounds of the rectangle
 ```
 
 And just like this, our entire collision function can be written as this:
@@ -39,5 +39,10 @@ Circle is in the format of {x=, y=, r=}, rectangle is in {x=,y=,w=,h=}
 
 Happy coding!
 
-`Written by Dot32`
-`19th Jan 2021`
+<div id="json">
+  {
+    "author": "Dot32",
+    "date": "18th Jan 2021",
+    "edited": "21st Jul 2021"
+  }
+</div>
