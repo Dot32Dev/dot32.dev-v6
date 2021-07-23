@@ -3,7 +3,7 @@
   --button: #425066;
   --background: hsl(218deg 21% 23%);
   --shadow: hsl(0deg 0% 0% / 50%);
-  /*--line: #5D7191;*/
+  --line: #5D7191;
 }
 
 
@@ -136,7 +136,7 @@ code {
 
 *::-webkit-scrollbar-thumb {
   background-color: #282c34;
-  border: 1px solid var(--background);
+  /*border: 1px solid var(--background);*/
   border-radius: 10px;
 }
 
@@ -182,7 +182,7 @@ span.language {
 }
 
 hr {
-	/*border-color: var(--line);*/
+	border-color: var(--line);
 }
 
 img.emoji {
