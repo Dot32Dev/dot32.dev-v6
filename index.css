@@ -1,8 +1,9 @@
 :root {
   --header: #3B475B;
   --button: #425066;
-  --background: #333d4e;
-  --line: #5D7191;
+  --background: hsl(218deg 21% 23%);
+  --shadow: hsl(0deg 0% 0% / 50%);
+  /*--line: #5D7191;*/
 }
 
 
@@ -10,7 +11,7 @@ body {
 	font-family: PT Sans, helvetica, sans-serif;
 	/*background-color: #212121; */
 	/*background-color: #f0f0f0;*/
-	background-color: var(--background);
+	background-color: hsl(358deg 21% 21%);
 	/*background-color: hsl(194, 85%, 81%);*/
   /*color: #c2c2c2;*/
   margin:  0px;
@@ -27,11 +28,12 @@ header {
 	top: 0;
   left: 0;
   margin: 0;
- 	border-bottom: 1px solid var(--line);
+ 	/*border-bottom: 1px solid var(--line);*/
 
  	display: flex;
  	justify-content: space-between;
  	align-items: center;
+ 	box-shadow: 0px 0px 50px var(--shadow);
 }
 
 header nav, header .socials {
@@ -95,13 +97,15 @@ main, #datetime, #alert  {
 	/*background-color: var(--header);*/
 	border-radius: 5px;
 	color: white;
-	border: 1px solid var(--line);
+	/*border: 1px solid var(--line);*/
+	box-shadow: 0px 0px 50px var(--shadow);
+	background-color: var(--background);
 }
 
 .segment {
 	padding: 20px;
 	border-radius: 5px;
-	border: 1px solid var(--line);
+	/*border: 1px solid var(--line);*/
 }
 
 img {
@@ -178,7 +182,7 @@ span.language {
 }
 
 hr {
-	border-color: var(--line);
+	/*border-color: var(--line);*/
 }
 
 img.emoji {
@@ -193,6 +197,12 @@ img.emoji {
 
 #datetime, #alert {
 	background: none;
+}
+
+@media only screen and (min-width:  800px) {
+	body {
+		overscroll-behavior-y: none;
+	}
 }
 
 @media only screen and (max-width: 800px) {
