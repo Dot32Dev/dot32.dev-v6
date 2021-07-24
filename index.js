@@ -13,8 +13,6 @@ xhr.onload = function()
   // console.log(text);
   if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
   	text = '# 404'
-  } else {
-  	cache[detectPageFromURL()] = text
   }
   document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
   hljs.highlightAll()
@@ -25,18 +23,16 @@ xhr.onload = function()
 xhr.send();
 
 function setContent(name) {
-	// xhr.open("GET", "/" + name + ".md");
-	// xhr.send();
+	xhr.open("GET", "/" + name + ".md");
+	xhr.send();
 	window.history.pushState(name, `Dot32`, '/'+name);
 	document.title =  `Dot32 | ${name.replace('.md', '')}`
-	checkCache("/" + name + ".md")
 }
 
 window.onpopstate = function(event) {
 	console.log(detectPageFromURL())
-	// xhr.open("GET", detectPageFromURL());
-	// xhr.send();
-	checkCache(detectPageFromURL())
+	xhr.open("GET", detectPageFromURL());
+	xhr.send();
 }
 
 function detectPageFromURL() {
@@ -91,18 +87,4 @@ function getPageData() {
 		document.getElementById("datetime").style.display = "none"
 	}
 
-}
-
-function checkCache(file) {
-	console.log(cache)
-	if (cache[file]) {
-		document.getElementsByTagName("main").item(0).innerHTML = md.render(cache[file]);
-	  hljs.highlightAll()
-	  twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
-
-	  getPageData()
-	} else {
-		xhr.open("GET", file);
-		xhr.send();
-	}
 }
