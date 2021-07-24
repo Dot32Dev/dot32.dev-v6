@@ -1,8 +1,8 @@
 # Render Markdown With Javascript Using Remarkable
 
-Integrate markdown into your website, to streamline creation!
+Integrate markdown into your website, to streamline page creation!
 
-![thumb.png](https://imgur.com/a/ZrKfKoZ)
+![thumb.png](/tutorials/mysite.png)
 
 In this tutorial, we will be using [remarkable](https://github.com/jonschlinkert/remarkable), for it's ease of use and quality. Getting remarkable into your project is as simple as adding this line into your html:
 ```html
@@ -16,9 +16,9 @@ console.log(md.render('# tada!'));
 // will log <h1>tada!</h1>
 ```
 
-By default, remarkable will parse html tags as escaped text. This would be useful if users were given the power of markdown (such as for comments), in which case you may not want them messing with custom html elements and styles. However, if this is something you want, you can enable it in the constructor.
+By default, remarkable will parse html tags as escaped text. This would be useful if users were given the power of markdown (such as for comments), in which case it may not be advisable to give them the power of custom html elements and styles. However, if this is something you want for yourself, you can enable it in the constructor.
 
-For my site, I enabled this, as nobody will be using this maliciously. When creating a new remarkable, you can specify an object of settings:
+For my site I enabled this, as nobody will be using this maliciously. When creating a new remarkable, you can specify an object of settings:
 ```js
 const md = new Remarkable({
 	html:true
