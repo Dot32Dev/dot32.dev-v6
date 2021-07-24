@@ -58,10 +58,10 @@ function detectPageFromURL() {
 
 function getPageData() {
 	try {
-	  let data = JSON.parse(document.getElementById("json").innerHTML)
+	  var data = JSON.parse(document.getElementById("json").innerHTML)
 	}
 	catch(err) {
-	  let data = JSON.parse("{}")
+	  var data = JSON.parse("{}")
 	  console.log(err)
 	}
 	
