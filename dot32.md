@@ -7,6 +7,6 @@ View the [source code](https://github.com/Dot32IsCool/dot32-website-v4) for this
 Play my officially released game, [Tiny Tank](https://dot32.itch.io/tiny-tank)! <br>
 Or even check out [this song](https://soundcloud.com/dot32/journey-to-the-clouds) I produced. <br>
 
-If you would like to contact me in anyway, send me a friend request through Discord to **Dot32#1186**.
+If you would like to contact me in any way, send me a friend request through Discord to **Dot32#1186**.
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6">
