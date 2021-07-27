@@ -40,6 +40,9 @@
 </div>
 <p></p>
 <div class=largeLink>
+	<a href="https://discordtimestampgenerator.netlify.app/">
+		<img src=https://user-images.githubusercontent.com/61964090/124254092-4caf5d00-db5b-11eb-82a7-c31a630218d2.png>
+	</a>
 	<div>
 		<a href="https://discordtimestampgenerator.netlify.app/">
 			<h2>Discord timestamp generator</h2>
