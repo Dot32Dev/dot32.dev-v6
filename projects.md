@@ -72,4 +72,4 @@
 	</div>
 </div>
 
-also see: [my github reopositories](https://github.com/Dot32IsCool)
+also see: [my github repositories](https://github.com/Dot32IsCool)
