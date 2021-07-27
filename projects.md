@@ -27,6 +27,18 @@
 </div>
 <hr>
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/3D-in-love2D">
+		<img src="https://user-images.githubusercontent.com/61964090/127146335-16ba2a76-f36b-4096-8545-b18322c615cc.png">
+	</a>
+	<div>
+		<a href="https://github.com/Dot32IsCool/3D-in-love2D">
+			<h2>3D engine in Love2D</h2>
+		</a>
+		<span class="language">Requires Love2D</span>
+		<p>Basic 3D engine using a custom shader and depth buffer</p>
+	</div>
+</div>
+<div class=largeLink>
 	<div>
 		<a href="https://discordtimestampgenerator.netlify.app/">
 			<h2>Discord timestamp generator</h2>
@@ -57,5 +69,3 @@
 </div>
 
 also see: [my github reopositories](https://github.com/Dot32IsCool)
-
-<!-- <div class="segment"><img src="favicon.png"><button>Tiny Tank</button></div> -->
