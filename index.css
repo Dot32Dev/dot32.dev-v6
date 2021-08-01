@@ -186,7 +186,7 @@ hr {
 }
 
 img.emoji {
-	width:1.5em;
+	width:1em;
 	pointer-events: none; 
 	display: inline;
 }
