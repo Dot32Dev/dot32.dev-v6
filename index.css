@@ -185,6 +185,12 @@ hr {
 	border-color: var(--line);
 }
 
+h2 {
+	border-bottom: 1px solid var(--line);
+  padding-bottom: .3em;	
+}
+
+
 img.emoji {
 	width:1em;
 	pointer-events: none; 
