@@ -3,7 +3,7 @@
 
 ## Who am I ✌️ 
 I'm Dot32, a 16 year old from Western Australia. I started making games when I was 9, and I never stopped!
-I built this site to showcase my games and projects. Also see [my tutorials](/tutorials)!
+I built this site to showcase some of my best games and projects.
 
 My language of choice for the moment is Lua, using an open source framework called Love2D for graphics and other useful functions. Unlike larger game engines like unity or godot, there is no GUI for making games, and far less is provided to support you. I have written my own custom physics solutions, and I just recently wrote a [primitive 3D engine](https://github.com/Dot32IsCool/3D-in-love2D) utilising some simple shaders and a z-buffer.
 
