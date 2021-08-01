@@ -32,7 +32,7 @@ If you would like to contact me in any way, the best way to do so would be throu
 </div>
 
 ## Statistics
-I just thought this representation of my frequesntly used languages was interesting ✨
+I just thought this representation of my frequently used languages was interesting ✨
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6">
 
