@@ -130,6 +130,11 @@ code {
 	background-color: #282c34;
 }
 
+h1, h2 {
+	border-bottom: 1px solid var(--line);
+  padding-bottom: .3em;	
+}
+
 *::-webkit-scrollbar { 
   width: 10px;
 }
@@ -155,6 +160,7 @@ code {
 
 .largeLink h2 {
 	margin-bottom: 5px;
+	border: none;
 }
 .largeLink p {
 	margin: 5px;
@@ -183,11 +189,6 @@ span.language {
 
 hr {
 	border-color: var(--line);
-}
-
-h2 {
-	border-bottom: 1px solid var(--line);
-  padding-bottom: .3em;	
 }
 
 
