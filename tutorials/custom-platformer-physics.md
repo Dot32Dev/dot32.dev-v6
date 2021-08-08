@@ -100,6 +100,6 @@ Something to note is that while each section has to be together, you can change 
 		"archived": true,
 		"author": "Dot32",
 		"date": "18th Jan 2021",
-		"title": "Custom platformer physics - Dot32 dev"
+		"title": "Custom platformer physics"
 	}
 </div>
