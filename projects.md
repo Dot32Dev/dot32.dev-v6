@@ -76,6 +76,6 @@ also see: [my github repositories](https://github.com/Dot32IsCool)
 
 <div id="json">
   {
-    "title": "Dot32's Projects"
+    "title": "Dot32's projects"
   }
 </div>
