@@ -42,6 +42,6 @@
 
 <div id="json">
   {
-    "title": "Dot32's tutorials"
+    "title": "Tutorials"
   }
 </div>
