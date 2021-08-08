@@ -89,8 +89,15 @@ function getPageData() {
 
 	if (data.title) {
 		document.title = data.title
+		let cardTitle = `${data.title} - Dot32 dev`.replace('Dot32 dev - ', '')
+		document.querySelector('meta[property="og:title"]').setAttribute("content", cardTitle);
+		console.log(cardTitle)
 	} else {
 		document.title = `Dot32 | ${detectPageFromURL().replace('.md', '').replace('/', '')}`
 	}
 
+	if (data.description) {
+		document.querySelector('meta[name="description"]').setAttribute("content", data.description);
+		console.log(data.description)
+	}
 }
