@@ -73,7 +73,7 @@ Happy coding!
 <div id="json">
 	{
 		"author": "Dot32",
-		"date": "24th Jul 2021"
+		"date": "24th Jul 2021",
 		"title": "Render markdown with javascript! - Dot32 dev"
 	}
 </div>
