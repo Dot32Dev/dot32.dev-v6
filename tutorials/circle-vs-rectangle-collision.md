@@ -45,6 +45,7 @@ Happy coding!
     "date": "18th Jan 2021",
     "edited": "21st Jul 2021",
     "title": "Circle VS rectangle collision detection",
-    "description": "This written tutorial will show you how to detect interception between circles and rectangles."
+    "description": "This written tutorial will show you how to detect interception between circles and rectangles.",
+    "image": "/tutorials/rectvcircle.gif"
   }
 </div>

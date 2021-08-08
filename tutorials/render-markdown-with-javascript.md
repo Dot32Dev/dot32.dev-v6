@@ -75,6 +75,7 @@ Happy coding!
 		"author": "Dot32",
 		"date": "24th Jul 2021",
 		"title": "Render markdown with javascript!",
-    "description": "Integrate markdown into your website, to streamline page creation!"
+    "description": "Integrate markdown into your website, to streamline page creation!",
+		"image": "/tutorials/mysite.png"
   }
 </div>

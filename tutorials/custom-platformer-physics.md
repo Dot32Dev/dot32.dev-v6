@@ -101,6 +101,7 @@ Something to note is that while each section has to be together, you can change 
 		"author": "Dot32",
 		"date": "18th Jan 2021",
 		"title": "Custom platformer physics",
-    "description": "Build physics for your platormer without and libraries or the inbuilt physics module"
+    "description": "Build physics for your platormer without and libraries or the inbuilt physics module",
+		"image": "/tutorials/thumb.gif"
 	}
 </div>
