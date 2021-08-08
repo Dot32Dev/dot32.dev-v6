@@ -6,7 +6,7 @@
 	</a>
 	<div>
 		<a href="https://dot32.itch.io/tiny-tank">
-			<h2>Tiny Tank</h2>
+			<h2>Tiny Tank <span class="fas fa-external-link-alt"></span></h2>
 		</a>
 		<span class="language">Windows, MacOS</span>
 		<p>Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!</p>
@@ -19,7 +19,7 @@
 	</a>
 	<div>
 		<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
-			<h2>Quick and simple platformer</h2>
+			<h2>Quick and simple platformer <span class="fas fa-external-link-alt"></span></h2>
 		</a>
 		<span class="language">Windows, MacOS</span>
 		<p>Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential</p>
@@ -32,7 +32,7 @@
 	</a>
 	<div>
 		<a href="https://github.com/Dot32IsCool/3D-in-love2D">
-			<h2>3D engine in Love2D</h2>
+			<h2>3D engine in Love2D <span class="fas fa-external-link-alt"></span></h2>
 		</a>
 		<span class="language">Requires Love2D</span>
 		<p>Basic 3D engine using a custom shader and depth buffer</p>
@@ -45,7 +45,7 @@
 	</a>
 	<div>
 		<a href="https://discordtimestampgenerator.netlify.app/">
-			<h2>Discord timestamp generator</h2>
+			<h2>Discord timestamp generator <span class="fas fa-external-link-alt"></span></h2>
 		</a>
 		<span class="language">Web</span>
 		<p>Generate relative timestamps that you can paste into chat</p>
@@ -55,7 +55,7 @@
 <div class=largeLink>
 	<div>
 		<a href="https://github.com/Dot32IsCool/count-lines">
-			<h2>Count Lines</h2>
+			<h2>Count Lines <span class="fas fa-external-link-alt"></span></h2>
 		</a>
 		<span class="language">Nim compiler required</span>
 		<p>Will automatically count how many lines of (Lua) sourcecode is in a folder</p>
@@ -65,7 +65,7 @@
 <div class=largeLink>
 	<div>
 		<a href="https://github.com/Dot32IsCool/italian-numbers">
-			<h2>Italian Number Practice</h2>
+			<h2>Italian Number Practice <span class="fas fa-external-link-alt"></span></h2>
 		</a>
 		<span class="language">Nim compiler required</span>
 		<p>Will quiz you on your knowlage of Italian numbers</p>
