@@ -24,10 +24,10 @@ If you would like to contact me in any way, the best way to do so would be throu
 
 <div class="socials">
 	<ul>
-		<li><a href="https://github.com/Dot32IsCool" target="blank"><span class="fab fa-github"></span> Github</a></li>
-		<li><a href="https://dot32.itch.io/" target="blank"><span class="fab fa-itch-io"></span> Itch</a></li>
-		<li><a href="https://twitter.com/Dot32IsCool" target="blank"><span class="fab fa-twitter"></span> Twitter</a></li>
-		<li><a href="https://www.youtube.com/channel/UC1Sg1xOPgdLgnJPW0KHie8Q" target="blank"><span class="fab fa-youtube"></span> Youtube</a></li>
+		<li><a href="https://github.com/Dot32IsCool" target="blank"><span class="fab fa-github"></span> Github <span class="as fa-external-link-alt"></span></a></li>
+		<li><a href="https://dot32.itch.io/" target="blank"><span class="fab fa-itch-io"></span> Itch <span class="as fa-external-link-alt"></span></a></li>
+		<li><a href="https://twitter.com/Dot32IsCool" target="blank"><span class="fab fa-twitter"></span> Twitter <span class="as fa-external-link-alt"></span></a></li>
+		<li><a href="https://www.youtube.com/channel/UC1Sg1xOPgdLgnJPW0KHie8Q" target="blank"><span class="fab fa-youtube"></span> Youtube <span class="as fa-external-link-alt"></span></a></li>
 	</ul>
 </div>
 
