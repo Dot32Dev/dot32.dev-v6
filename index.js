@@ -90,7 +90,7 @@ function getPageData() {
 	if (data.title) {
 		document.title = data.title
 	} else {
-		document.title = `Dot32 | ${detectPageFromURL().replace('.md', '')}`
+		document.title = `Dot32 | ${detectPageFromURL().replace('.md', '').replace('/', '')}`
 	}
 
 }
