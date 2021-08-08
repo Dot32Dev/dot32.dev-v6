@@ -3,8 +3,6 @@ Welcome to my website! As it automatically renders markdown, you can view this r
 
 This site functions as a Single Page Application; that is to say that changing pages and navigating the website will not reload the page, it handles everything by itself 👌
 
-I have a friend who is currently competing to create a website with similar functionality, check it out [here](https://blog-bergerapi.vercel.app/) ✨
-
 Version 4 of my website is now licensed under the [GNU GPLv3](https://github.com/Dot32IsCool/dot32-website-v4/blob/main/LICENSE) license, which allows you to effectively do whatever you wish with my website, except distribute a close source varient. View the sourcecode [here](https://github.com/Dot32IsCool/dot32-website-v4/).
 
 Credit to [Twemoji](https://twemoji.twitter.com/) for the emoji graphics, of which are licenced under the [cretive commons 4.0](https://creativecommons.org/licenses/by/4.0/) licence
