@@ -39,3 +39,9 @@ I just thought this representation of my frequently used languages was interesti
 Nim is a systems programming language which compiles to c++, however it is designed to look similar to python code.
 
 To see my other projects, check out the [projects page](/projects) or my [github repositories](https://github.com/Dot32IsCool).
+
+<div id="json">
+  {
+    "title": "Dot32 dev"
+  }
+</div>

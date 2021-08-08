@@ -44,5 +44,6 @@ Happy coding!
     "author": "Dot32",
     "date": "18th Jan 2021",
     "edited": "21st Jul 2021"
+    "title": "Circle VS rectangle collision detection - Dot32 dev"
   }
 </div>

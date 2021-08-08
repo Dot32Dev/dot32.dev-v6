@@ -26,7 +26,7 @@ function setContent(name) {
 	xhr.open("GET", "/" + name + ".md");
 	xhr.send();
 	window.history.pushState(name, `Dot32`, '/'+name);
-	document.title =  `Dot32 | ${name.replace('.md', '')}`
+	// document.title =  `Dot32 | ${name.replace('.md', '')}`
 }
 
 window.onpopstate = function(event) {
@@ -47,10 +47,10 @@ function detectPageFromURL() {
 	}
 	page = page.replace('/.md','.md')
 
-	let title = page.replace('.md', '')
-	title = title.substring(1)
-	title = "Dot32 | " + title
-	document.title = title
+	// let title = page.replace('.md', '')
+	// title = title.substring(1)
+	// title = "Dot32 | " + title
+	// document.title = title
 
 	console.log(page)
 	return page
@@ -85,6 +85,12 @@ function getPageData() {
 		document.getElementById("datetime").innerHTML = `Written ${data.date}`
 	} else {
 		document.getElementById("datetime").style.display = "none"
+	}
+
+	if (data.title) {
+		document.title = data.title
+	} else {
+		document.title = `Dot32 | ${name.replace('.md', '')}`
 	}
 
 }
