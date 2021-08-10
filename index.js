@@ -98,11 +98,12 @@ function getPageData() {
 
 	if (data.description) {
 		document.querySelector('meta[name="description"]').setAttribute("content", data.description);
-		document.querySelector('meta[property="og:description"]').setAttribute("content", cardTitle);
+		document.querySelector('meta[property="og:description"]').setAttribute("content", data.description);
 		console.log(data.description)
 	}
 
 	if (data.image) {
 		document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dot32.netlify.app${data.image}`);
+		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 }
