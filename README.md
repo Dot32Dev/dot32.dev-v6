@@ -1,4 +1,4 @@
-# Dot32 website v4
+# Dot32 Dev
 Welcome to my website! As it automatically renders markdown, you can view this readme in the [site itself](https://dot32.dev/readme)!
 
 This site functions as a Single Page Application; that is to say that changing pages and navigating the website will not reload the page, it handles everything by itself 👌
