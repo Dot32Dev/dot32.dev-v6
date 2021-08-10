@@ -1,5 +1,5 @@
 # Dot32
-<div style="background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));border-radius: 5px;"><img src="sunrise somewhere.svg" style="max-height: 30vh;"></div>
+<div style="background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));border-radius: 5px;"><img src="sunrise somewhere.png" style="max-height: 30vh;"></div>
 
 ## Who am I ✌️ 
 I'm Dot32, a 16 year old from Western Australia. I started making games when I was 9, and I never stopped!
