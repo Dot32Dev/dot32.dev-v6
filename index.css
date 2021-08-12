@@ -179,10 +179,11 @@ h1, h2 {
 	width: 146px;
 }
 
-.contents-absolute {
-	position: absolute;
+.contents-fixed {
+	position: fixed;
 	top: 100px;
 	pointer-events: none;
+	width: 100%;
 }
 
 .contents-container {
@@ -194,7 +195,7 @@ h1, h2 {
 
 .contents {
 	width: 80%;
-	max-width: none;
+	max-width: 500px;
 	pointer-events: auto;
 	box-sizing: border-box;
 }
