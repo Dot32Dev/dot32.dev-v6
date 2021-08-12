@@ -88,7 +88,7 @@ header nav ul li a:hover {
 	/*border: 1px solid var(--line);*/
 }
 
-main, #datetime, #alert  {
+main, #datetime, #alert, .contents  {
 	/*text-align: center;*/
 	max-width: 800px;
 	margin: auto;
@@ -177,6 +177,30 @@ h1, h2 {
 
 .largeLink img {
 	width: 146px;
+}
+
+.contents-absolute {
+	position: absolute;
+	top: 100px;
+	pointer-events: none;
+}
+
+.contents-container {
+	pointer-events: none;
+	box-sizing: border-box;
+	width: calc(50% - 420px);
+	pointer-events: none;
+}
+
+.contents {
+	width: 80%;
+	max-width: none;
+	pointer-events: auto;
+	box-sizing: border-box;
+}
+
+.contents ul {
+	padding: 0;
 }
 
 span.language {
