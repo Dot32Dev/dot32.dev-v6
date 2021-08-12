@@ -181,7 +181,7 @@ h1, h2 {
 
 .contents-fixed {
 	position: fixed;
-	top: 100px;
+	top: 120px;
 	pointer-events: none;
 	width: 100%;
 	display: flex;
