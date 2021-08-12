@@ -130,6 +130,11 @@ code {
 	background-color: #282c34;
 }
 
+h1, h2 {
+	border-bottom: 1px solid var(--line);
+  padding-bottom: .3em;	
+}
+
 *::-webkit-scrollbar { 
   width: 10px;
 }
@@ -155,6 +160,7 @@ code {
 
 .largeLink h2 {
 	margin-bottom: 5px;
+	border: none;
 }
 .largeLink p {
 	margin: 5px;
@@ -185,8 +191,9 @@ hr {
 	border-color: var(--line);
 }
 
+
 img.emoji {
-	width:1.5em;
+	width:1em;
 	pointer-events: none; 
 	display: inline;
 }
@@ -206,7 +213,7 @@ img.emoji {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
 	main, #alert, #datetime {
  	border: none;
  }

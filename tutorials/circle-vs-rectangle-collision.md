@@ -1,5 +1,5 @@
 # Circle VS Rectangle Collision
-This written tutorial will show you how to detect interception between circles and rectangles .
+This written tutorial will show you how to detect interception between circles and rectangles.
 
 ![thumbnail gif](/tutorials/rectvcircle.gif)
 
@@ -43,6 +43,9 @@ Happy coding!
   {
     "author": "Dot32",
     "date": "18th Jan 2021",
-    "edited": "21st Jul 2021"
+    "edited": "21st Jul 2021",
+    "title": "Circle VS rectangle collision detection",
+    "description": "This written tutorial will show you how to detect interception between circles and rectangles.",
+    "image": "/tutorials/rectvcircle.gif"
   }
 </div>

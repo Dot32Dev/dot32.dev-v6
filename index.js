@@ -26,7 +26,7 @@ function setContent(name) {
 	xhr.open("GET", "/" + name + ".md");
 	xhr.send();
 	window.history.pushState(name, `Dot32`, '/'+name);
-	document.title =  `Dot32 | ${name.replace('.md', '')}`
+	// document.title =  `Dot32 | ${name.replace('.md', '')}`
 }
 
 window.onpopstate = function(event) {
@@ -47,10 +47,10 @@ function detectPageFromURL() {
 	}
 	page = page.replace('/.md','.md')
 
-	let title = page.replace('.md', '')
-	title = title.substring(1)
-	title = "Dot32 | " + title
-	document.title = title
+	// let title = page.replace('.md', '')
+	// title = title.substring(1)
+	// title = "Dot32 | " + title
+	// document.title = title
 
 	console.log(page)
 	return page
@@ -87,4 +87,23 @@ function getPageData() {
 		document.getElementById("datetime").style.display = "none"
 	}
 
+	if (data.title) {
+		document.title = data.title
+		let cardTitle = `${data.title} - Dot32 dev`.replace('Dot32 dev - ', '')
+		document.querySelector('meta[property="og:title"]').setAttribute("content", cardTitle);
+		console.log(cardTitle)
+	} else {
+		document.title = `Dot32 | ${detectPageFromURL().replace('.md', '').replace('/', '')}`
+	}
+
+	if (data.description) {
+		document.querySelector('meta[name="description"]').setAttribute("content", data.description);
+		document.querySelector('meta[property="og:description"]').setAttribute("content", data.description);
+		console.log(data.description)
+	}
+
+	if (data.image) {
+		document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dot32.netlify.app${data.image}`);
+		console.log(`https://dot32.netlify.app${data.image}`)
+	}
 }
