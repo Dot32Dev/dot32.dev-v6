@@ -30,8 +30,10 @@ function setContent(name) {
 }
 
 window.onpopstate = function(event) {
-	console.log(detectPageFromURL())
-	xhr.open("GET", detectPageFromURL());
+	// console.log(detectPageFromURL())
+	// xhr.open("GET", detectPageFromURL());
+	// xhr.send();
+	xhr.open("GET", "/" + event.state + ".md");
 	xhr.send();
 }
 
@@ -105,5 +107,20 @@ function getPageData() {
 	if (data.image) {
 		document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dot32.netlify.app${data.image}`);
 		console.log(`https://dot32.netlify.app${data.image}`)
+	}
+
+	contentsList()
+}
+
+function contentsList() {
+	let list = document.getElementById("contents-ul")
+	list.innerHTML = ""
+	var titles = document.querySelectorAll("main h1, main h2");
+	for (let i = 0; i < x.length; i++) {
+		let li = document.createElement("li")
+  	li.innerHtml = titles[i].innerHTML
+  	list.appendChild(li)
+
+  	console.log(titles[i].innerHTML)
 	}
 }

@@ -200,7 +200,7 @@ h1, h2 {
 	box-sizing: border-box;
 }
 
-.contents ul {
+#contents-ul {
 	padding: 0;
 }
 
