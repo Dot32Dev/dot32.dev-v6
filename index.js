@@ -30,8 +30,10 @@ function setContent(name) {
 }
 
 window.onpopstate = function(event) {
-	console.log(detectPageFromURL())
-	xhr.open("GET", detectPageFromURL());
+	// console.log(detectPageFromURL())
+	// xhr.open("GET", detectPageFromURL());
+	// xhr.send();
+	xhr.open("GET", "/" + event.state + ".md");
 	xhr.send();
 }
 
