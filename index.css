@@ -184,6 +184,8 @@ h1, h2 {
 	top: 100px;
 	pointer-events: none;
 	width: 100%;
+	display: flex;
+  justify-content: flex-end;
 }
 
 .contents-container {
