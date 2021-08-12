@@ -1,6 +1,6 @@
 # Render Markdown With Javascript Using Remarkable
 
-Integrate markdown into your website, to streamline page creation!
+Integrate markdown into your website, to streamline page creation! This tutorial explains a lot within the comments of the code blocks, make you read it all to understand everything properly.
 
 ![thumb.png](/tutorials/mysite.png)
 
@@ -70,7 +70,7 @@ Call it directly after setting the page content, within the onload function. The
 
 ## You're half way there to building an SPA
 
-A `Single Page Application` is a website in which the page never reloads, it just requests the content it needs as you navigate. Things get more complicated as you realise editing/reading from the URL is required, assuming you want to share links to specific pages or have google web crawl your pages. I am reading the url with this value:
+A "Single Page Application" is a website in which the page never reloads, it just requests the content it needs as you navigate. Things get more complicated as you realise editing/reading from the URL is required, assuming you want to share links to specific pages or have google web crawl your pages. I am reading the url with this value:
 ```javascript
 window.location.pathname
 ```
