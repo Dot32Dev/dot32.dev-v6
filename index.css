@@ -204,6 +204,10 @@ h1, h2 {
 	padding: 0;
 }
 
+#contents-ul li {
+	padding-bottom: 5px;
+}
+
 span.language {
 	background-color: #282c34;
 	border-radius: 10px;
