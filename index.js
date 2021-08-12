@@ -118,7 +118,7 @@ function contentsList() {
 	var titles = document.querySelectorAll("main h1, main h2");
 	for (let i = 0; i < titles.length; i++) {
 		let li = document.createElement("li")
-  	li.innerHtml = titles[i].innerHTML
+  	li.innerHTML = titles[i].innerHTML
   	list.appendChild(li)
 
   	console.log(titles[i].innerHTML)
