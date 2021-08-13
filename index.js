@@ -126,7 +126,7 @@ function contentsList() {
   	a.onclick = function(){
   		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
   		let page = detectPageFromURL()
-  		window.history.pushState(page, `Dot32`, '/'+page+"#"+id); 
+  		window.history.pushState(page.replace(".md", ""), `Dot32`, '/'+page.replace(".md", "")+"#"+id); 
   		return false
   	}
   	li.appendChild(a)
