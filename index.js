@@ -122,6 +122,8 @@ function contentsList() {
 		let id = titles[i].innerHTML.replaceAll(' ', '-')
   	a.innerHTML = titles[i].innerHTML
   	a.href = "#"+id
+  	let page = detectPageFromURL()
+  	window.history.pushState(page, `Dot32`, '/'+page+"#"+id);
   	// a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`)
   	a.onclick = function(){
   		document.getElementById(id).scrollIntoView({behavior: 'smooth'}); 
