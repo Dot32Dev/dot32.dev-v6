@@ -120,7 +120,9 @@ function contentsList() {
 		let li = document.createElement("li")
   	li.innerHTML = titles[i].innerHTML
   	list.appendChild(li)
-
   	console.log(titles[i].innerHTML)
+
+  	titles[i].id = titles[i].innerHTML.replaceAll(' ', '-')
+  	console.log(titles[i].innerHTML.replaceAll(' ', '-'))
 	}
 }
