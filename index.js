@@ -118,11 +118,15 @@ function contentsList() {
 	var titles = document.querySelectorAll("main h1, main h2");
 	for (let i = 0; i < titles.length; i++) {
 		let li = document.createElement("li")
-  	li.innerHTML = titles[i].innerHTML
+		let a = document.createElement("a")
+		let id = titles[i].innerHTML.replaceAll(' ', '-')
+  	a.innerHTML = titles[i].innerHTML
+  	a.href = id
+  	li.appendChild(a)
   	list.appendChild(li)
   	console.log(titles[i].innerHTML)
 
-  	titles[i].id = titles[i].innerHTML.replaceAll(' ', '-')
-  	console.log(titles[i].innerHTML.replaceAll(' ', '-'))
+  	titles[i].id = id
+  	console.log(id)
 	}
 }
