@@ -109,12 +109,12 @@ function getPageData() {
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 
+	contentsList()
+
 	if (window.location.hash) {
 		console.log(window.location.hash.replace("#", ""))
 		document.getElementById(window.location.hash.replace("#", "")).scrollIntoView({behavior: 'smooth'});
 	}
-
-	contentsList()
 }
 
 function contentsList() {
