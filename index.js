@@ -110,6 +110,7 @@ function getPageData() {
 	}
 
 	if (window.location.hash) {
+		console.log(window.location.hash.replace("#", ""))
 		document.getElementById(window.location.hash.replace("#", "")).scrollIntoView({behavior: 'smooth'});
 	}
 
