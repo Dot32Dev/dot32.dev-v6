@@ -6,6 +6,10 @@
   --line: #5D7191;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 
 body {
 	font-family: PT Sans, helvetica, sans-serif;
