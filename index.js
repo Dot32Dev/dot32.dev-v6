@@ -121,7 +121,7 @@ function contentsList() {
 		let a = document.createElement("a")
 		let id = titles[i].innerHTML.replaceAll(' ', '-')
   	a.innerHTML = titles[i].innerHTML
-  	a.href = window.location.pathname+"#"+id
+  	a.href = "#"+id
   	li.appendChild(a)
   	list.appendChild(li)
   	console.log(titles[i].innerHTML)
