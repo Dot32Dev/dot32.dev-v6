@@ -122,7 +122,7 @@ function contentsList() {
 		let id = titles[i].innerHTML.replaceAll(' ', '-')
   	a.innerHTML = titles[i].innerHTML
   	a.href = "#"+id
-  	a.onClick = "document.getElementById("+id+").scrollIntoView({behavior: 'smooth'}); return false"
+  	a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`
   	li.appendChild(a)
   	list.appendChild(li)
   	console.log(titles[i].innerHTML)
