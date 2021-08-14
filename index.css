@@ -139,6 +139,10 @@ h1, h2 {
   padding-bottom: .3em;	
 }
 
+h1 {
+	font-size: 2em;
+}
+
 *::-webkit-scrollbar { 
   width: 10px;
 }
@@ -219,7 +223,6 @@ section {
 
 section.flash {
 	background-color: var(--button);
-	transition: all 0.5s;
 }
 
 span.language {
