@@ -154,12 +154,15 @@ function contentsList() {
 	while (element) {
 		console.log(element.tagName)
 		if (element.tagName == "H1" || element.tagName == "H2" ) {
-			page.appendChild(section)
-			section = document.createElement("section")
+			if (section.firstChild) {
+				page.appendChild(section)
+				section = document.createElement("section")
+			}
 		}
 		let nextElement = element.nextElementSibling
 		section.appendChild(element)
 		element = nextElement
 	}
+	page.appendChild(section)
 	document.querySelector("main").replaceWith(page)
 }
