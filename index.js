@@ -147,16 +147,17 @@ function contentsList() {
 	// for (let i = 1; i < titles.length; i++) {
 	// 	titles[i].insertAdjacentHTML("beforebegin", "</section><section>")
 	// }
-	let page = document.createElement("main")
-	let element = document.querySelector("main").firstChild
-	let section = document.createElement("section")
-	while (element) {
-		if (element.tagName == "H1" || element.tagName == "H2" ) {
-			page.appendChild(section)
-			section = document.createElement("section")
-		}
-		section.appendChild(element)
-		element = element.nextElementSibling
-	}
+	
+	// let page = document.createElement("main")
+	// let element = document.querySelector("main").firstChild
+	// let section = document.createElement("section")
+	// while (element) {
+	// 	if (element.tagName == "H1" || element.tagName == "H2" ) {
+	// 		page.appendChild(section)
+	// 		section = document.createElement("section")
+	// 	}
+	// 	section.appendChild(element)
+	// 	element = element.nextElementSibling
+	// }
 	// document.querySelector("main").replaceWith(page)
 }
