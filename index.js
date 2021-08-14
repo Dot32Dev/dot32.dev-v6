@@ -157,8 +157,9 @@ function contentsList() {
 			page.appendChild(section)
 			section = document.createElement("section")
 		}
+		let nextElement = element.nextElementSibling
 		section.appendChild(element)
-		element = element.nextElementSibling
+		element = nextElement
 	}
 	document.querySelector("main").replaceWith(page)
 }
