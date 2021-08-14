@@ -213,6 +213,15 @@ h1, h2 {
 	padding-bottom: 5px;
 }
 
+section {
+	background-color: var(--background);
+}
+
+section.flash {
+	background-color: var(--button);
+	transition: all 0.5s;
+}
+
 span.language {
 	background-color: #282c34;
 	border-radius: 10px;
