@@ -142,5 +142,9 @@ function contentsList() {
   	console.log(id)
 	}
 
-
+	document.querySelector("main").insertAdjacentHTML("afterbegin", "<section>")
+	document.querySelector("main").insertAdjacentHTML("beforeend", "</section>")
+	for (let i = 1; i < titles.length; i++) {
+		titles[i].insertAdjacentHTML("beforebegin", "</section><section>")
+	}
 }
