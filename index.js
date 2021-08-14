@@ -14,7 +14,7 @@ xhr.onload = function()
   if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
   	text = '# 404'
   }
-  document.getElementsByTagName("main").item(0).innerHTML = md.render(text);
+  document.querySelector("main").innerHTML = md.render(text);
   hljs.highlightAll()
   twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
 
