@@ -6,6 +6,10 @@
   --line: #5D7191;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 
 body {
 	font-family: PT Sans, helvetica, sans-serif;
@@ -88,7 +92,7 @@ header nav ul li a:hover {
 	/*border: 1px solid var(--line);*/
 }
 
-main, #datetime, #alert  {
+main, #datetime, #alert, .contents  {
 	/*text-align: center;*/
 	max-width: 800px;
 	margin: auto;
@@ -177,6 +181,36 @@ h1, h2 {
 
 .largeLink img {
 	width: 146px;
+}
+
+.contents-fixed {
+	position: fixed;
+	top: 120px;
+	pointer-events: none;
+	width: 100%;
+	display: flex;
+  justify-content: flex-end;
+}
+
+.contents-container {
+	box-sizing: border-box;
+	width: calc(50% - 420px);
+	pointer-events: none;
+}
+
+.contents {
+	width: 80%;
+	max-width: 500px;
+	pointer-events: auto;
+	box-sizing: border-box;
+}
+
+#contents-ul {
+	padding: 0;
+}
+
+#contents-ul li {
+	padding-bottom: 5px;
 }
 
 span.language {

@@ -108,4 +108,39 @@ function getPageData() {
 		document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dot32.netlify.app${data.image}`);
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
+
+	contentsList()
+
+	if (window.location.hash) {
+		console.log(window.location.hash.replace("#", ""))
+		document.getElementById(window.location.hash.replace("#", "")).scrollIntoView({behavior: 'smooth'});
+	}
+}
+
+function contentsList() {
+	let list = document.getElementById("contents-ul")
+	list.innerHTML = ""
+	var titles = document.querySelectorAll("main h1, main h2");
+	for (let i = 0; i < titles.length; i++) {
+		let li = document.createElement("li")
+		let a = document.createElement("a")
+		let id = titles[i].innerHTML.replaceAll(' ', '-')
+  	a.innerHTML = titles[i].innerHTML
+  	a.href = "#"+id
+  	// a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`)
+  	a.onclick = function(){
+  		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+  		let page = detectPageFromURL()
+  		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
+  		return false
+  	}
+  	li.appendChild(a)
+  	list.appendChild(li)
+  	console.log(titles[i].innerHTML)
+
+  	titles[i].id = id
+  	console.log(id)
+	}
+
+
 }
