@@ -254,12 +254,8 @@ h1 {
 	padding-bottom: 5px;
 }
 
-section {
-	background-color: var(--background);
-}
-
-section.flash {
-	background-color: var(--button);
+section:hover {
+	border: 1px solid var(--line);
 }
 
 span.tag {
