@@ -254,6 +254,11 @@ h1 {
 	padding-bottom: 5px;
 }
 
+section {
+	position: relative;
+	transition-duration: 0.5s;
+}
+
 section::after {
 	content: "";
 	position: absolute;
@@ -270,7 +275,7 @@ section::after {
 
 section.flash::after {
 	opacity: 0.7;
-	transition: all 0;
+	transition: 0s;
 }
 
 span.tag {
