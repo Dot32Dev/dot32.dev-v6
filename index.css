@@ -38,6 +38,7 @@ header {
  	justify-content: space-between;
  	align-items: center;
  	box-shadow: 0px 0px 50px var(--shadow);
+ 	z-index: 1;
 }
 
 header nav, header .socials {
@@ -191,6 +192,7 @@ h1 {
 	position: relative;
   overflow: hidden;
   display: inline-block;
+  border-radius: 5px;
 }
 
 .largeLink > a:after {
