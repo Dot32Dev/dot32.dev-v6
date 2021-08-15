@@ -110,6 +110,7 @@ function getPageData() {
 	}
 
 	contentsList()
+	document.getElementById(id).parentElement.className = ""
 
 	if (window.location.hash) {
 		console.log(window.location.hash.replace("#", ""))
@@ -131,7 +132,6 @@ function contentsList() {
   	a.onclick = function(){
   		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
   		document.getElementById(id).parentElement.className = "flash"
-  		document.getElementById(id).parentElement.className = ""
   		let page = detectPageFromURL()
   		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
   		return false
