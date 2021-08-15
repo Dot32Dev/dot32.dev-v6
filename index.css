@@ -254,14 +254,22 @@ h1 {
 	padding-bottom: 5px;
 }
 
-section {
-	background-color: var(--background);
+section::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: var(--button);
+	opacity: 0;
 	transition: all 0.5s;
 }
 
-section.flash:hover {
-	background-color: var(--button);
-	transition: all 0s;
+section.flash::after {
+	opacity: 0.7;
+	transition: all 0;
 }
 
 span.tag {
