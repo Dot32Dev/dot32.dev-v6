@@ -255,7 +255,7 @@ h1 {
 }
 
 section:hover {
-	border: 1px solid var(--line);
+	/*border: 1px solid var(--line);*/
 }
 
 span.tag {
