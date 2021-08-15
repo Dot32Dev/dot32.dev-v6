@@ -20,4 +20,7 @@ This site utilises [twitter cards](https://developer.twitter.com/en/docs/twitter
 However, what *is* new is that depending on the url requested, the cards change. This is expected behavior for most websites, however my site is an SPA; every page is the same page! Twitter's web crawler does not run with javascript, which would make editing the card information with javascript useless. However, then I heard about something called pre-rendering. The gist of it is to preemptively render each page of the site, specifically for web crawlers, so that when scanning your site it all appears as normal. Incredibly, Netlify just has an on/off switch for this, and after turning it on, I was able to edit the cards with javascript and see the results! It was yet another example of netlify saving my ass 😆
 
 </details>
-
+<details>
+  <summary>Shiny thumbnail images</summary>
+  
+  When hovering over a thumbnail on the projects or tutorials page, it plays a "shine" animation. Credit to [AntonTrollback](http://jsfiddle.net/user/AntonTrollback/) for his [shine effect jsfiddle](http://jsfiddle.net/AntonTrollback/nqQc7/)
