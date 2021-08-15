@@ -131,6 +131,7 @@ function contentsList() {
   	a.onclick = function(){
   		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
   		document.getElementById(id).parentElement.classList.toggle("flash")
+  		document.getElementById(id).parentElement.classList.toggle("flash")
   		let page = detectPageFromURL()
   		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
   		return false
