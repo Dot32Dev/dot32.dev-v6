@@ -254,8 +254,14 @@ h1 {
 	padding-bottom: 5px;
 }
 
-section:hover {
-	/*border: 1px solid var(--line);*/
+section {
+	background-color: var(--background);
+	transition: all 0.5s;
+}
+
+section.flash:hover {
+	background-color: var(--button);
+	transition: all 0s;
 }
 
 span.tag {
