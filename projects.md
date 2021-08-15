@@ -8,7 +8,7 @@
 		<a href="https://dot32.itch.io/tiny-tank">
 			<h2>Tiny Tank</h2>
 		</a>
-		<span class="language">Windows, MacOS</span>
+		<span class="tag">Windows, MacOS</span>
 		<p>Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!</p>
 	</div>
 </div>
@@ -21,7 +21,7 @@
 		<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
 			<h2>Quick and simple platformer</h2>
 		</a>
-		<span class="language">Windows, MacOS</span>
+		<span class="tag">Windows, MacOS</span>
 		<p>Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential</p>
 	</div>
 </div>
@@ -34,7 +34,7 @@
 		<a href="https://github.com/Dot32IsCool/3D-in-love2D">
 			<h2>3D engine in Love2D</h2>
 		</a>
-		<span class="language">Requires Love2D</span>
+		<span class="tag">Requires Love2D</span>
 		<p>Basic 3D engine using a custom shader and depth buffer</p>
 	</div>
 </div>
@@ -47,7 +47,7 @@
 		<a href="https://discordtimestampgenerator.netlify.app/">
 			<h2>Discord timestamp generator</h2>
 		</a>
-		<span class="language">Web</span>
+		<span class="tag">Web</span>
 		<p>Generate relative timestamps that you can paste into chat</p>
 	</div>
 </div>
@@ -57,7 +57,7 @@
 		<a href="https://github.com/Dot32IsCool/count-lines">
 			<h2>Count Lines</h2>
 		</a>
-		<span class="language">Nim compiler required</span>
+		<span class="tag">Nim compiler required</span>
 		<p>Will automatically count how many lines of (Lua) sourcecode is in a folder</p>
 	</div>
 </div>
@@ -67,7 +67,7 @@
 		<a href="https://github.com/Dot32IsCool/italian-numbers">
 			<h2>Italian Number Practice</h2>
 		</a>
-		<span class="language">Nim compiler required</span>
+		<span class="tag">Nim compiler required</span>
 		<p>Will quiz you on your knowlage of Italian numbers</p>
 	</div>
 </div>

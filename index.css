@@ -262,7 +262,7 @@ section.flash {
 	background-color: var(--button);
 }
 
-span.language {
+span.tag {
 	background-color: #282c34;
 	border-radius: 10px;
 	padding-right: 10px;
