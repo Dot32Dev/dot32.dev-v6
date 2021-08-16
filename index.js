@@ -112,8 +112,9 @@ function getPageData() {
 	contentsList()
 
 	if (window.location.hash) {
-		console.log(window.location.hash.replace("#", ""))
-		document.getElementById(window.location.hash.replace("#", "")).scrollIntoView({behavior: 'smooth'});
+		// console.log(elem)
+		let elem = document.querySelector(window.location.hash+"::before")
+		elem.scrollIntoView({behavior: 'smooth'});
 		let fn = function() {
 			document.getElementById(id).parentElement.className = ""
 		}
