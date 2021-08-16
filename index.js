@@ -114,6 +114,10 @@ function getPageData() {
 	if (window.location.hash) {
 		console.log(window.location.hash.replace("#", ""))
 		document.getElementById(window.location.hash.replace("#", "")).scrollIntoView({behavior: 'smooth'});
+		let fn = function() {
+			document.getElementById(id).parentElement.className = ""
+		}
+		window.setTimeout(fn, 32)
 	}
 }
 
