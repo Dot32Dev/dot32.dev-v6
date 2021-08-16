@@ -140,6 +140,15 @@ h1, h2 {
   padding-bottom: .3em;	
 }
 
+h1::before, h2::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 50vh;
+	top: 0;
+	transform: translateY(-100%);
+}
+
 h1 {
 	font-size: 2em;
 }
