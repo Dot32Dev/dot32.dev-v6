@@ -109,17 +109,17 @@ function getPageData() {
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 
-	// document.getElementById("first").scrollIntoView({behavior: 'auto'});
+	document.getElementById("first").scrollIntoView({behavior: 'auto'});
 
 	contentsList()
 
 	if (window.location.hash) {
 		// console.log(elem)
-		let elem = document.querySelector(window.location.hash+"::before")
+		let elem = document.querySelector(window.location.hash)
 		elem.scrollIntoView({behavior: 'smooth'});
 		elm.parentElement.className = "flash"
 		let fn = function() {
-			document.getElementById(id).parentElement.className = ""
+			elm.parentElement.parentElement.className = ""
 		}
 		window.setTimeout(fn, 32)
 	}
