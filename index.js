@@ -109,7 +109,7 @@ function getPageData() {
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 
-	document.getElementById("first").scrollIntoView({behavior: 'auto'});
+	// document.getElementById("first").scrollIntoView({behavior: 'auto'});
 
 	contentsList()
 
