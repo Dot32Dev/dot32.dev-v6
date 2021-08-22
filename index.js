@@ -111,7 +111,7 @@ function getPageData() {
 
 	contentsList()
 
-	document.getElementById("first").scrollIntoView();
+	document.getElementById("first").scrollIntoView({behavior: 'auto'});
 	if (window.location.hash) {
 		// console.log(elem)
 		let elem = document.querySelector(window.location.hash+"::before")
