@@ -117,7 +117,7 @@ function getPageData() {
 	contentsList()
 
 	if (window.location.hash) {
-		// console.log(elem)
+		console.log(window.location.hash)
 		let elem = document.querySelector(window.location.hash)
 		elem.scrollIntoView({behavior: 'smooth'});
 		elm.parentElement.className = "flash"
@@ -157,12 +157,6 @@ function contentsList() {
   	titles[i].id = id
   	console.log(id)
 	}
-
-	// document.querySelector("main").insertAdjacentHTML("afterbegin", "<section>")
-	// document.querySelector("main").insertAdjacentHTML("beforeend", "</section>")
-	// for (let i = 1; i < titles.length; i++) {
-	// 	titles[i].insertAdjacentHTML("beforebegin", "</section><section>")
-	// }
 
 	let page = document.createElement("main")
 	let element = document.querySelector("main").firstChild
