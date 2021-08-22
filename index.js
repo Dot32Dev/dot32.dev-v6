@@ -109,13 +109,15 @@ function getPageData() {
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 
+	document.getElementById("first").scrollIntoView({behavior: 'auto'});
+
 	contentsList()
 
-	document.getElementById("first").scrollIntoView({behavior: 'auto'});
 	if (window.location.hash) {
 		// console.log(elem)
 		let elem = document.querySelector(window.location.hash+"::before")
 		elem.scrollIntoView({behavior: 'smooth'});
+		elm.parentElement.className = "flash"
 		let fn = function() {
 			document.getElementById(id).parentElement.className = ""
 		}
