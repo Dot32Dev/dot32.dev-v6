@@ -109,11 +109,6 @@ function getPageData() {
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 
-	let fn = function() {
-		window.scrollTo(0, 0)
-	}
-	window.setTimeout(fn, 32)
-
 	contentsList()
 
 	if (window.location.hash) {
@@ -124,7 +119,9 @@ function getPageData() {
 			elem.parentElement.parentElement.className = ""
 			elem.scrollIntoView({behavior: 'smooth'});
 		}
-		window.setTimeout(fn, 33)
+		window.setTimeout(fn, 32)
+	} else {
+		window.scrollTo(0, 0)
 	}
 }
 
