@@ -6,11 +6,6 @@
   --line: #5D7191;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-
 body {
 	font-family: PT Sans, helvetica, sans-serif;
 	/*background-color: #212121; */
@@ -140,7 +135,7 @@ h1, h2 {
   padding-bottom: .3em;	
 }
 
-h1::before, h2::before {
+h1 > div, h2 > div {
 	content: "";
 	position: absolute;
 	width: 10px;
