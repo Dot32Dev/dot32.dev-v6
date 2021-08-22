@@ -119,7 +119,7 @@ function getPageData() {
 			elem.parentElement.parentElement.className = ""
 			elem.scrollIntoView({behavior: 'smooth'});
 		}
-		window.setTimeout(fn, 32)
+		window.setTimeout(fn, 200)
 	} else {
 		window.scrollTo(0, 0)
 	}
