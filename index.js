@@ -120,9 +120,9 @@ function getPageData() {
 		console.log(window.location.hash)
 		let elem = document.querySelector(window.location.hash)
 		elem.scrollIntoView({behavior: 'smooth'});
-		elm.parentElement.className = "flash"
+		elem.parentElement.className = "flash"
 		let fn = function() {
-			elm.parentElement.parentElement.className = ""
+			elem.parentElement.parentElement.className = ""
 		}
 		window.setTimeout(fn, 32)
 	}
