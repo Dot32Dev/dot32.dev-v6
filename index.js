@@ -109,7 +109,10 @@ function getPageData() {
 		console.log(`https://dot32.netlify.app${data.image}`)
 	}
 
-	window.scrollTo(0, 0)
+	let fn = function() {
+		window.scrollTo(0, 0)
+	}
+	window.setTimeout(fn, 32)
 
 	contentsList()
 
