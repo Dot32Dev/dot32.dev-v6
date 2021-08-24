@@ -310,9 +310,9 @@ img.emoji {
 	display: none;
 }
 
-@media only screen and (min-width:  1350px) {
-	.contents-fixed {
-		display: none;
+@media only screen and (min-width:  800px) {
+	body {
+		overscroll-behavior-y: none;
 	}
 }
 
@@ -321,8 +321,11 @@ img.emoji {
  		border: none;
  		border-radius: 0px;
 	}
-	body {
-		overscroll-behavior-y: none;
+}
+
+@media only screen and (max-width: 1350px) {
+	.contents {
+ 		display: none;
 	}
 }
 
