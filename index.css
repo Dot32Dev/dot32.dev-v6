@@ -310,16 +310,20 @@ img.emoji {
 	display: none;
 }
 
-@media only screen and (min-width:  800px) {
-	body {
-		overscroll-behavior-y: none;
+@media only screen and (min-width:  1350px) {
+	.contents-fixed {
+		display: none;
 	}
 }
 
 @media only screen and (max-width: 840px) {
 	main, #alert, #datetime {
- 	border: none;
- }
+ 		border: none;
+ 		border-radius: 0px;
+	}
+	body {
+		overscroll-behavior-y: none;
+	}
 }
 
 @media only screen and (max-width: 720px) {
