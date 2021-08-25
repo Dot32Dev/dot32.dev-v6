@@ -260,6 +260,7 @@ h1 {
 	padding: 5px;
 	display: inline-block;
 	width: 100%;
+	position: relative;
 }
 
 #contents-ul li a:hover {
@@ -269,6 +270,13 @@ h1 {
 	cursor: pointer;
 	text-decoration: none;
 	/*border: 1px solid var(--line);*/
+}
+
+#contents-ul li a::before {
+	content: '<span class="fas fa-caret-right"></span>';
+	position: absolute;
+	left: -1em;
+	top: 0px;
 }
 
 section {
