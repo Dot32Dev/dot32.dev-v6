@@ -256,7 +256,7 @@ h1 {
 }
 
 #contents-ul li a {
-	color: white;
+	/*color: white;*/
 	padding: 5px;
 	display: inline-block;
 	width: 100%;
