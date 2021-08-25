@@ -252,11 +252,13 @@ h1 {
 
 #contents-ul {
 	padding: 0;
+	list-style-type: none;
 }
 
 #contents-ul li a {
-	padding-bottom: 5px;
+	padding: 5px;
 	color: white;
+	border-radius: 5px;
 }
 
 #contents-ul li a:hover {
