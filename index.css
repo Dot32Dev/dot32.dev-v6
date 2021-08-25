@@ -254,12 +254,12 @@ h1 {
 	padding: 0;
 }
 
-#contents-ul li {
+#contents-ul li a {
 	padding-bottom: 5px;
 	color: white;
 }
 
-#contents-ul li:hover {
+#contents-ul li a:hover {
 	background-color: var(--button);
 	/*color:  plum;*/
 	color:  #90cc84;
