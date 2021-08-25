@@ -256,6 +256,16 @@ h1 {
 
 #contents-ul li {
 	padding-bottom: 5px;
+	color: white;
+}
+
+#contents-ul li:hover {
+	background-color: var(--button);
+	/*color:  plum;*/
+	color:  #90cc84;
+	cursor: pointer;
+	text-decoration: none;
+	/*border: 1px solid var(--line);*/
 }
 
 section {
