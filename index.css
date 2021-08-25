@@ -257,7 +257,7 @@ h1 {
 
 #contents-ul li a {
 	color: white;
-	border-radius: 5px;
+	padding: 5px;
 	display: inline-block;
 	width: 100%;
 }
