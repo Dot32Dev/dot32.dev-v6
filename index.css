@@ -275,14 +275,14 @@ h1 {
 #contents-ul li a::before {
 	content: '';
 	position: absolute;
-	left: -1em;
+	left: -0.8em;
 	top: 0.5em;
 
 	width: 0;
 	height: 0;
-	border-top: 0.3em solid transparent;
-	border-left: 0.6em solid white;
-	border-bottom: 0.3em solid transparent;
+	border-top: 0.2em solid transparent;
+	border-left: 0.4em solid white;
+	border-bottom: 0.2em solid transparent;
 }
 
 section {
