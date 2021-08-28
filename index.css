@@ -379,6 +379,9 @@ img.emoji {
 	}
 	span.tag {
 		text-align: center;
+		margin: auto;
+		display: block;
+		width: fit-content;
 	}
 }
 
