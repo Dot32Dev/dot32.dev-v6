@@ -383,6 +383,9 @@ img.emoji {
 		display: block;
 		width: fit-content;
 	}
+	.largeLink img {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 485px) {
