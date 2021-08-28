@@ -349,10 +349,13 @@ img.emoji {
  		border: none;
  		border-radius: 0px;
 	}
+	main > h1, main > h2, p {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 1350px) {
-	.contents {
+	.contents-container {
  		display: none;
 	}
 }
