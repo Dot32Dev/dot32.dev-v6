@@ -352,6 +352,9 @@ img.emoji {
 	main > h1, main > h2, section > h1, section > h2, p {
 		text-align: center;
 	}
+	main > h1, section > h1 {
+		margin-top: 0;
+	}
 }
 
 @media only screen and (max-width: 1350px) {
