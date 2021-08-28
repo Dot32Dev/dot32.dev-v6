@@ -174,6 +174,6 @@ function contentsList() {
 		document.querySelector(".contents").style.display = "none"
 	} else {
 		document.querySelector(".contents").style.display = "block"
-		document.querySelector("main").replaceWith(page)
 	}
+	document.querySelector("main").replaceWith(page)
 }
