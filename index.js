@@ -171,9 +171,9 @@ function contentsList() {
 	page.appendChild(section)
 
 	if (document.querySelectorAll("#contents-ul li").length < 2) {
-		document.querySelector("#contents").style.display = "none"
+		document.querySelector(".contents").style.display = "none"
 	} else {
+		document.querySelector(".contents").style.display = "block"
 		document.querySelector("main").replaceWith(page)
-		document.querySelector("#contents").style.display = "block"
 	}
 }
