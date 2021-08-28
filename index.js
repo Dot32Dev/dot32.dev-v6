@@ -169,7 +169,7 @@ function contentsList() {
 			let li = document.createElement("li")
 			let a = document.createElement("a")
 			let id = element.innerHTML.replaceAll(' ', '-')
-	  	a.innerHTML = titles[i].innerHTML
+	  	a.innerHTML = element.innerHTML
 	  	a.href = "#"+id
 	  	// a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`)
 	  	a.onclick = function(){
