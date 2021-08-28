@@ -349,7 +349,7 @@ img.emoji {
  		border: none;
  		border-radius: 0px;
 	}
-	main > h1, main > h2, p {
+	main > h1, main > h2, section > h1, section > h2, p {
 		text-align: center;
 	}
 }
