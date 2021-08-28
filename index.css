@@ -375,7 +375,10 @@ img.emoji {
 	}
 	.largeLink div {
 		margin-left: 0px;
-		max-width: 500px;
+		max-width: none;
+	}
+	span.tag {
+		text-align: center;
 	}
 }
 
