@@ -248,6 +248,7 @@ h1 {
 	max-width: 500px;
 	pointer-events: auto;
 	box-sizing: border-box;
+	display: none;
 }
 
 #contents-ul {
