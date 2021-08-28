@@ -349,11 +349,14 @@ img.emoji {
  		border: none;
  		border-radius: 0px;
 	}
-	main > h1, main > h2, section > h1, section > h2, p {
+	h1, h2, p {
 		text-align: center;
 	}
-	main > h1, section > h1 {
+	section > h1 {
 		margin-top: 0;
+	}
+	.largeLink h1, p {
+		text-align: left;
 	}
 }
 
