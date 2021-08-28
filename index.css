@@ -386,13 +386,13 @@ img.emoji {
 	.largeLink img {
 		width: 100%;
 	}
-}
-
-@media only screen and (max-width: 485px) {
 	header nav ul li a {
 		padding: 15px 5px;
 	}
 	header nav ul {
-		padding-left: 5px;
+		padding-left: 0px;
+	}
+	header {
+		justify-content: center;
 	}
 }
