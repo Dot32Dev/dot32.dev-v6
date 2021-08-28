@@ -128,32 +128,32 @@ function getPageData() {
 function contentsList() {
 	let list = document.getElementById("contents-ul")
 	list.innerHTML = ""
-	var titles = document.querySelectorAll("main h1, main h2");
-	for (let i = 0; i < titles.length; i++) {
-		let li = document.createElement("li")
-		let a = document.createElement("a")
-		let id = titles[i].innerHTML.replaceAll(' ', '-')
-  	a.innerHTML = titles[i].innerHTML
-  	a.href = "#"+id
-  	// a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`)
-  	a.onclick = function(){
-  		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
-  		document.getElementById(id).parentElement.className = "flash"
-  		let fn = function() {
-  			document.getElementById(id).parentElement.className = ""
-  		}
-  		window.setTimeout(fn, 32)
-  		let page = detectPageFromURL()
-  		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
-  		return false
-  	}
-  	li.appendChild(a)
-  	list.appendChild(li)
-  	console.log(titles[i].innerHTML)
+	// var titles = document.querySelectorAll("main h1, main h2");
+	// for (let i = 0; i < titles.length; i++) {
+	// 	let li = document.createElement("li")
+	// 	let a = document.createElement("a")
+	// 	let id = titles[i].innerHTML.replaceAll(' ', '-')
+ //  	a.innerHTML = titles[i].innerHTML
+ //  	a.href = "#"+id
+ //  	// a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`)
+ //  	a.onclick = function(){
+ //  		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+ //  		document.getElementById(id).parentElement.className = "flash"
+ //  		let fn = function() {
+ //  			document.getElementById(id).parentElement.className = ""
+ //  		}
+ //  		window.setTimeout(fn, 32)
+ //  		let page = detectPageFromURL()
+ //  		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
+ //  		return false
+ //  	}
+ //  	li.appendChild(a)
+ //  	list.appendChild(li)
+ //  	console.log(titles[i].innerHTML)
 
-  	titles[i].id = id
-  	console.log(id)
-	}
+ //  	titles[i].id = id
+ //  	console.log(id)
+	// }
 
 	let page = document.createElement("main")
 	let element = document.querySelector("main").firstChild
@@ -165,6 +165,30 @@ function contentsList() {
 				page.appendChild(section)
 				section = document.createElement("section")
 			}
+
+			let li = document.createElement("li")
+			let a = document.createElement("a")
+			let id = element.innerHTML.replaceAll(' ', '-')
+	  	a.innerHTML = titles[i].innerHTML
+	  	a.href = "#"+id
+	  	// a.setAttribute('onclick',`document.getElementById(${id}).scrollIntoView({behavior: 'smooth'}); return false`)
+	  	a.onclick = function(){
+	  		document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+	  		document.getElementById(id).parentElement.className = "flash"
+	  		let fn = function() {
+	  			document.getElementById(id).parentElement.className = ""
+	  		}
+	  		window.setTimeout(fn, 32)
+	  		let page = detectPageFromURL()
+	  		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
+	  		return false
+	  	}
+	  	li.appendChild(a)
+	  	list.appendChild(li)
+	  	console.log(element.innerHTML)
+
+	  	element.id = id
+	  	console.log(id)
 		}
 		let nextElement = element.nextElementSibling
 		section.appendChild(element)
