@@ -164,10 +164,6 @@ h1 {
   border-radius: 10px;
 }
 
-::selection {
-	background-color: var(--button);
-}
-
 .largeLink {
 	display: flex;
 	align-items: flex-start;
