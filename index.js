@@ -192,10 +192,8 @@ function contentsList() {
 	}
 	document.querySelector("main").replaceWith(page)
 
-	let pageDataContent = document.createElement("main")
-	pageDataContent.innerHTML = document.querySelector("main").innerHTML
-	let pageData = {name:currentPage, content:pageDataContent}
-	// console.log(pageData.content)
+	let pageData = {name:currentPage, content:document.querySelector("main")}
+	console.log(pageData.content)
 	let cached = false
 	for (let i = 0; i < cache.length; i++) {
   	if (cache[i].name === pageData.name) {
