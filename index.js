@@ -179,5 +179,6 @@ function contentsList() {
 	}
 	document.querySelector("main").replaceWith(page)
 
-	// let pageData = {name: }
+	let pageData = {name:currentPage, content:page}
+	console.log(pageData.content)
 }
