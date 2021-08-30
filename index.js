@@ -39,7 +39,7 @@ window.onpopstate = function(event) {
 	xhr.send();
 }
 
-function currentPage {
+function detectPageFromURL() {
 	let page = window.location.pathname.replace('index.html','').replace('.html','')
 	if (page.charAt(page.length-1) === "/") {
 		console.log("removing slash to " + page)
