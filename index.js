@@ -3,10 +3,11 @@ const md = new Remarkable({
 });
 
 let cache = {}
+let currentPage = detectPageFromURL()
 
 let xhr = new XMLHttpRequest();
-xhr.open("GET", detectPageFromURL());
-console.log(detectPageFromURL())
+xhr.open("GET", currentPage);
+console.log(currentPage)
 xhr.onload = function()
 {
   let text = xhr.responseText;
@@ -27,17 +28,18 @@ function setContent(name) {
 	xhr.send();
 	window.history.pushState(name, `Dot32`, '/'+name);
 	// document.title =  `Dot32 | ${name.replace('.md', '')}`
+	currentPage = detectPageFromURL()
 }
 
 window.onpopstate = function(event) {
-	// console.log(detectPageFromURL())
-	// xhr.open("GET", detectPageFromURL());
+	// console.log(currentPage)
+	// xhr.open("GET", currentPage);
 	// xhr.send();
 	xhr.open("GET", "/" + event.state + ".md");
 	xhr.send();
 }
 
-function detectPageFromURL() {
+function currentPage {
 	let page = window.location.pathname.replace('index.html','').replace('.html','')
 	if (page.charAt(page.length-1) === "/") {
 		console.log("removing slash to " + page)
@@ -95,7 +97,7 @@ function getPageData() {
 		document.querySelector('meta[property="og:title"]').setAttribute("content", cardTitle);
 		console.log(cardTitle)
 	} else {
-		document.title = `Dot32 | ${detectPageFromURL().replace('.md', '').replace('/', '')}`
+		document.title = `Dot32 | ${currentPage.replace('.md', '').replace('/', '')}`
 	}
 
 	if (data.description) {
@@ -153,7 +155,7 @@ function contentsList() {
 	  			document.getElementById(id).parentElement.className = ""
 	  		}
 	  		window.setTimeout(fn, 32)
-	  		let page = detectPageFromURL()
+	  		let page = currentPage
 	  		window.history.pushState(page.replace(".md", ""), `Dot32`, "#"+id); 
 	  		return false
 	  	}
@@ -176,4 +178,6 @@ function contentsList() {
 		document.querySelector(".contents").style.display = "block"
 	}
 	document.querySelector("main").replaceWith(page)
+
+	// let pageData = {name: }
 }
