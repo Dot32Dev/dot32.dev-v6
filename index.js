@@ -31,6 +31,7 @@ function setContent(name) {
 	for (let i = 0; i < cache.length; i++) {
   	if (cache[i].name === currentPage) {
   		document.querySelector("main").replaceWith(cache[i].content)
+  		console.log(cache[i].content)
   		contentsList()
   		cached = true
   		break
