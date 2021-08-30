@@ -24,11 +24,22 @@ xhr.onload = function()
 xhr.send();
 
 function setContent(name) {
-	xhr.open("GET", "/" + name + ".md");
-	xhr.send();
 	window.history.pushState(name, `Dot32`, '/'+name);
-	// document.title =  `Dot32 | ${name.replace('.md', '')}`
 	currentPage = detectPageFromURL()
+
+	let cached = false
+	for (let i = 0; i < cache.length; i++) {
+  	if (cache[i].name === currentPage) {
+  		document.querySelector("main").replaceWith(cache[i].content)
+  		contentsList()
+  		cached = true
+  		break
+  	}
+	}
+	if (!cached) {
+		xhr.open("GET", "/" + name + ".md");
+		xhr.send();
+	}
 }
 
 window.onpopstate = function(event) {
@@ -37,6 +48,7 @@ window.onpopstate = function(event) {
 	// xhr.send();
 	xhr.open("GET", "/" + event.state + ".md");
 	xhr.send();
+	currentPage = detectPageFromURL()
 }
 
 function detectPageFromURL() {
@@ -181,13 +193,13 @@ function contentsList() {
 
 	let pageData = {name:currentPage, content:page}
 	// console.log(pageData.content)
-	let alreadyCached = false
-	for (var i = 0; i < cache.length; i++) {
-  	if (cache[i].name == pageData.name) {
-  		alreadyCached = true
+	let cached = false
+	for (let i = 0; i < cache.length; i++) {
+  	if (cache[i].name === pageData.name) {
+  		cached = true
   	}
 	}
-	if (!alreadyCached) {
+	if (!cached) {
 		cache.push(pageData)
 		console.log("added new page to cache")
 	}
