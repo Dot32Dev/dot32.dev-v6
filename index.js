@@ -2,7 +2,7 @@ const md = new Remarkable({
 	html: true
 });
 
-let cache = {}
+let cache = []
 let currentPage = detectPageFromURL()
 
 let xhr = new XMLHttpRequest();
@@ -161,10 +161,10 @@ function contentsList() {
 	  	}
 	  	li.appendChild(a)
 	  	list.appendChild(li)
-	  	console.log(element.innerHTML)
+	  	// console.log(element.innerHTML)
 
 	  	element.id = id
-	  	console.log(id)
+	  	// console.log(id)
 		}
 		let nextElement = element.nextElementSibling
 		section.appendChild(element)
@@ -180,5 +180,17 @@ function contentsList() {
 	document.querySelector("main").replaceWith(page)
 
 	let pageData = {name:currentPage, content:page}
-	console.log(pageData.content)
+	// console.log(pageData.content)
+	let alreadyCached = false
+	for (var i = 0; i < cache.length; i++) {
+  	if (cache[i].name == pageData.name) {
+  		alreadyCached = true
+  	}
+	}
+	if (!alreadyCached) {
+		cache.push(pageData)
+		console.log("added new page to cache")
+	}
+
+	console.log(cache)
 }
