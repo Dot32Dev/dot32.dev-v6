@@ -32,7 +32,7 @@ function setContent(name) {
   	if (cache[i].name === currentPage) {
   		document.querySelector("main").replaceWith(cache[i].content)
   		console.log(cache[i].content)
-  		contentsList()
+  		// contentsList()
   		cached = true
   		break
   	}
