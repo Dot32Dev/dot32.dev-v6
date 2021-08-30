@@ -27,20 +27,20 @@ function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
 	currentPage = detectPageFromURL()
 
-	let cached = false
-	for (let i = 0; i < cache.length; i++) {
-  	if (cache[i].name === currentPage) {
-  		document.querySelector("main").replaceWith(cache[i].content)
-  		console.log(cache[i].content)
-  		// contentsList()
-  		cached = true
-  		break
-  	}
-	}
-	if (!cached) {
+	// let cached = false
+	// for (let i = 0; i < cache.length; i++) {
+ //  	if (cache[i].name === currentPage) {
+ //  		document.querySelector("main").replaceWith(cache[i].content)
+ //  		console.log(cache[i].content)
+ //  		contentsList()
+ //  		cached = true
+ //  		break
+ //  	}
+	// }
+	// if (!cached) {
 		xhr.open("GET", "/" + name + ".md");
 		xhr.send();
-	}
+	// }
 }
 
 window.onpopstate = function(event) {
@@ -192,18 +192,18 @@ function contentsList() {
 	}
 	document.querySelector("main").replaceWith(page)
 
-	let pageData = {name:currentPage, content:document.querySelector("main")}
-	console.log(pageData.content)
-	let cached = false
-	for (let i = 0; i < cache.length; i++) {
-  	if (cache[i].name === pageData.name) {
-  		cached = true
-  	}
-	}
-	if (!cached) {
-		cache.push(pageData)
-		console.log("added new page to cache")
-	}
+	// let pageData = {name:currentPage, content:document.querySelector("main")}
+	// console.log(pageData.content)
+	// let cached = false
+	// for (let i = 0; i < cache.length; i++) {
+ //  	if (cache[i].name === pageData.name) {
+ //  		cached = true
+ //  	}
+	// }
+	// if (!cached) {
+	// 	cache.push(pageData)
+	// 	console.log("added new page to cache")
+	// }
 
-	console.log(cache)
+	// console.log(cache)
 }
