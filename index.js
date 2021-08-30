@@ -192,7 +192,7 @@ function contentsList() {
 	}
 	document.querySelector("main").replaceWith(page)
 
-	let pageData = {name:currentPage, content:page}
+	let pageData = {name:currentPage, content:document.querySelector("main")}
 	// console.log(pageData.content)
 	let cached = false
 	for (let i = 0; i < cache.length; i++) {
