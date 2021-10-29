@@ -36,7 +36,7 @@ I just thought this representation of my frequently used languages was interesti
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6">
 
-Nim is a systems programming language which compiles to c++, however it is designed to look similar to python code.
+Nim is a systems programming language which compiles to c/c++, however it is designed to look similar to python code. While I was first interested for it's simplicity, I have now come to terms with it's uselessness.
 
 To see my other projects, check out the [projects page](/projects) or my [github repositories](https://github.com/Dot32IsCool?tab=repositories).
 
