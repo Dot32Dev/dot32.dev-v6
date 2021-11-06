@@ -27,6 +27,19 @@
 </div>
 <hr>
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/ball-physics-engine">
+		<img src="https://user-images.githubusercontent.com/61964090/140467254-67855ef8-b2e3-449e-9ef1-a9dbeb8477f0.png">
+	</a>
+	<div>
+		<a href="https://github.com/Dot32IsCool/ball-physics-engine">
+			<h2>Custom ball physics engine</h2>
+		</a>
+		<span class="tag">Requires Love2D</span>
+		<p>Custom physics engine built on verlet integration</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/3D-in-love2D">
 		<img src="https://user-images.githubusercontent.com/61964090/127146335-16ba2a76-f36b-4096-8545-b18322c615cc.png">
 	</a>
