@@ -30,7 +30,7 @@
 	<a href="https://github.com/Dot32IsCool/ball-physics-engine">
 		<img src="https://user-images.githubusercontent.com/61964090/140467254-67855ef8-b2e3-449e-9ef1-a9dbeb8477f0.png">
 	</a>
-	<div>
+	<div> 
 		<a href="https://github.com/Dot32IsCool/ball-physics-engine">
 			<h2>Custom ball physics engine</h2>
 		</a>
