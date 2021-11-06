@@ -14,11 +14,11 @@
 </div>
 <p></p>
 <div class=largeLink>
-	<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
+	<a href="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
 		<img src="/q&spthumb.png">
 	</a>
 	<div>
-		<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
+		<a href="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
 			<h2>Quick and simple platformer</h2>
 		</a>
 		<span class="tag">Windows, MacOS</span>
