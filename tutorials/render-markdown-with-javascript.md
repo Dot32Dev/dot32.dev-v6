@@ -37,18 +37,13 @@ document.getElementById("content").innerHTML = md.render('# tada!')
 
 ## Loading the markdown files
 
-Loading markdown files within javascript isn't as simple as you might think, but it isn't impossible either. The javascript file will have to make a request to the server for the specified file.
+Loading markdown files within javascript is pretty simple. The javascript file will have to make a request to the server for the specified file.
 
 Here is how it is done:
 ```js
-let xhr = new XMLHttpRequest();
-xhr.open("GET", "index.md"); // asking for index.md
-xhr.onload = function() // the onload callback is (asynchronously) sent when the file finishes loading
-{
-  let text = xhr.responseText;
-  document.getElementById("content").innerHTML = md.render(text) // sets page content to rendered text
-}
-xhr.send(); // actually sends the request
+fetch("index.md") // asking for index.md
+  .then(response => response.text()) // runs when the file finishes loading
+  .then(text => document.querySelector("#content").innerHTML = md.render(text)); // sets page content to rendered text
 ```
 
 ## Syntax Highlighting
@@ -77,6 +72,7 @@ window.location.pathname
 It returns the `/epic-page` from `www.epicsite/epic-page`. You can also directly set the value to something of your choosing, however this reloads the page. Idealy in a single page application, reloading the page should never need to happen! It allows for a smoother experience on the end user. To get around this, setting the url is done by manipulating the search history. This isnt too hard if you can understand the code I placed below:
 
 ```javascript
+// is it possible to switch to fetch over here
 let name = "epic-page" // the name of the page we're linking to
 window.history.pushState(name, `empty string`, '/'+name); // leave `empty string` blank, this code sets the URL. The first parameter is the "state", which gets stored for later
 
