@@ -13,6 +13,7 @@ function loadFile(url) {
 	  // console.log(text);
 	  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
 	  	if (url.includes("index")) {
+	  		console.log(`Could not find ${url} or ${url.replace(".md", "/index.md")}`)
 	  		text = '# 404'
 	  	} else {
 	  		loadFile(url.replace(".md", "/index.md"))
