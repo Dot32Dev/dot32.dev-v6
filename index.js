@@ -34,6 +34,7 @@ loadFile(currentPage)
 
 function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
+	console.log("--------")
 	currentPage = detectPageFromURL()
 
 	// let cached = false
@@ -57,6 +58,7 @@ window.onpopstate = function(event) {
 	// xhr.send();
 
 	// loadFile("GET", "/" + event.state + ".md");
+	console.log("--------")
 	currentPage = detectPageFromURL()
 	loadFile(currentPage)
 
@@ -119,7 +121,7 @@ function getPageData() {
 		document.title = data.title
 		let cardTitle = `${data.title} - Dot32 dev`.replace('Dot32 dev - ', '')
 		document.querySelector('meta[property="og:title"]').setAttribute("content", cardTitle);
-		console.log("Set page title to " + cardTitle)
+		console.log("Set page title: " + cardTitle)
 	} else {
 		document.title = `Dot32 | ${currentPage.replace('.md', '').replace('/', '')}`
 	}
@@ -127,12 +129,12 @@ function getPageData() {
 	if (data.description) {
 		document.querySelector('meta[name="description"]').setAttribute("content", data.description);
 		document.querySelector('meta[property="og:description"]').setAttribute("content", data.description);
-		console.log("Set page descirption to " + data.description)
+		console.log("Set page descirption: " + data.description)
 	}
 
 	if (data.image) {
 		document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dot32.netlify.app${data.image}`);
-		console.log("Set page thumbnail to " + `https://dot32.netlify.app${data.image}`)
+		console.log("Set page thumbnail: " + `https://dot32.netlify.app${data.image}`)
 	}
 
 	contentsList()
