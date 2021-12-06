@@ -9,12 +9,17 @@ function loadFile(url) {
 	let xhr = new XMLHttpRequest();
 	xhr.onload = function()
 	{
-		console.log(`Loaded ${url}`)
 	  let text = xhr.responseText;
 	  // console.log(text);
 	  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
-	  	text = '# 404'
+	  	if (url.includes("index")) {
+	  		text = '# 404'
+	  	} else {
+	  		loadFile(url.replace(".md", "/index.md"))
+	  		return false
+	  	}
 	  }
+	  console.log(`Loaded ${url}`)
 	  document.querySelector("main").innerHTML = md.render(text);
 	  hljs.highlightAll()
 	  twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
