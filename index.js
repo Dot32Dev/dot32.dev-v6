@@ -119,7 +119,7 @@ function getPageData() {
 		document.title = data.title
 		let cardTitle = `${data.title} - Dot32 dev`.replace('Dot32 dev - ', '')
 		document.querySelector('meta[property="og:title"]').setAttribute("content", cardTitle);
-		console.log(cardTitle)
+		console.log("Set page title to " + cardTitle)
 	} else {
 		document.title = `Dot32 | ${currentPage.replace('.md', '').replace('/', '')}`
 	}
@@ -127,12 +127,12 @@ function getPageData() {
 	if (data.description) {
 		document.querySelector('meta[name="description"]').setAttribute("content", data.description);
 		document.querySelector('meta[property="og:description"]').setAttribute("content", data.description);
-		console.log(data.description)
+		console.log("Set page descirption to " + data.description)
 	}
 
 	if (data.image) {
 		document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dot32.netlify.app${data.image}`);
-		console.log(`https://dot32.netlify.app${data.image}`)
+		console.log("Set page thumbnail to " + `https://dot32.netlify.app${data.image}`)
 	}
 
 	contentsList()
