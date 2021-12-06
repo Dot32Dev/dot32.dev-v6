@@ -252,6 +252,11 @@ h1 {
 	display: none;
 }
 
+.fa-external-link-alt {
+	font-size: 15px;
+	opacity: 50%;
+}
+
 #contents-ul {
 	padding: 0;
 	list-style-type: none;
