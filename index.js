@@ -5,23 +5,27 @@ const md = new Remarkable({
 let cache = []
 let currentPage = detectPageFromURL()
 
-let xhr = new XMLHttpRequest();
-xhr.open("GET", currentPage);
-console.log(currentPage)
-xhr.onload = function()
-{
-  let text = xhr.responseText;
-  // console.log(text);
-  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
-  	text = '# 404'
-  }
-  document.querySelector("main").innerHTML = md.render(text);
-  hljs.highlightAll()
-  twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
+function loadFile(url) {
+	let xhr = new XMLHttpRequest();
+	xhr.onload = function()
+	{
+		console.log(`Loaded ${url}`)
+	  let text = xhr.responseText;
+	  // console.log(text);
+	  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
+	  	text = '# 404'
+	  }
+	  document.querySelector("main").innerHTML = md.render(text);
+	  hljs.highlightAll()
+	  twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
 
-  getPageData()
+	  getPageData()
+	}
+	xhr.open("GET", url);
+	xhr.send();
+	console.log(`Requesting ${url}`)
 }
-xhr.send();
+loadFile(currentPage)
 
 function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
@@ -38,8 +42,7 @@ function setContent(name) {
  //  	}
 	// }
 	// if (!cached) {
-		xhr.open("GET", "/" + name + ".md");
-		xhr.send();
+		loadFile("/" + name + ".md");
 	// }
 }
 
@@ -47,8 +50,7 @@ window.onpopstate = function(event) {
 	// console.log(currentPage)
 	// xhr.open("GET", currentPage);
 	// xhr.send();
-	xhr.open("GET", "/" + event.state + ".md");
-	xhr.send();
+	loadFile("GET", "/" + event.state + ".md");
 	currentPage = detectPageFromURL()
 }
 
