@@ -50,8 +50,11 @@ window.onpopstate = function(event) {
 	// console.log(currentPage)
 	// xhr.open("GET", currentPage);
 	// xhr.send();
-	loadFile("GET", "/" + event.state + ".md");
+
+	// loadFile("GET", "/" + event.state + ".md");
 	currentPage = detectPageFromURL()
+	loadFile(currentPage)
+
 }
 
 function detectPageFromURL() {
