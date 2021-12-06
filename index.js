@@ -79,7 +79,7 @@ function detectPageFromURL() {
 	// title = "Dot32 | " + title
 	// document.title = title
 
-	console.log(page)
+	console.log("URL pathname: " + page)
 	return page
 }
 
@@ -89,10 +89,11 @@ function getPageData() {
 	}
 	catch(err) {
 	  var data = JSON.parse("{}")
-	  console.log(err)
+	  // console.log(err)
+	  console.log("This page has no JSON data attached")
 	}
 	
-	console.log(data)
+	// console.log(data)
 
 	if (data.archived) {
 		document.getElementById("alert").style.display = "block"
@@ -158,7 +159,7 @@ function contentsList() {
 	let element = document.querySelector("main").firstChild
 	let section = document.createElement("section")
 	while (element) {
-		console.log(element.tagName)
+		// console.log(element.tagName)
 		if (element.tagName == "H1" || element.tagName == "H2" ) {
 			if (section.firstChild) {
 				page.appendChild(section)
