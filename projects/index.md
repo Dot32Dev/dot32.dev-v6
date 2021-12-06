@@ -14,11 +14,11 @@
 </div>
 <p></p>
 <div class=largeLink>
-	<a href="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
+	<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
 		<img src="/projects/q&spthumb.png">
 	</a>
 	<div>
-		<a href="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
+		<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
 			<h2>Quick and simple platformer <span class="fas fa-external-link-alt"></h2>
 		</a>
 		<span class="tag">Windows, MacOS</span>
@@ -28,7 +28,7 @@
 <hr>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/ball-physics-engine">
-		<img src="https://user-images.githubusercontent.com/61964090/140467254-67855ef8-b2e3-449e-9ef1-a9dbeb8477f0.png">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/ball-physics-engine">
