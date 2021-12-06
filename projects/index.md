@@ -2,7 +2,7 @@
 
 <div class=largeLink>
 	<a href="https://dot32.itch.io/tiny-tank">
-		<img src="/tinytankthumb.png">
+		<img src="/projects/tinytankthumb.png">
 	</a>
 	<div>
 		<a href="https://dot32.itch.io/tiny-tank">
@@ -15,7 +15,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
-		<img src="/q&spthumb.png">
+		<img src="/projects/q&spthumb.png">
 	</a>
 	<div>
 		<a href="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
