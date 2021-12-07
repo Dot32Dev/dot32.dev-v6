@@ -1,9 +1,9 @@
 :root {
-  --header: hsl(218deg 21% 27%);
-  --button: #425066;
-  --background: hsl(218deg 21% 23%);
-  --shadow: hsl(0deg 0% 0% / 50%);
-  --line: #5D7191;
+	--header: hsl(218deg 21% 27%);
+	--button: #425066;
+	--background: hsl(218deg 21% 23%);
+	--shadow: hsl(0deg 0% 0% / 50%);
+	--line: #5D7191;
 }
 
 body {
@@ -12,10 +12,10 @@ body {
 	/*background-color: #f0f0f0;*/
 	background-color: hsl(358deg 21% 21%);
 	/*background-color: hsl(194, 85%, 81%);*/
-  /*color: #c2c2c2;*/
-  margin:  0px;
+	/*color: #c2c2c2;*/
+	margin:  0px;
 
-  display: inline;
+	display: inline;
 }
 
 header {
@@ -25,15 +25,15 @@ header {
 	/*background-color: #f0f0f0;*/
 	width: 100%;
 	top: 0;
-  left: 0;
-  margin: 0;
- 	/*border-bottom: 1px solid var(--line);*/
+	left: 0;
+	margin: 0;
+	/*border-bottom: 1px solid var(--line);*/
 
- 	display: flex;
- 	justify-content: space-between;
- 	align-items: center;
- 	box-shadow: 0px 0px 50px var(--shadow);
- 	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 0px 50px var(--shadow);
+	z-index: 1;
 }
 
 header nav, header .socials {
@@ -58,21 +58,21 @@ header nav ul li, header .socials ul li {
 }
 
 header nav ul li a, header .socials ul li span {
-  /*background-color: #2e2e2e;*/
-  color: white;
-  border: none;
-  /*border: 2px solid var(--header);*/
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  /*padding: 20;*/
-  /*padding-right:30px;*/
-  /*padding-left:30px;*/
-  /*border-radius: 10px;*/
-  font-weight: bold;
-  background-color: var(--header);
+	/*background-color: #2e2e2e;*/
+	color: white;
+	border: none;
+	/*border: 2px solid var(--header);*/
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 25px;
+	/*padding: 20;*/
+	/*padding-right:30px;*/
+	/*padding-left:30px;*/
+	/*border-radius: 10px;*/
+	font-weight: bold;
+	background-color: var(--header);
 }
 
 header .socials ul li span {
@@ -110,10 +110,10 @@ main, #datetime, #alert, .contents  {
 
 img {
 	padding: 0;
-  display: block;
-  margin: 0 auto;
-  max-height: 50vh;
-  max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	max-height: 50vh;
+	max-width: 100%;
 }
 
 a {
@@ -133,7 +133,7 @@ code {
 
 h1, h2 {
 	border-bottom: 1px solid var(--line);
-  padding-bottom: .3em;	
+	padding-bottom: .3em;	
 }
 
 h1 > div, h2 > div {
@@ -150,18 +150,18 @@ h1 {
 }
 
 *::-webkit-scrollbar { 
-  width: 10px;
+	width: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #282c34;
-  /*border: 1px solid var(--background);*/
-  border-radius: 10px;
+	background-color: #282c34;
+	/*border: 1px solid var(--background);*/
+	border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #90cc84;
-  border-radius: 10px;
+	background-color: #90cc84;
+	border-radius: 10px;
 }
 
 .largeLink {
@@ -170,6 +170,21 @@ h1 {
 	padding: 20px;
 	border-radius: 5px;
 	background-color: var(--header);
+	/*box-shadow: 0px 0px 50px var(--shadow);*/
+	/*box-shadow: 0px 0px 5px var(--shadow);*/
+	/*transition: box-shadow 0.3s ease-in-out;*/
+	transition: transform 0.1s ease-in-out;
+}
+
+.largeLink:hover {
+	/*box-shadow: 0px 0px 25px var(--shadow);*/
+	transition-duration: 0.5;/*
+	transition-property: box-shadow;
+	transition-timing-function: ease;*/
+	transform: scale(1.06);
+	/*transition: box-shadow 0.3s ease;*/
+	transition: transform 0.1s ease;
+	z-index: -2;
 }
 
 .largeLink h2 {
@@ -195,12 +210,12 @@ h1 {
 
 .largeLink > a {
 	position: relative;
-  overflow: hidden;
-  display: inline-block;
-  border-radius: 5px;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 5px;
 }
 
-.largeLink > a:after {
+.largeLink > a::after {
 	content: "";
 	position: absolute;
 	top: -110%;
@@ -220,7 +235,7 @@ h1 {
 	);
 }
 
-.largeLink > a:hover:after {
+.largeLink:hover > a::after {
 	opacity: 1;
 	top: -30%;
 	left: -30%;
@@ -235,7 +250,7 @@ h1 {
 	pointer-events: none;
 	width: 100%;
 	display: flex;
-  justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .contents-container {
@@ -352,14 +367,14 @@ img.emoji {
 
 @media only screen and (max-width: 840px) {
 	main, #alert, #datetime {
- 		border: none;
- 		border-radius: 0px;
+		border: none;
+		border-radius: 0px;
 	}
 }
 
 @media only screen and (max-width: 1350px) {
 	.contents-container {
- 		display: none;
+		display: none;
 	}
 }
 
