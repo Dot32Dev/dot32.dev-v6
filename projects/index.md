@@ -32,6 +32,19 @@
 ## Recent
 
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/platformer">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/917718774134763520/Screen_Shot_2021-12-07_at_18.06.27.png">
+	</a>
+	<div> 
+		<a href="https://github.com/Dot32IsCool/platformer">
+			<h2>Procedural animation with inverse kinematics <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Requires Love2D</span>
+		<p>A platformer demo with procedural animation</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/ball-physics-engine">
 		<img src="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
 	</a>
