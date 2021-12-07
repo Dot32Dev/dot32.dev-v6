@@ -3,7 +3,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="/tutorials/render-markdown-with-javascript" onClick="setContent('tutorials/render-markdown-with-javascript'); return false">
-		<img src="/tutorials/mysite.png">
+		<img src="/tutorials/render-markdown-with-javascript/thumb.png">
 	</a>
 	<div>
 		<a href="/tutorials/render-markdown-with-javascript" onClick="setContent('tutorials/render-markdown-with-javascript'); return false">
@@ -16,7 +16,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision'); return false">
-		<img src="/tutorials/rectvcircle.gif">
+		<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif">
 	</a>
 	<div>
 		<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision'); return false">
@@ -29,7 +29,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="/tutorials/auto-tilling" onClick="setContent('tutorials/auto-tilling'); return false">
-		<img src="/tutorials/autotilling.gif">
+		<img src="/tutorials/auto-tilling/thumb.gif">
 	</a>
 	<div>
 		<a href="/tutorials/auto-tilling" onClick="setContent('tutorials/auto-tilling'); return false">
