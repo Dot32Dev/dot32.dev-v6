@@ -1,5 +1,7 @@
 # Projects
 
+## Pinned
+
 <div class=largeLink>
 	<a href="https://dot32.itch.io/tiny-tank">
 		<img src="/projects/tinytankthumb.png">
@@ -25,7 +27,10 @@
 		<p>Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential</p>
 	</div>
 </div>
-<hr>
+<!-- <hr> -->
+
+## Recent
+
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/ball-physics-engine">
 		<img src="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
