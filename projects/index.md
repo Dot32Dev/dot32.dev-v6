@@ -32,6 +32,19 @@
 ## Recent
 
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/norwegian-numbers">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918064935395807273/Screen_Shot_2021-12-08_at_17.02.01.png">
+	</a>
+	<div> 
+		<a href="https://github.com/Dot32IsCool/norwegian-numbers">
+			<h2>Norwegian number practice <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Requires Rust compiler</span>
+		<p>Learn how to count in Norwegian; although this project was primarily just an excuse to use Rust 😎 🦀</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/platformer">
 		<img src="https://cdn.discordapp.com/attachments/577832597686583310/917718774134763520/Screen_Shot_2021-12-07_at_18.06.27.png">
 	</a>
@@ -84,6 +97,9 @@
 </div>
 <p></p>
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/count-lines">
+		<img src="https://user-images.githubusercontent.com/61964090/123012218-7696b000-d3f4-11eb-8555-2cbff6a57586.png">
+	</a>
 	<div>
 		<a href="https://github.com/Dot32IsCool/count-lines">
 			<h2>Count Lines <span class="fas fa-external-link-alt"></h2>
@@ -94,6 +110,9 @@
 </div>
 <p></p>
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/italian-numbers">
+		<img src="https://user-images.githubusercontent.com/61964090/123534049-b2ab7700-d74c-11eb-8888-3e9799c9cb45.png">
+	</a>
 	<div>
 		<a href="https://github.com/Dot32IsCool/italian-numbers">
 			<h2>Italian Number Practice <span class="fas fa-external-link-alt"></h2>
