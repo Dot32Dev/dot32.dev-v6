@@ -283,6 +283,7 @@ h1 {
 	display: inline-block;
 	width: 100%;
 	position: relative;
+	transition: transform 0.3s ease;
 }
 
 #contents-ul li a:hover {
@@ -292,6 +293,8 @@ h1 {
 	cursor: pointer;
 	text-decoration: none;
 	/*border: 1px solid var(--line);*/
+	/*transform: translateX(10px);*/
+	/*transition: transform 0.3s ease;*/
 }
 
 #contents-ul li a::before {
@@ -406,6 +409,14 @@ img.emoji {
 	}
 	.largeLink img {
 		width: 100%;
+	}
+	.largeLink img.emoji {
+		width:1em;
+		pointer-events: none; 
+		display: inline;
+	}
+	.largeLink:hover {
+		transform: scale(1);
 	}
 	header nav ul li a {
 		padding: 15px 5px;
