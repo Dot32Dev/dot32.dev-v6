@@ -1,7 +1,20 @@
 # Projects
 
-## Pinned
+## Pinned 
 
+<div class=largeLink>
+	<a href="https://discordtimestampgenerator.netlify.app/">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png">
+	</a>
+	<div>
+		<a href="https://discordtimestampgenerator.netlify.app/">
+			<h2>Discord timestamp generator <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Web</span>
+		<p>Generate relative timestamps that you can paste into Discord chat</p>
+	</div>
+</div>
+<p></p>
 <div class=largeLink>
 	<a href="https://dot32.itch.io/tiny-tank">
 		<img src="/projects/tinytankthumb.png">
@@ -15,18 +28,6 @@
 	</div>
 </div>
 <p></p>
-<div class=largeLink>
-	<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
-		<img src="/projects/q&spthumb.png">
-	</a>
-	<div>
-		<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
-			<h2>Quick and simple platformer <span class="fas fa-external-link-alt"></h2>
-		</a>
-		<span class="tag">Windows, MacOS</span>
-		<p>Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential</p>
-	</div>
-</div>
 <!-- <hr> -->
 
 ## Recent
@@ -84,19 +85,6 @@
 </div>
 <p></p>
 <div class=largeLink>
-	<a href="https://discordtimestampgenerator.netlify.app/">
-		<img src=https://user-images.githubusercontent.com/61964090/124254092-4caf5d00-db5b-11eb-82a7-c31a630218d2.png>
-	</a>
-	<div>
-		<a href="https://discordtimestampgenerator.netlify.app/">
-			<h2>Discord timestamp generator <span class="fas fa-external-link-alt"></h2>
-		</a>
-		<span class="tag">Web</span>
-		<p>Generate relative timestamps that you can paste into chat</p>
-	</div>
-</div>
-<p></p>
-<div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/count-lines">
 		<img src="https://user-images.githubusercontent.com/61964090/123012218-7696b000-d3f4-11eb-8555-2cbff6a57586.png">
 	</a>
@@ -119,6 +107,19 @@
 		</a>
 		<span class="tag">Nim compiler required</span>
 		<p>Will quiz you on your knowlage of Italian numbers</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
+		<img src="/projects/q&spthumb.png">
+	</a>
+	<div>
+		<a href="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game">
+			<h2>Quick and simple platformer <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Windows, MacOS</span>
+		<p>Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential</p>
 	</div>
 </div>
 
