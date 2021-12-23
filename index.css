@@ -381,7 +381,7 @@ img.emoji {
 	}
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 760px) {
 	header .socials {
 		display: none;
 	}

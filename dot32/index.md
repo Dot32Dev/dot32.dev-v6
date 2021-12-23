@@ -20,10 +20,11 @@ Play my officially released game, [Tiny Tank](https://dot32.itch.io/tiny-tank)! 
 Or even check out [this song](https://soundcloud.com/dot32/journey-to-the-clouds) I produced. <br>
 
 ## Socials
-If you would like to contact me in any way, the best way to do so would be through Discord. Send me a friend request to **Dot32#1186**. Alternatively you can join my friends [gamedev server](https://discord.gg/UrbYQU7uKv), of which I am moderator for and currently has 80+ members!
+If you would like to contact me in any way, the best way to do so would be through Discord. You can join my [Discord server](https://discord.gg/Pswb8khdgQ) or add me at `Dot32#1186`
 
 <div class="socials">
 	<ul>
+		<li><a href="https://discord.gg/Pswb8khdgQ" target="blank"><span class="fab fa-discord"></span> Discord <span class="fas fa-external-link-alt"></span></a></li>
 		<li><a href="https://github.com/Dot32IsCool" target="blank"><span class="fab fa-github"></span> Github <span class="fas fa-external-link-alt"></span></a></li>
 		<li><a href="https://dot32.itch.io/" target="blank"><span class="fab fa-itch-io"></span> Itch <span class="fas fa-external-link-alt"></span></a></li>
 		<li><a href="https://twitter.com/Dot32IsCool" target="blank"><span class="fab fa-twitter"></span> Twitter <span class="fas fa-external-link-alt"></span></a></li>
