@@ -4,7 +4,7 @@
 
 <div class=largeLink>
 	<a href="https://discordtimestampgenerator.netlify.app/">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png		">
 	</a>
 	<div>
 		<a href="https://discordtimestampgenerator.netlify.app/">
@@ -32,6 +32,32 @@
 
 ## Recent
 
+<div class=largeLink>
+	<a href="https://discord.com/api/oauth2/authorize?client_id=927501769272094720&permissions=274877991936&scope=bot">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/927860469522374676/Screen_Shot_2022-01-04_at_17.46.06.png">
+	</a>
+	<div> 
+		<a href="https://discord.com/api/oauth2/authorize?client_id=927501769272094720&permissions=274877991936&scope=bot">
+			<h2>Timer Bot <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag"><a href="https://discord.gg/Pswb8khdgQ">Join my server</a> and ask me to put it online</span>
+		<p>A simple bot that can create timers within  discord, based of my <a href="https://discordtimestampgenerator.netlify.app/">Discord Timestamp Generator</a> website</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/comand-line-connect-4">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/927858316628070410/Screen_Shot_2022-01-04_at_17.37.30.png">
+	</a>
+	<div> 
+		<a href="https://github.com/Dot32IsCool/comand-line-connect-4">
+			<h2>Connect 4 <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Requires Rust compiler</span>
+		<p>A command-line-interface version of the popular connect 4 game, complete with animations for dropping every piece 👌</p>
+	</div>
+</div>
+<p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/norwegian-numbers">
 		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918064935395807273/Screen_Shot_2021-12-08_at_17.02.01.png">
