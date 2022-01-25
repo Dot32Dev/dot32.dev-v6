@@ -10,12 +10,12 @@ function loadFile(url) {
 		.then(response => response.text())
 		.then(text => {
 		  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
-		  	if (url.includes("index")) {
+		  	if (!url.includes("/index.md")) {
 		  		console.log(`Could not find ${url} or ${url.replace(".md", "/index.md")}`)
 		  		text = '# 404'
 		  	} else {
-		  		console.log(`Could not find ${url}, trying ${url.replace(".md", "/index.md")}`)
-		  		loadFile(url.replace(".md", "/index.md"))
+		  		console.log(`Could not find ${url}, trying ${url.replace("/index.md", ".md")}`)
+		  		loadFile(url.replace("/index.md", ".md"))
 		  		return false
 		  	}
 		  }
@@ -28,7 +28,7 @@ function loadFile(url) {
 		});
 	console.log(`Requesting ${url}`)
 }
-loadFile(currentPage)
+loadFile(currentPage.replace(".md", "/index.md"))
 
 function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
