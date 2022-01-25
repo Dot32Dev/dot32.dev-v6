@@ -46,7 +46,7 @@ function setContent(name) {
  //  	}
 	// }
 	// if (!cached) {
-		loadFile("/" + name + ".md");
+		loadFile("/" + name + "/index.md");
 	// }
 }
 
@@ -58,12 +58,12 @@ window.onpopstate = function(event) {
 	// loadFile("GET", "/" + event.state + ".md");
 	console.log("--------")
 	currentPage = detectPageFromURL()
-	loadFile(currentPage)
+	loadFile(currentPage.replace(".md", "/index.md"))
 
 }
 
 function detectPageFromURL() {
-	let page = window.location.pathname.replace('index.html','').replace('.html','')
+	let page = window.location.pathname.replace('index.html','').replace('.html','').replace("/index.md", "md")
 	if (page.charAt(page.length-1) === "/") {
 		console.log("removing slash to " + page)
 		page.slice(0, -1);
