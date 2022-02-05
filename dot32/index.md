@@ -5,7 +5,7 @@
 <div style="overflow: hidden;max-height: 30vh;background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));border-radius: 5px;display: flex;
     justify-content: center;
     align-items: center;"><img src="dot32/the sea.png" style="object-fit: cover;width: 100%;"></div> 
-<img src="dot32/sunrise somewhere square.png" style="border-radius: 50%;border-style: solid;border-width: 2px; border-color: #2e3747;width: 5%; transform: translate(0, -50%) scale(3);">
+<img src="dot32/sunrise somewhere square.png" style="border-radius: 50%;border-style: solid;border-width: 2px; border-color: #2e3747;width: 4.4vh; transform: translate(0, -50%) scale(3);">
 
 ## Who am I ✌️ 
 I'm Dot32, a 16 year old from Western Australia. I started making games when I was 9, and I never stopped!
