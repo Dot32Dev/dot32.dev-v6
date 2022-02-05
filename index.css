@@ -346,6 +346,12 @@ span.tag > a {
 	color: gray;
 }
 
+blockquote {
+	border-left: 5px solid white;
+	margin: 0.5em;
+	padding: 20px;
+}
+
 hr {
 	border-color: var(--line);
 }
@@ -355,6 +361,7 @@ img.emoji {
 	width:1em;
 	pointer-events: none; 
 	display: inline;
+	transform: translateY(20%);
 }
 
 #json {
