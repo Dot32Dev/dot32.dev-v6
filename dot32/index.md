@@ -4,8 +4,8 @@
 
 <div style="overflow: hidden;max-height: 30vh;background-image: linear-gradient(hsl(194, 85%, 65%), hsl(194, 85%, 81%));border-radius: 5px;display: flex;
     justify-content: center;
-    align-items: center;"><img src="/dot32/the sea.png" style="object-fit: cover;width: 100%;"></div> 
-<img src="/dot32/sunrise somewhere square.png" style="border-radius: 50%;border-style: solid;border-width: 2px; border-color: #2e3747;width: 4.4vh; transform: translate(0, -50%) scale(3);">
+    align-items: center;"><img alt="Dot32 written in the minecraft enchanting table font, (SGA) floating above a sea." src="/dot32/the-sea.webp" style="object-fit: cover;width: 100%;"></div> 
+<img alt="Dot32 Logo" src="/dot32/sunrise-somewhere-square-copy.webp" style="border-radius: 50%;border-style: solid;border-width: 2px; border-color: #2e3747;width: 4.4vh; transform: translate(0, -50%) scale(3);">
 
 ## Who am I ✌️ 
 I'm Dot32, a 16 year old from Western Australia. I started making games when I was 9, and I never stopped!
@@ -41,7 +41,7 @@ If you would like to contact me in any way, the best way to do so would be throu
 ## Statistics
 I just thought this representation of my frequently used languages was interesting ✨
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6">
+<img alt="Github repo most used languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dot32IsCool&layout=compact&langs_count=6">
 
 Nim is a systems programming language which compiles to c/c++, however it is designed to look similar to python code. While I was first interested for it's simplicity, I have now come to terms with it's uselessness.
 
