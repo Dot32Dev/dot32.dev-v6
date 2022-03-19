@@ -81,7 +81,7 @@ end
 ```
 Note that in Lua, a "vector" is stored as a table `{x = 0, y = 0}`, so that we can look it up later with `table.x` and `table.y` 
 
-This particular resolution algorythm suits a top down game in which the player is the circle and the map is built of rectangles. If that isn't what you were going for, hopefully you understood the jist and can now build your own resolution algorythm ✨ 
+This particular resolution algorythm suits a top down game in which the player is the circle and the map is built of rectangles. If that isn't what you were going for, hopefully you understood the gist and can now build your own resolution algorythm ✨ 
 
 When all else fails, you could always google point versus circle collision resolution.
 
@@ -91,9 +91,9 @@ Happy coding!
   {
     "author": "Dot32",
     "date": "18th Jan 2021",
-    "edited": "28th Aug 2021",
+    "edited": "2nd Feb 2022",
     "title": "Circle VS rectangle collision detection",
     "description": "This written tutorial will show you how to detect interception between circles and rectangles.",
-    "image": "/tutorials/rectvcircle.gif"
+    "image": "/tutorials/circle-vs-rectangle-collision/thumb.gif"
   }
 </div>

@@ -44,6 +44,6 @@ Now, you should be able to easily compute which sprite to select when drawing yo
 		"edited": "21st Jul 2021",
 		"title": "Custom autotilling made easy",
 		"description": "Building your own auto tilling implementation is not as hard as you thought!",
-		"image": "/tutorials/autotilling.gif"
+		"image": "/tutorials/auto-tilling/thumb.gif"
 	}
 </div>

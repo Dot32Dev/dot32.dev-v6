@@ -95,6 +95,6 @@ Hopefully the contents of this admitedly long tutorial helped you, happy coding!
 		"date": "24th Jul 2021",
 		"title": "Render markdown with javascript",
     "description": "Integrate markdown into your website, to streamline page creation!",
-		"image": "/tutorials/mysite.png"
+		"image": "/tutorials/render-markdown-with-javascript/thumb.png"
   }
 </div>
