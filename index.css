@@ -342,10 +342,6 @@ span.tag {
 	color: white;
 }
 
-span.tag > a {
-	color: gray;
-}
-
 blockquote {
 	border-left: 5px solid white;
 	margin: 0.5em;
