@@ -2,6 +2,19 @@
 
 <p></p>
 <div class=largeLink>
+	<a href="/tutorials/bevy-fixed-update" onClick="setContent('tutorials/bevy-fixed-update'); return false">
+		<img src="/tutorials/bevy-fixed-update/thumb.gif">
+	</a>
+	<div>
+		<a href="/tutorials/bevy-fixed-update" onClick="setContent('tutorials/bevy-fixed-update'); return false">
+			<h2>Bevy Fixed Update</h2>
+		</a>
+		<span class="tag">Rust</span>
+		<p>See how to use Bevy's fixed update feature in this breif tutorial</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
 	<a href="/tutorials/render-markdown-with-javascript" onClick="setContent('tutorials/render-markdown-with-javascript'); return false">
 		<img src="/tutorials/render-markdown-with-javascript/thumb.png">
 	</a>
