@@ -10,7 +10,7 @@ So, it turns out having systems run as fixed update is as simple as this:
 use bevy::prelude::*;
 use bevy::core::FixedTimestep;
 
-const TIME_STEP: f32 = 1.0 / 120.0;
+const TIME_STEP: f32 = 1.0 / 120.0; // Where 120 is the target FPS
 
 fn main() {
     App::new() // Standard systems/plugins 
