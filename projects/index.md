@@ -41,7 +41,7 @@
 			<h2>My intro (Rust edition) <span class="fas fa-external-link-alt"></h2>
 		</a>
 		<span class="tag">Requires Rust compiler</span>
-		<p>My classive Love2D intro rewritten with rust and bevy</a> website</p>
+		<p>My classive Love2D intro rewritten with rust and bevy</p>
 	</div>
 </div>
 <p></p>
