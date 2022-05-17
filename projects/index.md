@@ -34,7 +34,7 @@
 
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
-		<img src="https://imgur.com/a/3YuXmUt">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/976074056656887858/Screen_Shot_2022-05-17_at_18.44.55.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
