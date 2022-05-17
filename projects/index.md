@@ -33,6 +33,19 @@
 ## Recent
 
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
+		<img src="https://imgur.com/a/3YuXmUt">
+	</a>
+	<div> 
+		<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
+			<h2>My intro (Rust edition) <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Requires Rust compiler</span>
+		<p>My classive Love2D intro rewritten with rust and bevy</a> website</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
 	<a href="https://discord.com/api/oauth2/authorize?client_id=927501769272094720&permissions=274877991936&scope=bot">
 		<img src="https://cdn.discordapp.com/attachments/577832597686583310/927860469522374676/Screen_Shot_2022-01-04_at_17.46.06.png">
 	</a>
