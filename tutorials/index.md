@@ -14,7 +14,7 @@
 	</div>
 </div>
 <p></p>
-<div class=largeLink>
+<!-- <div class=largeLink>
 	<a href="/tutorials/render-markdown-with-javascript" onClick="setContent('tutorials/render-markdown-with-javascript'); return false">
 		<img src="/tutorials/render-markdown-with-javascript/thumb.png">
 	</a>
@@ -25,7 +25,7 @@
 		<span class="tag">Javascript</span>
 		<p>How to compile markdown files into html with javascript</p>
 	</div>
-</div>
+</div> -->
 <p></p>
 <div class=largeLink>
 	<a href="/tutorials/circle-vs-rectangle-collision" onClick="setContent('tutorials/circle-vs-rectangle-collision'); return false">
