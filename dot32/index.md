@@ -7,10 +7,11 @@
     align-items: center;"><img alt="Dot32 written in the minecraft enchanting table font, (SGA) floating above a sea." src="/dot32/the-sea.webp" style="object-fit: cover;width: 100%;"></div> 
 <img alt="Dot32 Logo" src="/dot32/sunrise-somewhere-square-copy.webp" style="border-radius: 50%;border-style: solid;border-width: 2px; border-color: #2e3747;width: 4.4vh; transform: translate(0, -50%) scale(3);">
 
+
 `Note, much of this is quite outdated and in need of a do-over!`
 
 ## Who am I ✌️ 
-I'm Dot32, a 17 year old from Western Australia. I started making games when I was 9, and I never stopped!
+I'm Dot32, a 16 year old from Western Australia. I started making games when I was 9, and I never stopped!
 This site was built to showcase some of my best games and projects, and additionally to further my knowlage of webdev.
 
 My language of choice for the moment is Lua, using an open source framework called Love2D for graphics and other useful functions. Unlike larger game engines like unity or godot, there is no GUI for making games, and far less is provided to support you. I have written my own custom physics solutions, and I just recently wrote a [primitive 3D engine](https://github.com/Dot32IsCool/3D-in-love2D) utilising some simple shaders and a z-buffer.
