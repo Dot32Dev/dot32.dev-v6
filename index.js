@@ -9,7 +9,7 @@ function loadFile(url) {
 	fetch(url)
 		.then(response => response.text())
 		.then(text => {
-		  if (text.includes("<!doctype html>") && text.includes(`<script src="https://kit.fontawesome.com/c0fe0ca982.js" crossorigin="anonymous"></script>`)) {
+		  if (text.includes(`<meta property="og:title" content="Dot32 dev" />`)) {
 		  	if (!url.includes("/index.md")) {
 		  		console.log(`Could not find ${url} or ${url.replace(".md", "/index.md")}`)
 		  		text = '# 404'
