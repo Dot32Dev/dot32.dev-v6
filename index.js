@@ -12,7 +12,7 @@ function loadFile(url) {
 		  if (text.includes(`<meta property="og:title" content="Dot32 dev" />`)) {
 		  	if (!url.includes("/index.md")) {
 		  		console.log(`Could not find ${url} or ${url.replace(".md", "/index.md")}`)
-		  		text = '# 404'
+		  		text = '# 404 page not found'
 		  	} else {
 		  		console.log(`Could not find ${url}, trying ${url.replace("/index.md", ".md")}`)
 		  		loadFile(url.replace("/index.md", ".md"))
