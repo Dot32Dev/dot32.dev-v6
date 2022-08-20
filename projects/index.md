@@ -33,6 +33,19 @@
 ## Recent
 
 <div class=largeLink>
+	<a href="https://github.com/Dot32IsCool/bevy-moving-circle">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/1010396427299606528/Screen_Shot_2022-08-20_at_11.52.38.png">
+	</a>
+	<div> 
+		<a href="https://github.com/Dot32IsCool/bevy-moving-circle">
+			<h2>Bevy Tiny Tank clone <span class="fas fa-external-link-alt"></h2>
+		</a>
+		<span class="tag">Requires Rust compiler</span>
+		<p>A half fetaured recreation of my Love2D Tiny Tank game</p>
+	</div>
+</div>
+<p></p>
+<div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
 		<img src="https://cdn.discordapp.com/attachments/577832597686583310/976074056656887858/Screen_Shot_2022-05-17_at_18.44.55.png">
 	</a>
