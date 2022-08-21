@@ -2,8 +2,34 @@ const md = new Remarkable({
 	html: true
 });
 
-let cache = []
+// let cache = []
 let currentPage = detectPageFromURL()
+let loadedPages = []
+
+function selectPage(page) {
+	console.log("Scanning cache for " + page)
+	for (var i = 0; i < loadedPages.length; i++) {
+    console.log(`- ${loadedPages[i].name}`);
+
+    if (page == loadedPages[i].name) {
+    	console.log(`Found page ${page}`)
+
+    	document.querySelector("main").innerHTML = loadedPages[i].text
+    	hljs.highlightAll()
+    	twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
+    	getPageData()
+
+    	return
+
+    }
+	}
+	console.log("Page not found in cache")
+	if (page.startsWith("/")) {
+		loadFile(page.replace(".md", "/index.md"))
+	} else {
+		loadFile("/" + page.replace(".md", "/index.md"))
+	}
+} 
 
 function loadFile(url) {
 	fetch(url)
@@ -17,37 +43,33 @@ function loadFile(url) {
 		  		console.log(`Could not find ${url}, trying ${url.replace("/index.md", ".md")}`)
 		  		loadFile(url.replace("/index.md", ".md"))
 		  		return false
-		  	}
+		  	} 
 		  }
-		  console.log(`Loaded ${url}`)
-		  document.querySelector("main").innerHTML = md.render(text);
-		  hljs.highlightAll()
-		  twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
+		  // console.log(`Loaded ${url}`)
+		  // document.querySelector("main").innerHTML = md.render(text);
+		  // hljs.highlightAll()
+		  // twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
 
-		  getPageData()
+		  // getPageData()
+		  console.log("Downloaded " + url + ", added to cache as " + url.replace("/index.md", ".md"))
+		  loadedPages.push({name: url.replace("/index.md", ".md"), text: md.render(text)})
+
+		  selectPage(url.replace("/index.md", ".md"))
+
 		});
 	console.log(`Requesting ${url}`)
 }
-loadFile(currentPage.replace(".md", "/index.md"))
+// loadFile(currentPage.replace(".md", "/index.md"))
+// selectPage(currentPage.replace(".md", "/index.md"))
+selectPage(currentPage)
 
 function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
 	console.log("--------")
 	currentPage = detectPageFromURL()
 
-	// let cached = false
-	// for (let i = 0; i < cache.length; i++) {
- //  	if (cache[i].name === currentPage) {
- //  		document.querySelector("main").replaceWith(cache[i].content)
- //  		console.log(cache[i].content)
- //  		contentsList()
- //  		cached = true
- //  		break
- //  	}
-	// }
-	// if (!cached) {
-		loadFile("/" + name + "/index.md");
-	// }
+	// loadFile("/" + name + "/index.md");
+	selectPage("/" + name + ".md")
 }
 
 window.onpopstate = function(event) {
@@ -64,10 +86,10 @@ window.onpopstate = function(event) {
 
 function detectPageFromURL() {
 	let page = window.location.pathname.replace('index.html','').replace('.html','').replace("/index.md", "md")
-	if (page.charAt(page.length-1) === "/") {
-		console.log("removing slash to " + page)
-		page.slice(0, -1);
-	}
+	// if (page.charAt(page.length-1) === "/") {
+	// 	console.log("removing slash to " + page)
+	// 	page.slice(0, -1);
+	// }
 	page = page + ".md"
 	if (page === "/.md") {
 		page = "dot32.md"
