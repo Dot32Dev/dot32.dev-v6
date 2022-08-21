@@ -10,7 +10,7 @@ body {
 	font-family: PT Sans, helvetica, sans-serif;
 	/*background-color: #212121; */
 	/*background-color: #f0f0f0;*/
-	background-color: hsl(358deg 21% 21%);
+	background-color: hsl(358deg 21% 21%); 
 	/*background-color: hsl(194, 85%, 81%);*/
 	/*color: #c2c2c2;*/
 	margin:  0px;
@@ -100,6 +100,8 @@ main, #datetime, #alert, .contents  {
 	/*border: 1px solid var(--line);*/
 	box-shadow: 0px 0px 50px var(--shadow);
 	background-color: var(--background);
+
+	line-height: 1.5;
 }
 
 .segment {
@@ -129,6 +131,7 @@ code {
 	font-family: PT Mono, monospace;
 	background-color: #282c34;
 	color: #d19a66;
+	line-height: 1.1;
 }
 
 h1, h2 {
