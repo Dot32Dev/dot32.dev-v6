@@ -90,7 +90,9 @@ function detectPageFromURL() {
 	// 	console.log("removing slash to " + page)
 	// 	page.slice(0, -1);
 	// }
-	page = page + ".md"
+	if (!(page.endsWith(".md"))) {
+		page = page + ".md"
+	}
 	if (page === "/.md") {
 		page = "dot32.md"
 	}
