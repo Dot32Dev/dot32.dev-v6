@@ -6,7 +6,7 @@ const md = new Remarkable({
 let currentPage = detectPageFromURL()
 let loadedPages = []
 
-function selectPage(page) {
+function getPage(page) {
 	console.log("Scanning cache for " + page)
 	for (var i = 0; i < loadedPages.length; i++) {
     console.log(`- ${loadedPages[i].name}`);
@@ -18,6 +18,7 @@ function selectPage(page) {
     	hljs.highlightAll()
     	twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
     	getPageData()
+    	findNewLinks()
 
     	return
 
@@ -31,7 +32,7 @@ function selectPage(page) {
 	}
 } 
 
-function loadFile(url) {
+function loadFile(url, shouldNotLoadPage) {
 	fetch(url)
 		.then(response => response.text())
 		.then(text => {
@@ -54,14 +55,16 @@ function loadFile(url) {
 		  console.log("Downloaded " + url + ", added to cache as " + url.replace("/index.md", ".md"))
 		  loadedPages.push({name: url.replace("/index.md", ".md"), text: md.render(text)})
 
-		  selectPage(url.replace("/index.md", ".md"))
+		  if (!shouldNotLoadPage) {
+		  	getPage(url.replace("/index.md", ".md"))
+		  }
 
 		});
 	console.log(`Requesting ${url}`)
 }
 // loadFile(currentPage.replace(".md", "/index.md"))
-// selectPage(currentPage.replace(".md", "/index.md"))
-selectPage(currentPage)
+// getPage(currentPage.replace(".md", "/index.md"))
+getPage(currentPage)
 
 function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
@@ -69,7 +72,7 @@ function setContent(name) {
 	currentPage = detectPageFromURL()
 
 	// loadFile("/" + name + "/index.md");
-	selectPage("/" + name + ".md")
+	getPage("/" + name + ".md")
 }
 
 window.onpopstate = function(event) {
@@ -105,6 +108,44 @@ function detectPageFromURL() {
 
 	console.log("URL pathname: " + page)
 	return page
+}
+
+function getPosition(string, subString, index) {
+  return string.split(subString, index).join(subString).length;
+}
+
+function findNewLinks() {
+	let internalLinks = document.querySelectorAll("a:not([href*='://'])")
+
+	console.log("Scanning page for internal links that should be prefetched")
+	let newLinks = []
+	for (i = 0; i < internalLinks.length; ++i) {
+
+		let charPos = getPosition(internalLinks[i].href, "/", 3)
+		let url = internalLinks[i].href.substring(charPos)
+		url = url.split("#")[0] + ".md"
+
+		let alreadyAdded = false
+		for (let j = 0; j < newLinks.length; j++) {
+  		if (url === newLinks[j]) {
+  			alreadyAdded = true
+  		}
+		}
+		for (let j = 0; j < loadedPages.length; j++) {
+			if (url === loadedPages[j].name) {
+  			alreadyAdded = true
+	  	}
+		}
+		if (!alreadyAdded && (url !== "/.md")) {
+			newLinks.push(url)
+		}
+	}
+	for (i = 0; i < newLinks.length; ++i) {
+		console.log("- " + newLinks[i])
+	}
+	for (i = 0; i < newLinks.length; ++i) {
+		loadFile(newLinks[i].replace(".md", "/index.md"), true)
+	}
 }
 
 function getPageData() {
