@@ -34,7 +34,7 @@
 
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/wave_function_collapse">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/1010396427299606528/Screen_Shot_2022-08-20_at_11.52.38.png">
+		<img src="https://cdn.discordapp.com/attachments/577832597686583310/1036186311666712616/Screen_Shot_2022-10-30_at_15.54.20.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/wave_function_collapse">
