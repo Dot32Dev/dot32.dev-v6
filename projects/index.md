@@ -38,10 +38,10 @@
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/wave_function_collapse">
-			<h2>Bevy Tiny Tank clone <span class="fas fa-external-link-alt"></h2>
+			<h2>Wave Function Collapse <span class="fas fa-external-link-alt"></h2>
 		</a>
 		<span class="tag">Requires Rust compiler</span>
-		<p>A half fetaured recreation of my Love2D Tiny Tank game</p>
+		<p>A CLI WFC demo written in Rust 🦀</p>
 	</div>
 </div>
 <p></p>
