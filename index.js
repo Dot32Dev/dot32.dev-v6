@@ -5,8 +5,10 @@ const md = new Remarkable({
 // let cache = []
 let currentPage = detectPageFromURL()
 let loadedPages = []
+let pages = ["/dot32.md", "/projects.md", "/tutorials.md"];
+let lastPage = ""
 
-function getPage(page) {
+async function getPage(page) {
 	console.log("Scanning cache for " + page)
 	for (var i = 0; i < loadedPages.length; i++) {
     console.log(`- ${loadedPages[i].name}`);
@@ -15,10 +17,23 @@ function getPage(page) {
     	console.log(`Found page ${page}`)
 
     	if (document.startViewTransition) {
-    		document.startViewTransition(() => {
-    			document.querySelector("main").innerHTML = loadedPages[i].text
+    		let newPage = pages.indexOf(loadedPages[i].name)
+  			let oldPage = pages.indexOf(lastPage)
+  			console.log("old" + oldPage)
+  			console.log("new" + newPage)
+  			if (newPage < oldPage) {
+  				document.documentElement.classList.add('back-transition');
+  				console.log('back-transition')
+  			}
+    		const transition = document.startViewTransition(() => {
+	    		document.querySelector("main").innerHTML = loadedPages[i].text
     			getPageData()
     		})
+    		try {
+					await transition.finished;
+				} finally {
+					document.documentElement.classList.remove('back-transition');
+				}
     	} else {
     		document.querySelector("main").innerHTML = loadedPages[i].text
     		getPageData()
@@ -77,6 +92,7 @@ getPage(currentPage)
 function setContent(name) {
 	window.history.pushState(name, `Dot32`, '/'+name);
 	console.log("--------")
+	lastPage = currentPage
 	currentPage = detectPageFromURL()
 
 	// loadFile("/" + name + "/index.md");
