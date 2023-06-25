@@ -36,6 +36,7 @@ header {
 	align-items: center;
 	box-shadow: 0px 0px 50px var(--shadow);
 	z-index: 1;
+	view-transition-name: header;
 }
 
 header nav, header .socials {
@@ -270,6 +271,7 @@ h1 {
 	pointer-events: auto;
 	box-sizing: border-box;
 	display: none;
+	view-transition-name: contents;
 }
 
 .fa-external-link-alt {
@@ -449,4 +451,106 @@ img.emoji {
 	header {
 		justify-content: center;
 	}
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes slide-from-right {
+  from { transform: translateX(30px); }
+}
+
+@keyframes slide-to-left {
+  to { transform: translateX(-30px); }
+}
+
+@keyframes slide-from-left {
+  from { transform: translateX(-30px); }
+}
+
+@keyframes slide-to-right {
+  to { transform: translateX(30px); }
+}
+
+/* 'Forward' transitions */
+::view-transition-old(root) {
+  animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(root) {
+  animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in, 300ms
+      cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* Overrides for 'back' transitions */
+.back-transition::view-transition-old(root) {
+  animation-name: fade-out, slide-to-right;
+}
+
+.back-transition::view-transition-new(root) {
+  animation-name: fade-in, slide-from-left;
+}
+
+/* Forward for mobile */
+@keyframes full-slide-from-right {
+  from { transform: translateX(100%); }
+}
+
+@keyframes full-slide-to-left {
+  to { transform: translateX(-100%); }
+}
+
+/* Back for mobile */
+@keyframes full-slide-from-left {
+  from { transform: translateX(-100%); }
+}
+
+@keyframes full-slide-to-right {
+  to { transform: translateX(100%); }
+}
+
+/* Transitions for mobile */
+::view-transition-old(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both full-slide-to-left;
+}
+
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both full-slide-from-right;
+}
+
+.back-transition::view-transition-old(root) {
+  animation-name: full-slide-to-right;
+}
+
+.back-transition::view-transition-new(root) {
+  animation-name: full-slide-from-left;
+}
+
+@media (min-width: 626px) {
+  /* Overrides for larger displays.
+  This is the shared axis transition from earlier in the article. */
+  ::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+  }
+
+  ::view-transition-new(root) {
+    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+  }
+
+  /* Overrides for 'back' transitions */
+  .back-transition::view-transition-old(root) {
+    animation-name: fade-out, slide-to-right;
+  } 
+
+  .back-transition::view-transition-new(root) {
+    animation-name: fade-in, slide-from-left;
+  }
 }
