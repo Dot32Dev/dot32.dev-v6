@@ -14,10 +14,18 @@ function getPage(page) {
     if (page == loadedPages[i].name) {
     	console.log(`Found page ${page}`)
 
-    	document.querySelector("main").innerHTML = loadedPages[i].text
+    	if (document.startViewTransition) {
+    		document.startViewTransition(() => {
+    			document.querySelector("main").innerHTML = loadedPages[i].text
+    			getPageData()
+    		})
+    	} else {
+    		document.querySelector("main").innerHTML = loadedPages[i].text
+    		getPageData()
+    	}
+
     	hljs.highlightAll()
     	twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})
-    	getPageData()
     	findNewLinks()
 
     	return
@@ -39,7 +47,7 @@ function loadFile(url, shouldNotLoadPage) {
 		  if (text.includes(`<meta property="og:title" content="Dot32 dev" />`)) {
 		  	if (!url.includes("/index.md")) {
 		  		console.log(`Could not find ${url} or ${url.replace(".md", "/index.md")}`)
-		  		text = '# 404 page not found'
+		  		text = "# 404 page not found \n[back to home page](/dot32)"
 		  	} else {
 		  		console.log(`Could not find ${url}, trying ${url.replace("/index.md", ".md")}`)
 		  		loadFile(url.replace("/index.md", ".md"))

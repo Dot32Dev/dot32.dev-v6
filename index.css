@@ -15,7 +15,9 @@ body {
 	/*color: #c2c2c2;*/
 	margin:  0px;
 
-	display: inline;
+/*	display: inline;*/
+
+	padding-left: calc(100vw - 100%);
 }
 
 header {
@@ -316,6 +318,8 @@ h1 {
 section {
 	position: relative;
 	transition-duration: 0.5s;
+	margin: 0;
+	padding: 0;
 }
 
 section::after {
