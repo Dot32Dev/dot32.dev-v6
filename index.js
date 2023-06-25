@@ -35,6 +35,9 @@ async function getPage(page) {
 					} finally {
 						document.documentElement.classList.remove('back-transition');
 					}
+				} else {
+					document.querySelector("main").innerHTML = loadedPages[i].text
+    			getPageData()
 				}
     	} else {
     		document.querySelector("main").innerHTML = loadedPages[i].text
