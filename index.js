@@ -19,6 +19,8 @@ async function getPage(page) {
     	if (document.startViewTransition) {
     		let newPage = pages.indexOf(loadedPages[i].name)
   			let oldPage = pages.indexOf(lastPage)
+  			if (newPage === -1) {newPage = 32}
+  			if (oldPage === -1) {oldPage = 32}
   			console.log("old" + oldPage)
   			console.log("new" + newPage)
   			if (newPage < oldPage) {
