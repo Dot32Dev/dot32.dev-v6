@@ -25,14 +25,16 @@ async function getPage(page) {
   				document.documentElement.classList.add('back-transition');
   				console.log('back-transition')
   			}
-    		const transition = document.startViewTransition(() => {
-	    		document.querySelector("main").innerHTML = loadedPages[i].text
-    			getPageData()
-    		})
-    		try {
-					await transition.finished;
-				} finally {
-					document.documentElement.classList.remove('back-transition');
+  			if (newPage !== oldPage) {
+	    		const transition = document.startViewTransition(() => {
+		    		document.querySelector("main").innerHTML = loadedPages[i].text
+	    			getPageData()
+	    		})
+	    		try {
+						await transition.finished;
+					} finally {
+						document.documentElement.classList.remove('back-transition');
+					}
 				}
     	} else {
     		document.querySelector("main").innerHTML = loadedPages[i].text
