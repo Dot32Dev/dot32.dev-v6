@@ -7,7 +7,8 @@
     align-items: center;"><img alt="Dot32 written in the minecraft enchanting table font, (SGA) floating above a sea." src="/dot32/the-sea.webp" style="object-fit: cover;width: 100%;"></div> 
 <img alt="Dot32 Logo" src="/dot32/sunrise-somewhere-square-copy.webp" style="border-radius: 50%;border-style: solid;border-width: 2px; border-color: #2e3747;width: 4.4vh; transform: translate(0, -50%) scale(3);">
 
-<br>`Note, much of this is quite outdated and in need of a do-over!`
+<br>`Note, much of this is quite outdated and in need of a do-over.`
+<br><a href="https://dot32v5.netlify.app">`Check out the work-in-progress next generation of this website!`</a>
 
 ## Who am I ✌️ 
 I'm Dot32, a 16 year old from Western Australia. I started making games when I was 9, and I never stopped!
