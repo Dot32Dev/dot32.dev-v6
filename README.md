@@ -1,15 +1,13 @@
-# Dot32 dev
-Welcome to my website! As it automatically renders markdown, you can view this readme in the [site itself](https://dot32.dev/readme)!
+# Dot32.dev-v4
+This is version 4 of my website, check out the latest version [here.](https://github.com/Dot32IsCool/dot32.dev)
+
+I made this site when I was 16, excuse my unprofessionalism lmao.
 
 This site functions as a Single Page Application; that is to say that changing pages and navigating the website will not reload the page, it handles everything by itself 👌
 
-Version 4 of my website is now licensed under the [GNU GPLv3](https://github.com/Dot32IsCool/dot32-website-v4/blob/main/LICENSE) license, which allows you to effectively do whatever you wish with my website, except distribute a close source varient. View the sourcecode [here](https://github.com/Dot32IsCool/dot32-website-v4/).
+This version of the website is licensed under the [GNU GPLv3](https://github.com/Dot32IsCool/dot32-website-v4/blob/main/LICENSE) license, which allows you to effectively do whatever you wish with my website, except distribute a close source varient. View the sourcecode [here](https://github.com/Dot32IsCool/dot32-website-v4/).
 
 Credit to [Twemoji](https://twemoji.twitter.com/) for the emoji graphics, of which are licenced under the [cretive commons 4.0](https://creativecommons.org/licenses/by/4.0/) licence
-
-This website is hosted for free by Netlify, and this badge indicates the current build status for the site. My domain was also bought under Netlify, and it provides a nice service in general, I can absolutely recomend it for your personal use :)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a6b161ad-76d8-4fee-b1cd-f86d77cbd203/deploy-status)](https://app.netlify.com/sites/dot32/deploys)
 
 <details>
   <summary>My discord embeds</summary>
