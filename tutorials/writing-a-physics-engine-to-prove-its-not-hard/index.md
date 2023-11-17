@@ -21,7 +21,7 @@ The `V` stands for velocity, and will be how we track the players momentum. When
 Here, a square is being drawn at the players coordinates as its velocity is increased every frame.
 <!-- ![Velocity video](/tutorials/writing-a-physics-engine-to-prove-its-not-hard/velocity.mp4) -->
 <video autoplay="" playsinline="" loop="" muted="">
-  <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132277991913832529/velocity.mp4" type="video/mp4">
+  <source src="/images/velocity.mp4" type="video/mp4">
 </video>
 The update code looks something like this:
 ```lua
@@ -41,7 +41,7 @@ player.xV = player.xV * 0.9
 ```
 This will subtract 10% of the players speed every frame, eventually bringing the player to a stop. Make sure to adjust the values so that the player's speed and momentum feels right. The result of this change should look something like this.
 <video autoplay="" playsinline="" loop="" muted="">
-  <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132282406372642856/movement.mp4" type="video/mp4">
+  <source src="/images/movement.mp4" type="video/mp4">
 </video>
 Now, I'm going to add gravity by constantly updating the Y velocity as described earlier. Note that there is no reason to put friction on the sky, unless you really want air resistance. But oh no! I'm just falling into the void!
 
@@ -70,7 +70,7 @@ end
 
 Perfect! We have a little player jumping around the scene.
 <video autoplay="" playsinline="" loop="" muted="">
-  <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132282890395328552/bounce_that_boi.mp4" type="video/mp4">
+  <source src="/images/bounce_that_boi.mp4" type="video/mp4">
 </video>
 
 
@@ -148,12 +148,12 @@ for i, platform in ipairs(platforms) do
 ```
 Et voilà! We now correctly detect when or when not we are colliding with the platforms! 
 <video autoplay="" playsinline="" loop="" muted="">
-  <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132285075791294596/aabb_working.mp4" type="video/mp4">
+  <source src="/images/aabb_working.mp4" type="video/mp4">
 </video>
 
 However, what we have achieved still isn't perfect! In fact, there are more glaring issues to be solved. Currently, no matter what edge we hit the platform from, our collision script resolves it by taking us to the top of the platform. This is the desired behaviour when our player is coming from above the platform, but is incorrect in other cases! Look what happens if the player jumps into the platform from below.
 <video autoplay="" playsinline="" loop="" muted="">
-  <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132285434425266267/through_the_platform.mp4" type="video/mp4">
+  <source src="/images/through_the_platform.mp4" type="video/mp4">
 </video>
 
 ## Resolving the Collision Correctly 
@@ -226,7 +226,7 @@ Some important things to note!
 
 And that is it done! Enjoy your home-made versatile physics engine. 
 <video autoplay="" playsinline="" loop="" muted="">
-  <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132286244873830511/completed_the_resolution.mp4" type="video/mp4">
+  <source src="/images/completed_the_resolution.mp4" type="video/mp4">
 </video>
 If you would also like to support circles in your physics engine, check out my [circle versus rectangle collision](https://dot32.netlify.app/tutorials/circle-vs-rectangle-collision) tutorial!
 

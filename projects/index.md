@@ -4,7 +4,7 @@
 
 <div class=largeLink>
 	<a href="https://discordtimestampgenerator.netlify.app/">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png		">
+		<img src="/images/Screen_Shot_2021-12-10_at_14.20.21.png		">
 	</a>
 	<div>
 		<a href="https://discordtimestampgenerator.netlify.app/">
@@ -34,7 +34,7 @@
 
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/wave_function_collapse">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/1036186311666712616/Screen_Shot_2022-10-30_at_15.54.20.png">
+		<img src="/images/Screen_Shot_2022-10-30_at_15.54.20.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/wave_function_collapse">
@@ -47,7 +47,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/bevy-moving-circle">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/1010396427299606528/Screen_Shot_2022-08-20_at_11.52.38.png">
+		<img src="/images/Screen_Shot_2022-08-20_at_11.52.38.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/bevy-moving-circle">
@@ -60,7 +60,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/976074056656887858/Screen_Shot_2022-05-17_at_18.44.55.png">
+		<img src="/images/Screen_Shot_2022-05-17_at_18.44.55.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/dot32-intro-rs">
@@ -73,7 +73,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://discord.com/api/oauth2/authorize?client_id=927501769272094720&permissions=274877991936&scope=bot">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/927860469522374676/Screen_Shot_2022-01-04_at_17.46.06.png">
+		<img src="/images/Screen_Shot_2022-01-04_at_17.46.06.png">
 	</a>
 	<div> 
 		<a href="https://discord.com/api/oauth2/authorize?client_id=927501769272094720&permissions=274877991936&scope=bot">
@@ -86,7 +86,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/comand-line-connect-4">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/927858316628070410/Screen_Shot_2022-01-04_at_17.37.30.png">
+		<img src="/images/Screen_Shot_2022-01-04_at_17.37.30.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/comand-line-connect-4">
@@ -99,7 +99,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/norwegian-numbers">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/918064935395807273/Screen_Shot_2021-12-08_at_17.02.01.png">
+		<img src="/images/Screen_Shot_2021-12-08_at_17.02.01.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/norwegian-numbers">
@@ -112,7 +112,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/platformer">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/917718774134763520/Screen_Shot_2021-12-07_at_18.06.27.png">
+		<img src="/images/Screen_Shot_2021-12-07_at_18.06.27.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/platformer">
@@ -125,7 +125,7 @@
 <p></p>
 <div class=largeLink>
 	<a href="https://github.com/Dot32IsCool/ball-physics-engine">
-		<img src="https://cdn.discordapp.com/attachments/577832597686583310/906352104111734784/Screen_Shot_2021-11-06_at_9.19.19_am.png">
+		<img src="/images/Screen_Shot_2021-11-06_at_9.19.19_am.png">
 	</a>
 	<div> 
 		<a href="https://github.com/Dot32IsCool/ball-physics-engine">
