@@ -23,6 +23,10 @@ body {
 	padding: 0;
 }
 
+@view-transition {
+	navigation: auto;
+}
+
 h2 {
 	/* color: rgb(248, 246, 227); */
 	border-bottom: 1px solid #282c34;
