@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 482 361" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.00139,0,0,1,0,0)">
+        <rect x="0" y="0" width="481.333" height="361" style="fill:rgb(33,33,33);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-32.5619,23.6956)">
+        <path d="M322.284,119.504C322.284,113.2 317.166,108.083 310.862,108.083L236.262,108.083C229.958,108.083 224.84,113.2 224.84,119.504L224.84,194.105C224.84,200.408 229.958,205.526 236.262,205.526L310.862,205.526C317.166,205.526 322.284,200.408 322.284,194.105L322.284,119.504Z" style="fill:rgb(211,160,80);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,11.0302,25.2774)">
+        <text x="220.075px" y="91.36px" style="font-family:'HiraKakuStd-W8', 'Hiragino Kaku Gothic Std', sans-serif;font-weight:800;font-size:24px;fill:white;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,87.8224,101.706)">
+        <text x="220.075px" y="91.36px" style="font-family:'HiraKakuStd-W8', 'Hiragino Kaku Gothic Std', sans-serif;font-weight:800;font-size:24px;fill:white;">2</text>
+    </g>
+    <g transform="matrix(1,0,0,1,9.71547,178.134)">
+        <text x="220.075px" y="91.36px" style="font-family:'HiraKakuStd-W8', 'Hiragino Kaku Gothic Std', sans-serif;font-weight:800;font-size:24px;fill:white;">4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-68.3914,101.706)">
+        <text x="220.075px" y="91.36px" style="font-family:'HiraKakuStd-W8', 'Hiragino Kaku Gothic Std', sans-serif;font-weight:800;font-size:24px;fill:white;">8</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-91.5728,35.0818)">
+        <text x="173.293px" y="308.382px" style="font-family:'HiraKakuStd-W8', 'Hiragino Kaku Gothic Std', sans-serif;font-weight:800;font-size:15.574px;fill:white;fill-opacity:0.25;">Each side gets assigned a binary value</text>
+    </g>
+</svg>
