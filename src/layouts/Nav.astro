@@ -83,7 +83,7 @@ import { Icon } from 'astro-icon/components';
 	}
 
 	/* Animation styles for reload type only */
-	/* html:active-view-transition-type(reload) {
+	html:active-view-transition-type(reload) {
 		&::view-transition-old(root) {
 			animation-name: fade-out, scale-down;
 		}
@@ -91,7 +91,7 @@ import { Icon } from 'astro-icon/components';
 			animation-delay: 0.25s;
 			animation-name: fade-in, scale-up;
 		}
-	} */
+	}
 
 	/* @keyframes slide-out-to-left {
 		from {
@@ -337,6 +337,15 @@ import { Icon } from 'astro-icon/components';
 		if (currentPathname === destinationPathname) {
 			return "reload";
 		}
+
+		const pages = ["/", "/projects", "/tutorials"];
+		current = pages.indexOf(currentPathname);
+		next = pages.indexOf(destinationPathname);
+
+		if (current > next) {
+			return "backwards";
+		}
+
 		return "forwards";
 	}
 
