@@ -15,7 +15,7 @@ import { Icon } from 'astro-icon/components';
 	<body>
 		<div class="header-container">
 			<header>
-				<a class="dot32" href="/"><img src="dot32text.webp" alt="Dot32"></a>
+				<a class="first" href="/"><img src="dot32text.webp" alt="Dot32"></a>
 				<nav>
 					<ul>
 						<li><a href="/">Projects</a></li>
@@ -84,20 +84,21 @@ import { Icon } from 'astro-icon/components';
 	a {
 		color: rgba(255, 255, 255, 0.652);
 		text-decoration: none;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 500;
 		transition: color;
-		transition-duration: 0.3s;
+		transition-duration: 0.2s;
 	}
 
-	.dot32 a {
+	.first {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		pointer-events: none;
+		position: relative;
 	}
 
-	.dot32 img {
+	.first img {
 		height: 75px; /* Set an appropriate size */
 		width: auto;
 		position: relative;
@@ -105,16 +106,18 @@ import { Icon } from 'astro-icon/components';
 		pointer-events: none; /* Make the image not clickable */
 	}
 
-	.dot32 a::before {
+	.first::after {
 		content: '';
 		position: absolute;
 		top: 50%; /* Start from the middle */
 		left: 0;
+		right: 0;
 		transform: translateY(-50%); /* Center vertically */
 		width: 100%;
 		height: 2em; /* Set the hitbox height */
-		z-index: 1; /* Set a higher z-index for the hitbox */
+		z-index: 10; /* Set a higher z-index for the hitbox */
 		background-color: transparent; /* Make sure it's invisible */
+		/* background-color: red; */
 		pointer-events: all;
 	}
 
@@ -136,10 +139,13 @@ import { Icon } from 'astro-icon/components';
 
 	.cta svg {
 		margin-left: 1em;
-		fill: green;
 	}
 
 	a:hover {
 		color: white;
+	}
+
+	.cta:hover {
+		color: black;
 	}
 </style>
