@@ -18,8 +18,8 @@ import { Icon } from 'astro-icon/components';
 				<a class="first" href="/"><img src="dot32text.webp" alt="Dot32"></a>
 				<nav>
 					<ul>
-						<li><a href="/">Projects</a></li>
-						<li><a href="/">Tutorials</a></li>
+						<li><a href="/projects">Projects</a></li>
+						<li><a href="/tutorials">Tutorials</a></li>
 					</ul>
 				</nav>
 
@@ -42,6 +42,137 @@ import { Icon } from 'astro-icon/components';
 		font-family: Inter;
 		--brand-colour: #5069cb;
 	}
+
+	@view-transition {
+		navigation: auto;
+		/* types: backwards, forwards, reload; */
+	}
+
+
+	html:active-view-transition-type(forwards, backwards) {
+		body {
+			view-transition-name: content;
+		}
+	}
+
+	/* ::view-transition-old(root) {
+		animation-name: slide-out-to-left;
+	}
+	::view-transition-new(root) {
+		animation-name: slide-in-from-right;
+	} */
+
+	/* Animation styles for forwards type only */
+	html:active-view-transition-type(forwards) {
+		&::view-transition-old(content) {
+			animation-name: slide-out-to-left;
+		}
+		&::view-transition-new(content) {
+			animation-name: slide-in-from-right;
+		}
+	}
+
+	/* Animation styles for backwards type only */
+	html:active-view-transition-type(backwards) {
+		&::view-transition-old(content) {
+			animation-name: slide-out-to-right;
+		}
+		&::view-transition-new(content) {
+			animation-name: slide-in-from-left;
+		}
+	}
+
+	/* Animation styles for reload type only */
+	/* html:active-view-transition-type(reload) {
+		&::view-transition-old(root) {
+			animation-name: fade-out, scale-down;
+		}
+		&::view-transition-new(root) {
+			animation-delay: 0.25s;
+			animation-name: fade-in, scale-up;
+		}
+	} */
+
+	/* @keyframes slide-out-to-left {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes slide-in-from-left {
+		from {
+			transform: translateX(-100%);
+		}
+
+		to {
+			transform: translateX(0%);
+		}
+	}
+
+	@keyframes slide-out-to-right-out {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(100%);
+		}
+	}
+
+	@keyframes slide-in-from-right {
+		from {
+			transform: translateX(100%);
+		}
+
+		to {
+			transform: translateX(0%);
+		}
+	} */
+
+@keyframes slide-in-from-left {
+  from {
+    translate: -100vw 0;
+  }
+}
+@keyframes slide-in-from-right {
+  from {
+    translate: 100vw 0;
+  }
+}
+@keyframes slide-out-to-left {
+  to {
+    translate: -100vw 0;
+  }
+}
+@keyframes slide-out-to-right {
+  to {
+    translate: 100vw 0;
+  }
+}
+@keyframes scale-up {
+  from {
+    scale: 0;
+  }
+}
+@keyframes scale-down {
+  to {
+    scale: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
 </style>
 
 <style>
@@ -50,6 +181,7 @@ import { Icon } from 'astro-icon/components';
 		height: 5rem;
 		padding-top: 2rem;
 		position: absolute;
+		top: 0;
 	}
 
 	header {
@@ -69,6 +201,7 @@ import { Icon } from 'astro-icon/components';
 		z-index: 40;
 		-webkit-backdrop-filter: blur(5px);
 		backdrop-filter: blur(5px);
+		view-transition-name: header;
 	}
 
 	li {
@@ -152,3 +285,59 @@ import { Icon } from 'astro-icon/components';
 		color: black;
 	}
 </style>
+
+<script client:load>
+
+	window.addEventListener("pageswap", async (e) => {
+		if (e.viewTransition) {
+			console.log("pageswap");
+
+			// @TODO: If destination does not start with basePath, abort the VT
+
+			const transitionType = determineTransitionType(e.activation.from, e.activation.entry);
+			// console.log(`pageSwap: ${transitionType}`);
+			e.viewTransition.types.add(transitionType);
+
+			// Persist transitionType for browsers that don’t have the Navigation API
+			if (!window.navigation) {
+				localStorage.setItem("transitionType", transitionType);
+			}
+		}
+	});
+
+	window.addEventListener("pagereveal", async (e) => {
+		if (e.viewTransition) {
+			console.log("pagereveal");
+
+			// @TODO: If destination does not start with basePath, abort the VT
+
+			// Get transitionType from localStorage or derive it using the NavigationActivationInformation
+			let transitionType;
+			if (!window.navigation) {
+				transitionType = localStorage.getItem("transitionType");
+			} else {
+				transitionType = determineTransitionType(navigation.activation.from, navigation.activation.entry);
+			}
+
+			// console.log(`pageReveal: ${transitionType}`);
+			e.viewTransition.types.add(transitionType);
+		}
+	});
+
+	const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
+		const currentURL = new URL(oldNavigationEntry.url);
+		const destinationURL = new URL(newNavigationEntry.url);
+
+		const currentPathname = currentURL.pathname;
+		const destinationPathname = destinationURL.pathname;
+
+		console.log(currentPathname);
+		console.log(destinationPathname);
+
+		if (currentPathname === destinationPathname) {
+			return "reload";
+		}
+		return "forwards";
+	}
+
+</script>
