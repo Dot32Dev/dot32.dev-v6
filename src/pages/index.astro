@@ -5,6 +5,7 @@ import Nav from '../layouts/Nav.astro';
 
 <Nav title="Home">
 	<div class="outer-container">
+		<div class="landing-background-anim"></div>
 		<h1>Hi there, I'm <span>Dot32</span></h1>
 		<div class="video-container animate">
 			<video autoplay="" playsinline="" loop="" muted="">
@@ -48,7 +49,10 @@ import Nav from '../layouts/Nav.astro';
 	}
 
 	.marquee {
-		max-width: 300px; /* Adjust width as needed */
+		max-width: 2em; /* Adjust width as needed */
+		transform: translateY(-20px);
+		opacity: 0;
+
 		margin-left: auto;
 		margin-right: auto;
 		overflow: hidden;
@@ -60,6 +64,9 @@ import Nav from '../layouts/Nav.astro';
 		height: 3em;
 		display: flex;
 		align-items: center;
+
+		animation: sub-fade-in .2s ease-out .5s 1, sub-resize 1s ease-out .5s 1;
+		animation-fill-mode: forwards;
 	}
 
 	.marquee span {
@@ -91,12 +98,72 @@ import Nav from '../layouts/Nav.astro';
 	}
 
 	h1 {
-		font-weight: 400;
+		font-weight: 550;
+		/* font-weight: 400; */
 		letter-spacing: .2rem;
 		margin-bottom: 0;
+		animation: top-fade-in .5s cubic-bezier(0.25, 1, 0.5, 1) .4s 1;
+		animation-fill-mode: forwards;
+		transform: translateY(40px);
+		opacity: 0;
 	}
 
 	h1 span {
+		/* font-weight: 600; */
 		color: var(--brand-colour);
+	}
+
+	.landing-background-anim {
+		display: none;
+		--size: 750px;
+		--speed: 15s;
+		--easing: cubic-bezier(.8, .2, .2, .8);
+		width: var(--size);
+		height: var(--size);
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		/* transform: translate(calc(var(--size) / -2),calc(var(--size) / -2)); */
+		/* transform: translateX(-50%); */
+		margin-top: calc(var(--size) / -2);
+		margin-left: calc(var(--size) / -2);
+		filter: blur(calc(var(--size) / 5));
+		opacity: .2;
+		background-image: linear-gradient(red,blue);
+		border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+		z-index: -20;
+	}
+
+	@keyframes sub-fade-in {
+		0% {
+			transform: translateY(-20px);
+			/* max-width: 2em; */
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+			/* max-width: 300px; */
+		}
+	}
+
+	@keyframes sub-resize {
+		0% {
+			max-width: 2em;
+		}
+		100% {
+			max-width: 300px;
+		}
+	}
+
+	@keyframes top-fade-in {
+		0% {
+			transform: translateY(40px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
 	}
 </style>
