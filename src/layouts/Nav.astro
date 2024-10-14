@@ -33,13 +33,28 @@ import { Icon } from 'astro-icon/components';
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+	/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+	@font-face {
+		font-family: 'Inter Self-Hosted';
+		src: url(/Inter-VariableFont_opsz,wght.ttf) format('truetype');
+		font-style: normal;
+		font-weight: 100 900;
+
+	}
+
+	@font-face {
+		font-family: 'Inter Self-Hosted';
+		src: url('Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+		font-style: italic;
+		font-weight: 100 900;
+	}
 
 	body {
 		margin: 0;
 		background-color: #0f0e0e;
 		color: white;
-		font-family: Inter;
+		font-family: Inter Self-Hosted;
 		--brand-colour: #5069cb;
 	}
 
