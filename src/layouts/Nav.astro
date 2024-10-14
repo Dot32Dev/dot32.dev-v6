@@ -354,8 +354,8 @@ import { Icon } from 'astro-icon/components';
 		}
 
 		const pages = ["/", "/projects", "/tutorials"];
-		current = pages.indexOf(currentPathname);
-		next = pages.indexOf(destinationPathname);
+		current = pages.indexOf(currentPathname.replace(/\/$/, ""));
+		next = pages.indexOf(destinationPathname.replace(/\/$/, ""));
 
 		if (current > next) {
 			return "backwards";
