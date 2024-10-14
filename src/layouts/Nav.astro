@@ -10,6 +10,7 @@ import { Icon } from 'astro-icon/components';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<!-- <link rel="expect" href=".header-container" blocking="render" />`` -->
 		<title>{title}</title>
 	</head>
 	<body>
@@ -80,20 +81,20 @@ import { Icon } from 'astro-icon/components';
 	/* Animation styles for forwards type only */
 	html:active-view-transition-type(forwards) {
 		&::view-transition-old(content) {
-			animation-name: slide-out-to-left;
+			animation-name: slide-out-to-left, fade-out;
 		}
 		&::view-transition-new(content) {
-			animation-name: slide-in-from-right;
+			animation-name: slide-in-from-right, fade-in;
 		}
 	}
 
 	/* Animation styles for backwards type only */
 	html:active-view-transition-type(backwards) {
 		&::view-transition-old(content) {
-			animation-name: slide-out-to-right;
+			animation-name: slide-out-to-right, fade-out;
 		}
 		&::view-transition-new(content) {
-			animation-name: slide-in-from-left;
+			animation-name: slide-in-from-left, fade-in;
 		}
 	}
 
@@ -150,22 +151,22 @@ import { Icon } from 'astro-icon/components';
 
 @keyframes slide-in-from-left {
   from {
-    translate: -100vw 0;
+    translate: -30px 0;
   }
 }
 @keyframes slide-in-from-right {
   from {
-    translate: 100vw 0;
+    translate: 30px 0;
   }
 }
 @keyframes slide-out-to-left {
   to {
-    translate: -100vw 0;
+    translate: -30px 0;
   }
 }
 @keyframes slide-out-to-right {
   to {
-    translate: 100vw 0;
+    translate: 30px 0;
   }
 }
 @keyframes scale-up {
@@ -211,12 +212,23 @@ import { Icon } from 'astro-icon/components';
 		padding-left: 2rem;
 		padding-right: 1rem;
 		background-color: #00000026;
-		border: 1px solid hsla(0, 0%, 100%, .06);
+		border: 1px solid rgba(255, 255, 255, 0.06);
 		/* border: 1px solid #2b2b2b; */
 		z-index: 40;
 		-webkit-backdrop-filter: blur(5px);
 		backdrop-filter: blur(5px);
 		view-transition-name: header;
+
+		/* Force GPU rendering */
+		/* transform: translateZ(0);
+		backface-visibility: hidden;
+		will-change: transform, opacity; */
+		will-change: transform, opacity;
+	}
+
+	::view-transition-old(header), ::view-transition-new(header) {
+		animation: none;
+		transition: none;
 	}
 
 	li {
@@ -364,4 +376,17 @@ import { Icon } from 'astro-icon/components';
 		return "forwards";
 	}
 
+</script>
+
+<script type="speculationrules">
+	{
+	  "prerender": [{
+		"where": {
+		  "and": [
+			{ "href_matches": "/*" }
+		  ]
+		},
+		"eagerness": "moderate"
+	  }]
+	}
 </script>
