@@ -1,6 +1,7 @@
 ---
 const { title } = Astro.props;
 import { Icon } from 'astro-icon/components';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <html lang="en">
@@ -12,6 +13,8 @@ import { Icon } from 'astro-icon/components';
 		<meta name="generator" content={Astro.generator} />
 		<!-- <link rel="expect" href=".header-container" blocking="render" />`` -->
 		<title>{title}</title>
+
+		<ViewTransitions />
 	</head>
 	<body>
 		<div class="header-container">
@@ -24,7 +27,7 @@ import { Icon } from 'astro-icon/components';
 					</ul>
 				</nav>
 
-				<a href="https://discord.gg/Pswb8khdgQ" target="_blank" class="cta">Join my Discord<Icon name="ic:baseline-discord" size="1.5em"/></a>
+				<a href="https://discord.gg/Pswb8khdgQ" target="_blank" class="cta"><span class="cta-text">Join my Discord</span><Icon name="ic:baseline-discord" size="1.5em"/></a>
 			</header>
 		</div>
 
@@ -57,6 +60,7 @@ import { Icon } from 'astro-icon/components';
 		color: white;
 		font-family: Inter Self-Hosted;
 		--brand-colour: #5069cb;
+		overflow-x: hidden;
 	}
 
 	@view-transition {
@@ -69,6 +73,20 @@ import { Icon } from 'astro-icon/components';
 		body {
 			view-transition-name: content;
 		}
+	}
+
+	.forward::view-transition-old(root) {
+		animation-name: slide-out-to-left, fade-out;
+	}
+	.forward::view-transition-new(root) {
+		animation-name: slide-in-from-right, fade-in;
+	}
+
+	.backward::view-transition-old(root) {
+		animation-name: slide-out-to-right, fade-out;
+	}
+	.backward::view-transition-new(root) {
+		animation-name: slide-in-from-left, fade-in;
 	}
 
 	/* ::view-transition-old(root) {
@@ -311,9 +329,39 @@ import { Icon } from 'astro-icon/components';
 	.cta:hover {
 		color: black;
 	}
+
+	/* Hide text on smaller screens */
+	@media (max-width: 600px) {
+		header {
+			padding-right: 0.5rem;
+			padding-left: 0.5rem;
+			border-radius: 0;
+		}
+		.header-container {
+			padding-top: 0;
+		}
+		header a {
+			font-size: 15px;
+		}
+		.cta {
+			height: 3rem;
+			/* background-color: rgba(73, 188, 255, 0.65); */
+			width: 3rem;
+			padding: 0;
+			margin-left: 13.5px;
+			margin-right: 13.5px;
+			border-radius: 1.5rem;
+		}
+		.cta span {
+			display: none; /* Hide the text */
+		}
+		.cta svg {
+			margin-left: 0;
+		}
+	}
 </style>
 
-<script client:load>
+<script is:inline> //client:load
 
 	window.addEventListener("pageswap", async (e) => {
 		if (e.viewTransition) {
@@ -351,9 +399,40 @@ import { Icon } from 'astro-icon/components';
 		}
 	});
 
+	// document.addEventListener('astro:before-preparation', event => {
+	// 	// const originalLoader = event.loader;
+	// 	// event.loader = async function() {
+	// 	// 	const { startSpinner } = await import('./spinner.js');
+	// 	// 	const stop = startSpinner();
+	// 	// 	await originalLoader();
+	// 	// 	stop();
+	// 	// };
+	// 	// console.log(event);
+
+	// 	// const transitionType = determineTransitionType(event.from, event.to);
+	// 	// event.viewTransition.types.add(transitionType);
+
+	// 	console.log(event.from.pathname);
+	// 	console.log(event.to.pathname);
+
+	// 	const transitionClass = determineTransitionType(event.from, event.to);
+	// 	console.log(transitionClass);
+
+	// 	document.documentElement.classList.add(transitionClass);
+  	// });
+
+	// document.addEventListener('astro:after-preparation', () => {
+	// 	// document.classList.remove('forwards');
+	// 	// document.classList.remove('backwards');
+  	// });
+
 	const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
-		const currentURL = new URL(oldNavigationEntry.url);
-		const destinationURL = new URL(newNavigationEntry.url);
+		// const currentURL = new URL(oldNavigationEntry.url);
+		// const destinationURL = new URL(newNavigationEntry.url);
+
+		const currentURL = new URL(oldNavigationEntry);
+		const destinationURL = new URL(newNavigationEntry);
+
 
 		const currentPathname = currentURL.pathname;
 		const destinationPathname = destinationURL.pathname;
