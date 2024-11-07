@@ -2,9 +2,112 @@
 const { title } = Astro.props;
 import { Icon } from 'astro-icon/components';
 import { ViewTransitions } from 'astro:transitions';
+
+// const slide_right = {
+//   forwards: {
+//     old: { name: 'slide-out-to-left', duration: '0.3s', easing: 'ease-out' },
+//     new: { name: 'slide-in-from-right', duration: '0.3s', easing: 'ease-out' }
+//   },
+//   backwards: {
+//     old: { name: 'slide-out-to-right', duration: '0.3s', easing: 'ease-out' },
+//     new: { name: 'slide-in-from-left', duration: '0.3s', easing: 'ease-out' }
+//   }
+// };
+
+// const slide_left = {
+//   forwards: {
+//     old: { name: 'slide-out-to-right', duration: '0.3s', easing: 'ease-out' },
+//     new: { name: 'slide-in-from-left', duration: '0.3s', easing: 'ease-out' }
+//   },
+//   backwards: {
+//     old: { name: 'slide-out-to-left', duration: '0.3s', easing: 'ease-out' },
+//     new: { name: 'slide-in-from-right', duration: '0.3s', easing: 'ease-out' }
+//   }
+// };
+
+// const determineTransitionType = (oldNavigationEntry, newNavigationEntry) => {
+// 	// const currentURL = new URL(oldNavigationEntry.url);
+// 	// const destinationURL = new URL(newNavigationEntry.url);
+
+// 	const currentURL = new URL(oldNavigationEntry);
+// 	const destinationURL = new URL(newNavigationEntry);
+
+
+// 	const currentPathname = currentURL.pathname;
+// 	const destinationPathname = destinationURL.pathname;
+
+// 	// console.log(currentPathname);
+// 	// console.log(destinationPathname);
+
+// 	if (currentPathname === destinationPathname) {
+// 		return "reload";
+// 	}
+
+// 	const pages = ["/", "/projects", "/tutorials"];
+// 	let current = pages.indexOf(currentPathname.replace(/\/$/, ""));
+// 	let next = pages.indexOf(destinationPathname.replace(/\/$/, ""));
+
+// 	if (current > next) {
+// 		return "backwards";
+// 	}
+
+// 	return "forwards";
+// }
+
+// const custom_transition = (oldNavigationEntry, newNavigationEntry) => {
+//   const direction = determineTransitionType(oldNavigationEntry, newNavigationEntry);
+
+//   if (direction === 'forwards') {
+//     return slide_right;
+// 	// return {
+// 	// 	forwards: slide_right,
+// 	// 	backwards: slide_left,
+// 	// }
+//   } else if (direction === 'backwards') {
+//     return slide_left;
+// 	// return {
+// 	// 	forwards: slide_left,
+// 	// 	backwards: slide_right,
+// 	// }
+//   } else {
+//     // For 'reload' or any other case, you might want to use a different animation or none at all
+//     return { forwards: {}, backwards: {} };
+//   }
+// };
+
+const slideSmall = {
+  forwards: {
+    old: {
+      name: 'slide-out-to-left',
+      duration: '0.2s',
+      easing: 'ease-out',
+      fillMode: 'forwards'
+    },
+    new: {
+      name: 'slide-in-from-right',
+      duration: '0.2s',
+      easing: 'ease-out',
+      fillMode: 'backwards'
+    }
+  },
+  backwards: {
+    old: {
+      name: 'slide-out-to-right',
+      duration: '0.2s',
+      easing: 'ease-out',
+      fillMode: 'forwards'
+    },
+    new: {
+      name: 'slide-in-from-left',
+      duration: '0.2s',
+      easing: 'ease-out',
+      fillMode: 'backwards'
+    }
+  }
+};
 ---
 
-<html lang="en">
+<html lang="en" transition:animate=slide>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -31,7 +134,9 @@ import { ViewTransitions } from 'astro:transitions';
 			</header>
 		</div>
 
-		<slot />
+		<main>
+			<slot/>
+		</main>
 
 	</body>
 </html>
@@ -311,8 +416,8 @@ import { ViewTransitions } from 'astro:transitions';
 		display: flex; /* CSS3 */
 		align-items: center; /* Vertical align */
 		justify-content: center; /* Horizontal align */
-		padding-right: 1em; 
-		padding-left: 1em; 
+		padding-right: 1em;
+		padding-left: 1em;
 		border-radius: 1em;
 		font-size: 15px;
 		font-weight: 600;
@@ -361,7 +466,7 @@ import { ViewTransitions } from 'astro:transitions';
 	}
 </style>
 
-<script is:inline> //client:load
+<!-- <script is:inline> //client:load
 
 	window.addEventListener("pageswap", async (e) => {
 		if (e.viewTransition) {
@@ -455,7 +560,7 @@ import { ViewTransitions } from 'astro:transitions';
 		return "forwards";
 	}
 
-</script>
+</script> -->
 
 <!-- <script type="speculationrules">
 	{
@@ -469,3 +574,30 @@ import { ViewTransitions } from 'astro:transitions';
 	  }]
 	}
 </script> -->
+
+<script is:inline>
+
+const pages = ["/", "/projects", "/tutorials"];
+
+// Change direction of
+document.addEventListener('astro:before-preparation', (e) => {
+  const fromIdx = pages.indexOf(e.from.pathname);
+  const toIdx = pages.indexOf(e.to.pathname);
+
+  e.direction = fromIdx === -1 || toIdx === -1
+	? e.direction
+	: fromIdx < toIdx ? 'forward' : 'back';
+});
+
+// If it's the same page, dont navigate
+document.addEventListener('astro:page-load', () => {
+  const links = document.querySelector('nav').querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.pathname === window.location.pathname) {
+        e.preventDefault();
+      }
+    });
+  });
+});
+</script>

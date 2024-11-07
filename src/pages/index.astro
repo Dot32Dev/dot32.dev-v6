@@ -134,14 +134,16 @@ import Nav from '../layouts/Nav.astro';
 	}
 
 	@media (max-width: 750px) {
+		.landing-background-anim {
+			--size: 90vw; /* Adjust size for mobile */
+		}
+	}
+
+	@media (max-width: 600px) {
 		.outer-container {
 			gap: 1rem;
 		}
-		.landing-background-anim {
-			--size: 300px; /* Adjust size for mobile */
-			filter: blur(calc(var(--size) / 5)); /* Adjust blur accordingly */
-		}
-
+	
 		h1 {
 			font-size: 1rem;
 		}
