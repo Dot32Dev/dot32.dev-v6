@@ -75,16 +75,47 @@ import { ViewTransitions } from 'astro:transitions';
 //   }
 // };
 
+// const slideSmall = {
+//   forwards: {
+//     old: {
+//       name: 'slide-out-to-left',
+//       duration: '0.2s',
+//       easing: 'ease-out',
+//       fillMode: 'forwards'
+//     },
+//     new: {
+//       name: 'slide-in-from-right',
+//       duration: '0.2s',
+//       easing: 'ease-out',
+//       fillMode: 'backwards'
+//     }
+//   },
+//   backwards: {
+//     old: {
+//       name: 'slide-out-to-right',
+//       duration: '0.2s',
+//       easing: 'ease-out',
+//       fillMode: 'forwards'
+//     },
+//     new: {
+//       name: 'slide-in-from-left',
+//       duration: '0.2s',
+//       easing: 'ease-out',
+//       fillMode: 'backwards'
+//     }
+//   }
+// };
+
 const slideSmall = {
   forwards: {
     old: {
-      name: 'slide-out-to-left',
+      name: 'slideOutSmall',
       duration: '0.2s',
       easing: 'ease-out',
       fillMode: 'forwards'
     },
     new: {
-      name: 'slide-in-from-right',
+      name: 'slideInSmall',
       duration: '0.2s',
       easing: 'ease-out',
       fillMode: 'backwards'
@@ -92,13 +123,13 @@ const slideSmall = {
   },
   backwards: {
     old: {
-      name: 'slide-out-to-right',
+      name: 'slideOutSmallBack',
       duration: '0.2s',
       easing: 'ease-out',
       fillMode: 'forwards'
     },
     new: {
-      name: 'slide-in-from-left',
+      name: 'slideInSmallBack',
       duration: '0.2s',
       easing: 'ease-out',
       fillMode: 'backwards'
@@ -107,7 +138,7 @@ const slideSmall = {
 };
 ---
 
-<html lang="en" transition:animate=slide>
+<html lang="en" transition:animate={slideSmall}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -173,8 +204,35 @@ const slideSmall = {
 		/* types: backwards, forwards, reload; */
 	}
 
+	@keyframes slideOutSmall {
+        to {
+            transform: translateX(-30px);
+            opacity: 0;
+        }
+    }
 
-	html:active-view-transition-type(forwards, backwards) {
+    @keyframes slideInSmall {
+        from {
+            transform: translateX(30px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideOutSmallBack {
+        to {
+            transform: translateX(30px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInSmallBack {
+        from {
+            transform: translateX(-30px);
+            opacity: 0;
+        }
+    }
+
+	/* html:active-view-transition-type(forwards, backwards) {
 		body {
 			view-transition-name: content;
 		}
@@ -192,7 +250,7 @@ const slideSmall = {
 	}
 	.backward::view-transition-new(root) {
 		animation-name: slide-in-from-left, fade-in;
-	}
+	} */
 
 	/* ::view-transition-old(root) {
 		animation-name: slide-out-to-left;
@@ -202,27 +260,27 @@ const slideSmall = {
 	} */
 
 	/* Animation styles for forwards type only */
-	html:active-view-transition-type(forwards) {
+	/* html:active-view-transition-type(forwards) {
 		&::view-transition-old(content) {
 			animation-name: slide-out-to-left, fade-out;
 		}
 		&::view-transition-new(content) {
 			animation-name: slide-in-from-right, fade-in;
 		}
-	}
+	} */
 
 	/* Animation styles for backwards type only */
-	html:active-view-transition-type(backwards) {
+	/* html:active-view-transition-type(backwards) {
 		&::view-transition-old(content) {
 			animation-name: slide-out-to-right, fade-out;
 		}
 		&::view-transition-new(content) {
 			animation-name: slide-in-from-left, fade-in;
 		}
-	}
+	} */
 
 	/* Animation styles for reload type only */
-	html:active-view-transition-type(reload) {
+	/* html:active-view-transition-type(reload) {
 		&::view-transition-old(root) {
 			animation-name: fade-out, scale-down;
 		}
@@ -230,7 +288,7 @@ const slideSmall = {
 			animation-delay: 0.25s;
 			animation-name: fade-in, scale-up;
 		}
-	}
+	} */
 
 	/* @keyframes slide-out-to-left {
 		from {
@@ -272,7 +330,7 @@ const slideSmall = {
 		}
 	} */
 
-@keyframes slide-in-from-left {
+/* @keyframes slide-in-from-left {
   from {
     translate: -30px 0;
   }
@@ -311,7 +369,7 @@ const slideSmall = {
   to {
     opacity: 0;
   }
-}
+} */
 </style>
 
 <style>
