@@ -141,16 +141,18 @@ const slideSmall = {
 <html lang="en" transition:animate={slideSmall}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="generator" content={Astro.generator} />
-		<!-- <link rel="expect" href=".header-container" blocking="render" />`` -->
-		<title>{title}</title>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+		<meta name="description" content="Dot32 Dev" />
+		<meta name="viewport" content="width=device-width" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<!-- <meta name="generator" content={Astro.generator} /> -->
+		<!-- <link rel="expect" href=".header-container" blocking="render" />`` -->
+		<title>{title}</title>
+
 
 		<ViewTransitions />
 	</head>
@@ -198,9 +200,10 @@ const slideSmall = {
 		margin: 0;
 		background-color: #0f0e0e;
 		color: white;
-		font-family: Inter Self-Hosted, Inter, Arial, Helvetica, sans-serif;
+		font-family: Inter Self-Hosted, Inter;
 		--brand-colour: #5069cb;
 		overflow-x: hidden;
+		font-display: block;
 	}
 
 	@view-transition {
