@@ -142,9 +142,11 @@ const slideSmall = {
 	<head>
 		<meta charset="UTF-8" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> -->
+
+		<link rel="preload" href="/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
 
 		<meta name="description" content="Dot32 Dev" />
 		<meta name="viewport" content="width=device-width" />
@@ -183,7 +185,7 @@ const slideSmall = {
 
 	@font-face {
 		font-family: 'Inter Self-Hosted';
-		src: url(/Inter-VariableFont_opsz,wght.ttf) format('truetype');
+		src: url('/Inter-VariableFont_opsz,wght.ttf') format('truetype');
 		font-style: normal;
 		font-weight: 100 900;
 
@@ -203,7 +205,7 @@ const slideSmall = {
 		font-family: Inter Self-Hosted, Inter;
 		--brand-colour: #5069cb;
 		overflow-x: hidden;
-		font-display: block;
+		font-display: swap;
 	}
 
 	@view-transition {
@@ -412,11 +414,19 @@ const slideSmall = {
 		backface-visibility: hidden;
 		will-change: transform, opacity; */
 		will-change: transform, opacity;
+
+		position: relative;
 	}
 
 	::view-transition-old(header), ::view-transition-new(header) {
 		animation: none;
 		transition: none;
+	}
+
+	nav {
+    	position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
 	}
 
 	li {
@@ -425,6 +435,8 @@ const slideSmall = {
 	}
 	ul {
 		margin: 0;
+		/* margin-left: auto;
+        margin-right: auto; */
 		padding: 0;
 		list-style: none;
 		display: flex;
@@ -481,8 +493,8 @@ const slideSmall = {
 		display: flex; /* CSS3 */
 		align-items: center; /* Vertical align */
 		justify-content: center; /* Horizontal align */
-		padding-right: 1em;
-		padding-left: 1em;
+		padding-right: 0.875em;
+		padding-left: 0.875em;
 		border-radius: 1em;
 		font-size: 15px;
 		font-weight: 600;
@@ -490,6 +502,7 @@ const slideSmall = {
 
 	.cta svg {
 		margin-left: 1em;
+		display: inline;
 	}
 
 	a:hover {
@@ -499,6 +512,69 @@ const slideSmall = {
 	.cta:hover {
 		color: black;
 	}
+
+    .cta {
+    /* font-weight: 600; */
+    /*   line-height: 130%; */
+    /* letter-spacing: -0.02em; */
+    /* color: black; */
+    /* font-size: 20px; */
+    box-sizing: border-box;
+    position: relative;
+    /* border-radius: 80em; */
+    /* background-color: white; */
+    border: 0.125rem solid white;
+    /* text-align: center; */
+    /* text-decoration: none; */
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+    /* cursor: pointer; */
+    overflow: hidden;
+    will-change: transform;
+    /* padding: 10px 20px; */
+    /* display: inline-block; */
+    /* margin-top: clamp(1px, 5.3333333333vw, 40.96px); */
+    }
+    .cta:hover {
+    background-color: #5069cb;
+    border-color: #5069cb;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+    /* transform: scale(1.07); */
+    will-change: transform;
+    color: white;
+    }
+    .cta:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%) rotate(10deg);
+    transform-origin: top left;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+    will-change: transform;
+    z-index: -1;
+    border-radius: 80em;
+    background-color: #5069cb;
+    }
+    .cta:hover:after {
+    transform: translate(0);
+    z-index: 0;
+    }
+    .cta > * {
+    position: relative;
+    z-index: 1;
+    }
+    .cta__inner {
+    color: black;
+    }
+    .cta:hover .cta__inner {
+    color: white;
+    }
 
 	/* Hide text on smaller screens */
 	@media (max-width: 600px) {
