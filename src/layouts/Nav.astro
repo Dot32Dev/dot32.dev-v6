@@ -427,11 +427,13 @@ const slideSmall = {
     	position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        height: 100%;
 	}
 
 	li {
 		display: inline;
 		position: relative;
+		height: 100%;
 	}
 	ul {
 		margin: 0;
@@ -442,6 +444,7 @@ const slideSmall = {
 		display: flex;
 		align-items: center;
 		gap: 2rem;
+		height:100%;
 	}
 
 	a {
@@ -451,6 +454,10 @@ const slideSmall = {
 		font-weight: 500;
 		transition: color;
 		transition-duration: 0.2s;
+		height: 100%;
+		display: flex;
+        align-items: center;
+        /* flex-direction: column; */
 	}
 
 	.first {
