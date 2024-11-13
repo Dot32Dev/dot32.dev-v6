@@ -138,7 +138,7 @@ const slideSmall = {
 };
 ---
 
-<html lang="en">
+<html lang="en" transition:animate=slide>
 	<head>
 		<meta charset="UTF-8" />
 
@@ -158,9 +158,9 @@ const slideSmall = {
 
 		<ViewTransitions />
 	</head>
-	<body transition:animate=slide>
+	<body>
 		<div class="header-container">
-			<header transition:animate=none>
+			<header transition:persist>
 				<a class="first" href="/"><img src="/dot32text.webp" alt="Dot32"></a>
 				<nav>
 					<ul>
