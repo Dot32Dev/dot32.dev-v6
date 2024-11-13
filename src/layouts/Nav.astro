@@ -543,29 +543,30 @@ const slideSmall = {
     /* margin-top: clamp(1px, 5.3333333333vw, 40.96px); */
     }
     .cta:hover {
-    background-color: #5069cb;
+    background-color: white;
     border-color: #5069cb;
     transition: background-color 0.2s ease, border-color 0.2s ease,
         color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
-    /* transform: scale(1.07); */
+    transform: scale(1.05);
     will-change: transform;
     color: white;
     }
     .cta:after {
     content: "";
     display: block;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-100%) rotate(10deg);
+    /* left: 0;
+    top: 0; */
+    inset: -4px;
+    transform: translateX(-100%) rotate(10deg);
     transform-origin: top left;
     transition: background-color 0.2s ease, border-color 0.2s ease,
         color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
     will-change: transform;
     z-index: -1;
-    border-radius: 80em;
+    border-radius: 2rem;
     background-color: #5069cb;
     }
     .cta:hover:after {
